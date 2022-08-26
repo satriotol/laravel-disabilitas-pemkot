@@ -17,8 +17,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
+            $table->string('name');
+            $table->BigInteger('price');
             $table->bigInteger('discount_price')->nullable();
             $table->longText('description');
+            $table->BigInteger('stock');
             $table->timestamps();
         });
     }
