@@ -18,10 +18,10 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->BigInteger('price');
+            $table->bigInteger('price');
             $table->bigInteger('discount_price')->nullable();
             $table->longText('description');
-            $table->BigInteger('stock');
+            $table->bigInteger('stock');
             $table->timestamps();
         });
     }
