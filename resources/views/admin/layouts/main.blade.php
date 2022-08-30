@@ -32,7 +32,8 @@
 
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://semarangkota.go.id/">PEMKOT SEMARANG</a>.</strong>
+            <strong>Copyright &copy; 2022 <a href="https://semarangkota.go.id/" target="_blank">PEMKOT
+                    SEMARANG</a>.</strong>
             All rights reserved.
         </footer>
 
