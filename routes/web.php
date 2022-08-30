@@ -13,15 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', 'App\Http\Controllers\AdminController@tabel1')->name('tabel.1');
+    Route::get('/admin1', 'App\Http\Controllers\AdminController@tabel2')->name('tabel.2');
+    Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-Route::get('/admin', 'App\Http\Controllers\AdminController@tabel1')->name('tabel.1');
-Route::get('/admin1', 'App\Http\Controllers\AdminController@tabel2')->name('tabel.2');
-Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');
 
 require __DIR__ . '/auth.php';
