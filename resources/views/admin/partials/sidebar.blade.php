@@ -21,7 +21,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('tabel.1') }}" class="nav-link active">
+                    <a href="{{ route('tabel.1') }}" class="nav-link {{ active_class(['tabel.1']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Tabel 1
@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('tabel.2') }}" class="nav-link">
+                    <a href="{{ route('tabel.2') }}" class="nav-link {{ active_class(['tabel.2']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Tabel 2
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('tabel.3') }}" class="nav-link">
+                    <a href="{{ route('tabel.3') }}" class="nav-link {{ active_class(['tabel.3']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Tabel 3
