@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin');
+    return view('welcome');
 });
+
+Route::get('/admin', 'App\Http\Controllers\AdminController@tabel1')->name('tabel.1');
+Route::get('/admin1', 'App\Http\Controllers\AdminController@tabel2')->name('tabel.2');
+Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');

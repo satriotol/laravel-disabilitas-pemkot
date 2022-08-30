@@ -24,21 +24,21 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('tabel.1') }}" class="nav-link">
               <p>
                 Tabel 1
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('tabel.2') }}" class="nav-link">
               <p>
                 Tabel 2
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('tabel.3') }}" class="nav-link">
               <p>
                 Tabel 3
               </p>
