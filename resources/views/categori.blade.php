@@ -25,10 +25,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th style="width: 50px">Id</th>
                             <th>Nama</th>
                             <th>Image</th>
-                            <th>Action</th>
+                            <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,10 +36,12 @@
                             @foreach ($kategori as $k)
                             <td>{{ $k->id }}</td>
                             <td>{{ $k->name }}</td>
-                            <td>{{ $k->image }}</td>
                             <td>
-                                <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
-                                <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
+                                <img src="{{ asset('gambar/'.$k->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
+                            </td>
+                            <td>
+                                <button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button>
+                                <button type="button" name="delete" class="btn btn-sm bg-gradient-danger">Hapus</button>
                             </td>
                         </tr>
                         @endforeach
