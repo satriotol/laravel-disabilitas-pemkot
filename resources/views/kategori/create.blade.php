@@ -12,35 +12,43 @@
     </section>
     <!-- Main content -->
     <section class="content">
-
-        <!-- Default box -->
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Admin Tabel</h3>
-            </div>
-            <div class="card-body">
-                <div class="text-right mb-2">
-                    <button type="button" class="btn bg-gradient-primary">Create</button>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Create Categories</h3>
                 </div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Nama</th>
-                            <th>Deskripsi</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Adisti Khairunnisa</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>
-                                <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
-                                <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="POST" action="{{ route('kategori.store') }}" enctype="multipart/form-data">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nama Kategori</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputFile">Gambar</label>
+                      <div class="input-group">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="exampleInputFile">
+                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                          <span class="input-group-text">Upload</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
             </div>
             <!--/.col (right) -->
           </div>
