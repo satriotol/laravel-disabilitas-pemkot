@@ -23,7 +23,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/category/store', 'App\Http\Controllers\CategoryController@store')->name('kategori.store');
     Route::get('/slider', 'App\Http\Controllers\SliderController@slider')->name('slider');
     Route::get('/slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
-    Route::get('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
+    Route::post('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
+// ROUTE CRUD
+
 });
 
 require __DIR__ . '/auth.php';
