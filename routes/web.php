@@ -19,6 +19,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');
 
     Route::get('/category', 'App\Http\Controllers\CategoryController@kategori')->name('kategori');
+    Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('kategori.create');
     Route::get('/slider', 'App\Http\Controllers\SliderController@slider')->name('slider');
 });
 

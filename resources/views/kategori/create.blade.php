@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Kategori</h1>
+                    <h1>Admin</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -15,26 +15,24 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tabel Kategori</h3>
+                <h3 class="card-title">Admin Tabel</h3>
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="{{ route('kategori.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <button type="button" class="btn bg-gradient-primary">Create</button>
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Nama</th>
-                            <th>Image</th>
+                            <th>Deskripsi</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <td>Adisti Khairunnisa</td>
                             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>Gambar</td>
                             <td>
                                 <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
                                 <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
