@@ -27,6 +27,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Nama</th>
+                            <th>Diskripsi</th>
                             <th>Image</th>
                             <th>Action</th>
                         </tr>
@@ -34,7 +35,8 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Kursi Roda</td>
+                            <td>Baru dipakai selama sepekan. Kondisi masih bagus.</td>
                             <td>Gambar</td>
                             <td>
                                 <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
