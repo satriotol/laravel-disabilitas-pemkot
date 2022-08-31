@@ -19,15 +19,15 @@
               <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Create Categories</h3>
+                  <h3 class="card-title">Create Sliders</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form method="POST" action="{{ route('slider.store') }}" enctype="multipart/form-data">
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Nama Kategori</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <label for="exampleInputEmail1">Nama Barang</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Input Name">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
