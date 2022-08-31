@@ -25,7 +25,7 @@ class CategoryController extends Controller
     		'image' => 'required|image|mimes:jpeg, jpg, png'
     	]);
         $foto_kategori = $request->image;
-        $nama_file = time().'.'.$foto_peminjam->getClientOriginalExtension();
+        $nama_file = time().'.'.$foto_kategori->getClientOriginalExtension();
         $foto_kategori->move('gambar/', $nama_file);
 
         $kategori = new Category;
