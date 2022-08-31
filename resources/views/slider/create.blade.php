@@ -27,8 +27,12 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nama Barang</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Input Name">
+                      <input type="email" class="form-control" id="exampleInputtext" placeholder="enter item Name">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Diskripsi Barang</label>
+                        <input type="email" class="form-control" id="exampleInputtext" placeholder="enter item description">
+                      </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
                       <div class="input-group">
