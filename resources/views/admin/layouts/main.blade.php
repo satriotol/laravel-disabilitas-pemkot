@@ -8,15 +8,15 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
-                width="60">
+            <img class="animation__shake" src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
+                height="60" width="60">
         </div>
 
         @include('admin.partials.navbar')
@@ -35,20 +35,18 @@
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
     </div>
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="dist/js/adminlte.min.js"></script>
+    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     <!-- bs-custom-file-input -->
-    <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
     <!-- AdminLTE App -->
-    <script src="../../dist/js/adminlte.min.js"></script>
+    <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
-    <!-- Page specific script -->
     <script>
-    $(function () {
-    bsCustomFileInput.init();
-    });
+        $(function() {
+            bsCustomFileInput.init();
+        });
     </script>
 </body>
 
