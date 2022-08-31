@@ -9,4 +9,8 @@ class SliderController extends Controller
     public function slider(){
         return view('slide');
     }
+    public function create(){
+        return view('slide');
+    }
+
 }

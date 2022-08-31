@@ -21,6 +21,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category', 'App\Http\Controllers\CategoryController@kategori')->name('kategori');
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('kategori.create');
     Route::get('/slider', 'App\Http\Controllers\SliderController@slider')->name('slider');
+    Route::get('/slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
 });
 
 require __DIR__ . '/auth.php';
