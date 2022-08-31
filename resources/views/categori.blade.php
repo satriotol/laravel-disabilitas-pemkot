@@ -41,7 +41,7 @@
                             </td>
                             <td>
                                 <a href="{{ route('kategori.edit', $k->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <button type="button" name="delete" class="btn btn-sm bg-gradient-danger">Hapus</button>
+                                <a href="{{ route('kategori.delete', $k->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach

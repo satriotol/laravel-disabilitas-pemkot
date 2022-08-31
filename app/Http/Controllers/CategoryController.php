@@ -64,4 +64,18 @@ class CategoryController extends Controller
 
         return redirect('/category');
     }
+
+    public function delete($id){
+        //menghapus data user apabila data peminjam dihapus
+        $cari_kategori_id = Category::where('id', $id)->pluck('id');
+        $kategori_id = Category::where('id', $cari_kategori_id);
+        $kategori_id->delete();
+        //menghapus data pada tabel data_peminjam
+        $kategori = Category::find($id);
+        $kategori->delete();
+
+        Session::flash('flash_message', 'Data kategori berhasil dihapus');
+
+        return redirect('/category');
+    }
 }
