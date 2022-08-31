@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 
+use Session;
+
+use Storage;
+
 class CategoryController extends Controller
 {
     public function kategori(){
@@ -18,10 +22,10 @@ class CategoryController extends Controller
     public function store(Request $request){
         $this->validate($request,[
     		'nama' => 'required',
-    		'foto' => 'required|image|mimes:jpeg, jpg, png'
+    		'image' => 'required|image|mimes:jpeg, jpg, png'
     	]);
         $foto_kategori = $request->image;
-        $nama_file = time().'.'.$foto_peminjam->getClientOriginalExtension();
+        $nama_file = time().'.'.$foto_kategori->getClientOriginalExtension();
         $foto_kategori->move('gambar/', $nama_file);
 
         $kategori = new Category;

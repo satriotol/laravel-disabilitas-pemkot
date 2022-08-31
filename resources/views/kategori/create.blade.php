@@ -27,13 +27,13 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nama Kategori</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Enter Category's Name ">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
                       <div class="input-group">
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="exampleInputFile">
+                          <input type="file" name="foto" class="custom-file-input" id="exampleInputFile">
                           <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
                         <div class="input-group-append">
