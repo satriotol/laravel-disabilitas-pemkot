@@ -53,6 +53,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['slider']) }}">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Slider
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <x-responsive-nav-link :href="route('logout')" class="nav-link"
