@@ -24,14 +24,15 @@
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form method="POST" action="{{ route('slider.store') }}" enctype="multipart/form-data">
+                    @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Nama Barang</label>
-                      <input type="email" class="form-control" id="exampleInputtext" placeholder="enter item Name">
+                      <label for="exampleInputText">Nama Barang</label>
+                      <input type="text" class="form-control" id="exampleInputtext" placeholder="enter item Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Diskripsi Barang</label>
-                        <input type="email" class="form-control" id="exampleInputtext" placeholder="enter item description">
+                        <label for="exampleInputText">Diskripsi Barang</label>
+                        <input type="text" class="form-control" id="exampleInputtext" placeholder="enter item description">
                       </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
