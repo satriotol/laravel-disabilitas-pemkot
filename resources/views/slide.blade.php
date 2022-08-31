@@ -1,11 +1,12 @@
 @extends('admin.layouts.main')
 
+
 @section('container')
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Sliders</h1>
+                    <h1>Slider</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -15,7 +16,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Slider Tabel</h3>
+                <h3 class="card-title">Tabel Slider</h3>
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
@@ -26,17 +27,15 @@
                         <tr>
                             <th>Id</th>
                             <th>Nama</th>
-                            <th>Gambar</th>
-                            <th>Deskripsi</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Kursi Roda</td>
-                            <td>gambar</td>
-                            <td>Kursi Roda baru digunakan selama sepekan.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                            <td>Gambar</td>
                             <td>
                                 <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
                                 <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
