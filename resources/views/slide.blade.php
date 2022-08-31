@@ -34,15 +34,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Kursi Roda</td>
-                            <td>Baru dipakai selama sepekan. Kondisi masih bagus.</td>
-                            <td>Gambar</td>
+                            @foreach ($slider as $s)
+                            <td>{{ $s->id }}</td>
+                            <td>{{ $s->Nama }}</td>
+                            <td>{{ $s->Diskripsi }}</td>
+                            <td>{{ $s->image }}</td>
                             <td>
                                 <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
                                 <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
