@@ -12,7 +12,9 @@ use Storage;
 class CategoryController extends Controller
 {
     public function kategori(){
-        return view('categori');
+        $kategori = Category::orderBy('id', 'asc')->paginate(5);
+        $no = 0;
+        return view('categori', compact('kategori','no'));
     }
 
     public function create(){
@@ -21,7 +23,7 @@ class CategoryController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-    		'nama' => 'required',
+    		'name' => 'required',
     		'image' => 'required|image|mimes:jpeg, jpg, png'
     	]);
         $foto_kategori = $request->image;
@@ -29,11 +31,11 @@ class CategoryController extends Controller
         $foto_kategori->move('gambar/', $nama_file);
 
         $kategori = new Category;
-        $kategori->nama = $request->nama;
-        $kategori->foto = $nama_file;
+        $kategori->name = $request->name;
+        $kategori->image = $nama_file;
         $kategori->save();
 
-        Session::flash('flash_message', 'Data peminjam berhasil disimpan');
+        Session::flash('flash_message', 'Data Kategori berhasil disimpan');
 
     	return redirect('/category');
     }

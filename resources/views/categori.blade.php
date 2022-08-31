@@ -33,14 +33,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>Gambar</td>
+                            @foreach ($kategori as $k)
+                            <td>{{ $k->id }}</td>
+                            <td>{{ $k->name }}</td>
+                            <td>{{ $k->image }}</td>
                             <td>
                                 <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
                                 <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
