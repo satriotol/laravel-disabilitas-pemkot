@@ -38,8 +38,8 @@
                             <td>{{ $f->question }}</td>
                             <td>{{ $f->answer }}</td>
                             <td>
-                                <a href="{{ route('faq.edit', $k->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <a href="{{ route('faq.delete', $k->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
+                                <a href="{{ route('faq.edit', $f->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
+                                <a href="{{ route('faq.delete', $f->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach

@@ -28,12 +28,12 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Question</label>
-                      <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="{{ $faq->question }}">
+                      <input type="text" name="question" class="form-control" id="exampleInputEmail1" value="{{ $faq->question }}">
                     </div>
                     <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Answer</label>
-                      <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="{{ $faq->answer }}">
+                      <input type="text" name="answer" class="form-control" id="exampleInputEmail1" value="{{ $faq->answer }}">
                     </div>
                   </div>
                   <!-- /.card-body -->

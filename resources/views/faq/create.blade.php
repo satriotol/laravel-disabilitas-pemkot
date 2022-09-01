@@ -23,17 +23,17 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="POST" action="{{ route('faq.store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('faq.store') }}">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Question</label>
-                                    <input type="text" name="question" class="form-control" id="exampleInputEmail1"
+                                    <label for="question">Question</label>
+                                    <input type="text" name="question" class="form-control" id="question"
                                         placeholder="Enter Question Here">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Answer</label>
-                                    <input type="text" name="answer" class="form-control" id="exampleInputEmail1"
+                                    <label for="answer">Answer</label>
+                                    <input type="text" name="answer" class="form-control" id="answer"
                                         placeholder="Enter Answer Here">
                                 </div>
                             </div>
