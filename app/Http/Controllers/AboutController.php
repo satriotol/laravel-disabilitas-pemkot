@@ -49,7 +49,7 @@ class AboutController extends Controller
         if ($request->image) {
             $foto_about = $request->image;
             $nama_file = time() . '.' . $foto_about->getClientOriginalExtension();
-            $about->move('gambar/', $nama_file);
+            $foto_about->move('gambar/', $nama_file);
             $about->image = $nama_file;
         }
         $about->description = $request->description;

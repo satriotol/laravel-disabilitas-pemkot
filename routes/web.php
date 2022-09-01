@@ -56,7 +56,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/about/store', 'App\Http\Controllers\AboutController@store')->name('about.store');
     Route::get('/about/edit/{id}', 'App\Http\Controllers\AboutController@edit')->name('about.edit');
     Route::post('/about/update/{id}', 'App\Http\Controllers\AboutController@update')->name('about.update');
-    Route::get('/about/delete/{faq}', 'App\Http\Controllers\AboutController@delete')->name('about.delete');
+    Route::get('/about/delete/{about}', 'App\Http\Controllers\AboutController@delete')->name('about.delete');
 });
 
 require __DIR__ . '/auth.php';

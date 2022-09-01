@@ -27,15 +27,15 @@
                 @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="question">Question</label>
-                      <input type="text" name="name" class="form-control" id="question" value="{{ $about->description }}">
+                      <label for="description">Description</label>
+                      <input type="text" name="description" class="form-control" id="description" value="{{ $about->description }}">
                     </div>
                     <div class="form-group">
-                        <label for="gambar">Gambar</label>
+                        <label for="exampleInputFile">Gambar</label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" name="image" class="custom-file-input" id="exampleInputFile"value="{{ $about->image }}">
-                            <label class="custom-file-label" for="image">Choose file</label>
+                            <input type="file" name="image" class="custom-file-input" id="exampleInputFile" value="{{ $about->image }}">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                           </div>
                           <div class="input-group-append">
                             <span class="input-group-text">Upload</span>
