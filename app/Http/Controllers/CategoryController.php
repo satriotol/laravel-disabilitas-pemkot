@@ -4,30 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-
 use Session;
 
 use Storage;
 
 class CategoryController extends Controller
 {
-    public function kategori(){
+    public function kategori()
+    {
         $kategori = Category::orderBy('id', 'asc')->paginate(5);
-        $no = 0;
-        return view('categori', compact('kategori','no'));
+        return view('kategori.categori', compact('kategori'));
     }
 
-    public function create(){
+    public function create()
+    {
         return view('kategori.create');
     }
 
-    public function store(Request $request){
-        $this->validate($request,[
-    		'name' => 'required',
-    		'image' => 'required|image|mimes:jpeg, jpg, png'
-    	]);
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'required|image|mimes:jpeg, jpg, png'
+        ]);
         $foto_kategori = $request->image;
-        $nama_file = time().'.'.$foto_kategori->getClientOriginalExtension();
+        $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
         $foto_kategori->move('gambar/', $nama_file);
 
         $kategori = new Category;
@@ -37,45 +38,36 @@ class CategoryController extends Controller
 
         Session::flash('flash_message', 'Data Kategori berhasil disimpan');
 
-    	return redirect('/category');
+        return redirect('/category');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $kategori = Category::Find($id);
         return view('kategori.edit', compact('kategori'));
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $kategori = Category::find($id);
-        $foto_kategori = $request->image;
-        $nama_file = time().'.'.$foto_kategori->getClientOriginalExtension();
-        $foto_kategori->move('gambar/', $nama_file);
+        if ($request->image) {
+            $foto_kategori = $request->image;
+            $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
+            $foto_kategori->move('gambar/', $nama_file);
+            $kategori->image = $nama_file;
+        }
         $kategori->name = $request->name;
-        $kategori->image = $nama_file;
         $kategori->update();
-        //Ketika kolom name pada tabel nama_peminjam diedit maka kolom user juga ikut berubah
-        $cari_category_id = Category::where('id', $id)->pluck('id');
-        $kategori = Category::where('id', $cari_category_id);
-        $kategori->update([
-            'name' => $request->name,
-        ]);
 
         Session::flash('flash_message', 'Data Kategori berhasil diupdate');
 
         return redirect('/category');
     }
 
-    public function delete($id){
-        //menghapus data user apabila data peminjam dihapus
-        $cari_kategori_id = Category::where('id', $id)->pluck('id');
-        $kategori_id = Category::where('id', $cari_kategori_id);
-        $kategori_id->delete();
-        //menghapus data pada tabel data_peminjam
-        $kategori = Category::find($id);
-        $kategori->delete();
-
+    public function delete(Category $category)
+    {
+        $category->delete();
         Session::flash('flash_message', 'Data kategori berhasil dihapus');
-
         return redirect('/category');
     }
 }
