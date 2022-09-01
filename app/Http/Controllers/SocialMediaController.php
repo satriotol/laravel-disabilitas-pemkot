@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SocialMedia;
 
+use Session;
+
+use Storage;
+
 class SocialMediaController extends Controller
 {
     public function index(){
         $socialmedia = SocialMedia::orderBy('id', 'asc')->paginate(5);
-        return view('socialmedia.index');
+        return view('socialmedia.index', compact('socialmedia'));
     }
 
     public function create()
@@ -21,49 +25,54 @@ class SocialMediaController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required|image|mimes:jpeg, jpg, png'
+            'image' => 'required|image|mimes:jpeg, jpg, png',
+            'url' => 'required'
         ]);
-        $foto_kategori = $request->image;
-        $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
-        $foto_kategori->move('gambar/', $nama_file);
 
-        $kategori = new Category;
-        $kategori->name = $request->name;
-        $kategori->image = $nama_file;
-        $kategori->save();
+        $foto_socialmedia = $request->image;
+        $nama_file = time() . '.' . $foto_socialmedia->getClientOriginalExtension();
+        $foto_socialmedia->move('gambar/', $nama_file);
 
-        Session::flash('flash_message', 'Data Kategori berhasil disimpan');
+        $socialmedia = new SocialMedia;
+        $socialmedia->name = $request->name;
+        $socialmedia->image = $nama_file;
+        $socialmedia->url = $request->url;
 
-        return redirect('/category');
+        $socialmedia->save();
+
+        Session::flash('flash_message', 'Data socialmedia berhasil disimpan');
+
+        return redirect('/socialmedia');
     }
 
     public function edit($id)
     {
-        $kategori = Category::Find($id);
-        return view('kategori.edit', compact('kategori'));
+        $socialmedia = SocialMedia::Find($id);
+        return view('socialmedia.edit', compact('socialmedia'));
     }
 
     public function update(Request $request, $id)
     {
-        $kategori = Category::find($id);
+        $socialmedia = SocialMedia::find($id);
         if ($request->image) {
-            $foto_kategori = $request->image;
-            $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
-            $foto_kategori->move('gambar/', $nama_file);
-            $kategori->image = $nama_file;
+            $foto_socialmedia = $request->image;
+            $nama_file = time() . '.' . $foto_socialmedia->getClientOriginalExtension();
+            $foto_socialmedia->move('gambar/', $nama_file);
+            $socialmedia->image = $nama_file;
         }
-        $kategori->name = $request->name;
-        $kategori->update();
+        $socialmedia->name = $request->name;
+        $socialmedia->url = $request->url;
+        $socialmedia->update();
 
-        Session::flash('flash_message', 'Data Kategori berhasil diupdate');
+        Session::flash('flash_message', 'Data socialmedia berhasil diupdate');
 
-        return redirect('/category');
+        return redirect('/socialmedia');
     }
 
-    public function delete(Category $category)
+    public function delete(Category $socialmedia)
     {
-        $category->delete();
-        Session::flash('flash_message', 'Data kategori berhasil dihapus');
-        return redirect('/category');
+        $socialmedia->delete();
+        Session::flash('flash_message', 'Data socialmedia berhasil dihapus');
+        return redirect('/socialmedia');
     }
 }

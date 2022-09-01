@@ -28,16 +28,7 @@
                             <th style="width: 50px">Id</th>
                             <th>Nama</th>
                             <th>
-                                <div class="form-group">
-                                    <label>Select</label>
-                                    <select class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                    </select>
-                                </div>
+                                Image
                             </th>
                             <th>URL</th>
                             <th style="width: 150px">Action</th>
@@ -45,7 +36,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($socialmedia as $sm)
+                        @foreach ($socialmedia as $sm)
                             <td>{{ $sm->id }}</td>
                             <td>{{ $sm->name }}</td>
                             <td>
