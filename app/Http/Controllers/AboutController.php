@@ -51,7 +51,7 @@ class AboutController extends Controller
             $about->move('gambar/', $nama_file);
             $about->image = $nama_file;
         }
-        $about->description = $request->descrption;
+        $about->description = $request->description;
         $about->update();
 
         return redirect('/about');
