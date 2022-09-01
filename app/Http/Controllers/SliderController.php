@@ -25,6 +25,7 @@ class SliderController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
+            'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg'
         ]);
         $foto_slider = $request->image;
@@ -33,6 +34,7 @@ class SliderController extends Controller
 
         $slider = new Slider;
         $slider->name = $request->name;
+        $slider->description = $request->description;
         $slider->image = $nama_file;
         $slider->save();
 
@@ -57,6 +59,7 @@ class SliderController extends Controller
             $slider->image = $nama_file;
         }
         $slider->name = $request->name;
+        $slider->description = $request->description;
         $slider->update();
 
         Session::flash('flash_message', 'Data Slider berhasil diupdate');

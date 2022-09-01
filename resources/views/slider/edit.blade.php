@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Diskripsi Slider</label>
-                        <input type="text" name="name" class="form-control" id="exampleInputtext" placeholder="enter slider description">
+                        <input type="text" name="description" class="form-control" id="exampleInputtext" placeholder="enter slider description">
                       </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
