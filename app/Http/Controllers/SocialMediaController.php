@@ -69,7 +69,7 @@ class SocialMediaController extends Controller
         return redirect('/socialmedia');
     }
 
-    public function delete(Category $socialmedia)
+    public function delete(SocialMedia $socialmedia)
     {
         $socialmedia->delete();
         Session::flash('flash_message', 'Data socialmedia berhasil dihapus');
