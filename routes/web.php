@@ -36,6 +36,11 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Social Media
     Route::get('/socialmedia', 'App\Http\Controllers\SocialMediaController@index')->name('socialmedia');
+    Route::get('/socialmedia/create', 'App\Http\Controllers\SocialMediaController@create')->name('socialmedia.create');
+    Route::post('/socialmedia/store', 'App\Http\Controllers\SocialMediaController@store')->name('socialmedia.store');
+    Route::get('/socialmedia/edit/{id}', 'App\Http\Controllers\SocialMediaController@edit')->name('socialmedia.edit');
+    Route::post('/socialmedia/update/{id}', 'App\Http\Controllers\SocialMediaController@update')->name('socialmedia.update');
+    Route::get('/socialmedia/delete/{socialmedia}', 'App\Http\Controllers\SocialMediaController@delete')->name('socialmedia.delete');
 
     //FAQ
     Route::get('/faq', 'App\Http\Controllers\FaqController@index')->name('faq');
