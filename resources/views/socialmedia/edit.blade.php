@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">URL</label>
-                        <input type="text" name="url" class="form-control" id="exampleInputEmail1" value="{{ $socialmedia->url }}">
+                        <input type="url" name="url" class="form-control" id="exampleInputEmail1" value="{{ $socialmedia->url }}">
                       </div>
                   </div>
                   <!-- /.card-body -->

@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">URL</label>
-                                    <input type="text" name="url" class="form-control" id="exampleInputEmail1"
+                                    <input type="url" name="url" class="form-control" id="exampleInputEmail1"
                                         placeholder="Enter URL ">
                                 </div>
                             </div>
