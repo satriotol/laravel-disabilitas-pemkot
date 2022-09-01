@@ -27,7 +27,6 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-<<<<<<< HEAD
                                     <label for="question">Question</label>
                                     <input type="text" name="question" class="form-control" id="question"
                                         placeholder="Enter Question Here">
@@ -35,15 +34,6 @@
                                 <div class="form-group">
                                     <label for="answer">Answer</label>
                                     <input type="text" name="answer" class="form-control" id="answer"
-=======
-                                    <label for="exampleInputEmail1">Question</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter Question Here">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Answer</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
->>>>>>> 937ba021412c4cdb661ce86e30fc8c3c993fd475
                                         placeholder="Enter Answer Here">
                                 </div>
                             </div>
