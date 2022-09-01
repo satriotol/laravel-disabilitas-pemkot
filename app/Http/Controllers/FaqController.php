@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Faq;
 
@@ -28,7 +27,7 @@ class FaqController extends Controller
         $faq = new Faq;
         $faq->question = $request->question;
         $faq->answer = $request->answer;
-
+        $faq->save();
         return redirect('/faq');
     }
 
