@@ -25,11 +25,11 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th style="width: 50px">Id</th>
                             <th>Nama</th>
                             <th>Diskripsi</th>
                             <th>Image</th>
-                            <th>Action</th>
+                            <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,10 +38,12 @@
                             <td>{{ $s->id }}</td>
                             <td>{{ $s->Nama }}</td>
                             <td>{{ $s->Diskripsi }}</td>
-                            <td>{{ $s->image }}</td>
                             <td>
-                                <button type="button" class="btn btn-sm bg-gradient-warning">Edit</button>
-                                <button type="button" class="btn btn-sm bg-gradient-danger">Hapus</button>
+                                <img src="{{ asset('gambar/'.$s->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
+                            </td>
+                            <td>
+                                <a href="{{ route('slider.edit', $s->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
+                                <a href="{{ route('slider.delete', $s->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach
