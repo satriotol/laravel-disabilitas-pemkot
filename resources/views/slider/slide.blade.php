@@ -36,8 +36,8 @@
                         <tr>
                             @foreach ($slider as $s)
                             <td>{{ $s->id }}</td>
-                            <td>{{ $s->Nama }}</td>
-                            <td>{{ $s->Diskripsi }}</td>
+                            <td>{{ $s->name }}</td>
+                            <td>{{ $s->description }}</td>
                             <td>
                                 <img src="{{ asset('gambar/'.$s->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
                             </td>
