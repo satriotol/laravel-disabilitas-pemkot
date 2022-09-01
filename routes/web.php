@@ -44,7 +44,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //FAQ
     Route::get('/faq', 'App\Http\Controllers\FaqController@index')->name('faq');
-    Route::get('/faq/create', 'App\Http\Controllers\FaqController@create')->name('fac.create');
+    Route::get('/faq/create', 'App\Http\Controllers\FaqController@create')->name('faq.create');
     Route::post('/faq/store', 'App\Http\Controllers\FaqController@store')->name('faq.store');
     Route::get('/faq/edit/{id}', 'App\Http\Controllers\FaqController@edit')->name('faq.edit');
     Route::post('/faq/update/{id}', 'App\Http\Controllers\FaqController@update')->name('faq.update');
