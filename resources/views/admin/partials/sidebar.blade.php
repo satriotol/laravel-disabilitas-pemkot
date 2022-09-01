@@ -61,6 +61,30 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('about') }}" class="nav-link {{ active_class(['about']) }}">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            About
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('faq') }}" class="nav-link {{ active_class(['faq']) }}">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            FAQ
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('socialmedia') }}" class="nav-link {{ active_class(['socialmedia']) }}">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Social Media
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <x-responsive-nav-link :href="route('logout')" class="nav-link"
