@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use Illuminate\Http\Request;
-use App\Models\Model;
+
 
 class AboutController extends Controller
 {
