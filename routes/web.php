@@ -30,7 +30,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/slider', 'App\Http\Controllers\SliderController@index')->name('slider');
     Route::get('/slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
     Route::post('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
-    Route::get('/slider/edit/{id}', 'App\Http\Controllers\SliderController@edit')->name('Slider.edit');
+    Route::get('/slider/edit/{id}', 'App\Http\Controllers\SliderController@edit')->name('slider.edit');
+    Route::post('/slider/update/{id}', 'App\Http\Controllers\SliderController@update')->name('slider.update');
+    Route::get('/slider/delete/{slider}', 'App\Http\Controllers\SliderController@delete')->name('slider.delete');
 
     // Social Media
     Route::get('/socialmedia', 'App\Http\Controllers\SocialMediaController@index')->name('socialmedia');
