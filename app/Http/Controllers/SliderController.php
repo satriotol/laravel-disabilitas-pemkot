@@ -10,7 +10,7 @@ use Storage;
 
 class SliderController extends Controller
 {
-    public function slider(){
+    public function index(){
         $slider = Slider::orderBy('id', 'asc')->paginate(5);
         $no = 0;
         return view('slide', compact('slider','no'));

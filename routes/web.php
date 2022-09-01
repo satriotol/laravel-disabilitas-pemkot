@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('kategori.edit');
     Route::post('/category/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('kategori.update');
     Route::get('/category/delete/{category}', 'App\Http\Controllers\CategoryController@delete')->name('kategori.delete');
-    Route::get('/slider', 'App\Http\Controllers\SliderController@slider')->name('slider');
+    Route::get('/slider', 'App\Http\Controllers\SliderController@index')->name('slider');
     Route::get('/slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
     Route::post('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
 
