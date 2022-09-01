@@ -33,15 +33,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($kategori as $k)
-                            <td>{{ $k->id }}</td>
-                            <td>{{ $k->description }}</td>
+                            @foreach ($about as $a)
+                            <td>{{ $a->id }}</td>
+                            <td>{{ $a->description }}</td>
                             <td>
-                                <img src="{{ asset('gambar/'.$k->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
+                                <img src="{{ asset('gambar/'.$a->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
                             </td>
                             <td>
-                                <a href="{{ route('about.edit', $k->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <a href="{{ route('about.delete', $k->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
+                                <a href="{{ route('about.edit', $a->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
+                                <a href="{{ route('about.delete', $a->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach
