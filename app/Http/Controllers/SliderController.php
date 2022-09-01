@@ -10,18 +10,20 @@ use Storage;
 
 class SliderController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $slider = Slider::orderBy('id', 'asc')->paginate(5);
-        $no = 0;
-        return view('slide', compact('slider','no'));
+        return view('slider.slide', compact('slider'));
     }
-    public function create(){
+    public function create()
+    {
         return view('slider.create');
     }
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $this->validate($request,[
             'name' => 'required',
-            'image' => 'required|image|mimes:png,jpg'
+            'image' => 'required|image|mimes:jpeg,png,jpg'
         ]);
         $foto_slider = $request->image;
         $nama_file = time().'.'.$foto_slider->getClientOriginalExtension();
