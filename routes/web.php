@@ -19,7 +19,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');
 
     // Category
-    Route::get('/category', 'App\Http\Controllers\CategoryController@kategori')->name('kategori');
+    Route::get('/category', 'App\Http\Controllers\CategoryController@index')->name('kategori');
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('kategori.create');
     Route::post('/category/store', 'App\Http\Controllers\CategoryController@store')->name('kategori.store');
     Route::get('/category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('kategori.edit');
