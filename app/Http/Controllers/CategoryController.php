@@ -10,7 +10,7 @@ use Storage;
 
 class CategoryController extends Controller
 {
-    public function kategori()
+    public function index()
     {
         $kategori = Category::orderBy('id', 'asc')->paginate(5);
         return view('kategori.categori', compact('kategori'));
