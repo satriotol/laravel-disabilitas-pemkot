@@ -27,12 +27,12 @@
                     @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputText">Nama Barang</label>
-                      <input type="text" class="form-control" id="exampleInputtext" placeholder="enter item Name">
+                      <label for="exampleInputText">Nama Slider</label>
+                      <input type="text" name="name" class="form-control" id="exampleInputtext" placeholder="enter slider Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputText">Diskripsi Barang</label>
-                        <input type="text" class="form-control" id="exampleInputtext" placeholder="enter item description">
+                        <label for="exampleInputText">Diskripsi Slider</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputtext" placeholder="enter slider description">
                       </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
