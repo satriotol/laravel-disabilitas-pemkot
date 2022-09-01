@@ -32,6 +32,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
     Route::get('/slider/edit/{id}', 'App\Http\Controllers\SliderController@edit')->name('Slider.edit');
 
+    // Social Media
+    Route::get('/socialmedia', 'App\Http\Controllers\SocialMediaController@index')->name('socialmedia');
+
 
 });
 
