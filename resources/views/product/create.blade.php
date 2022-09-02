@@ -36,7 +36,26 @@
                             @endforeach
                         </select>
                       </div>
-
+                      <div class="form-group">
+                        <label for="exampleInputText">Nama Product</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputtext" placeholder="enter Product's Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Harga</label>
+                        <input type="string" name="price" class="form-control" id="exampleInputtext" placeholder="enter Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Harga Diskon</label>
+                        <input type="text" name="discount_price" class="form-control" id="exampleInputtext" placeholder="enter Discount's Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Deskripsi</label>
+                        <textarea type="text" name="description" class="form-control" id="exampleInputtext" placeholder="enter slider description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Stock</label>
+                        <input type="text" name="stock" class="form-control" id="exampleInputtext" placeholder="enter Stock"></textarea>
+                    </div>
                   </div>
                   <!-- /.card-body -->
 
