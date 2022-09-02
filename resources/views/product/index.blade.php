@@ -30,7 +30,11 @@
                             <th>
                                 User
                             </th>
-
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Harga Diskon</th>
+                            <th>Deskripsi</th>
+                            <th>Stock</th>
                             <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
@@ -39,6 +43,13 @@
                         @foreach ($product as $p)
                             <td>{{ $p->id }}</td>
                             <td>{{ $p->category->name }}</td>
+                            <td>{{ $p->user->name }}</td>
+                            <td>{{ $p->name }}</td>
+                            <td>{{ $p->price }}</td>
+                            <td>{{ $p->discount_price }}</td>
+                            <td>{{ $p->description }}</td>
+                            <td>{{ $p->stock }}</td>
+                            <td>
 
                             <td>
                                 <a href="{{ route('product.edit', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
