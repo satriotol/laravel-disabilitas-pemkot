@@ -57,6 +57,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/about/edit/{id}', 'App\Http\Controllers\AboutController@edit')->name('about.edit');
     Route::post('/about/update/{id}', 'App\Http\Controllers\AboutController@update')->name('about.update');
     Route::get('/about/delete/{about}', 'App\Http\Controllers\AboutController@delete')->name('about.delete');
+
+    //Product
+    Route::get('/product', 'App\Http\Controllers\ProductController@index')->name('product');
+    Route::get('/product/create', 'App\Http\Controllers\ProductController@create')->name('product.create');
+    Route::post('/product/store', 'App\Http\Controllers\ProductController@store')->name('product.store');
+    Route::get('/product/edit/{id}', 'App\Http\Controllers\ProductController@edit')->name('product.edit');
+    Route::post('/product/update/{id}', 'App\Http\Controllers\ProductController@update')->name('product.update');
+    Route::get('/product/delete/{product}', 'App\Http\Controllers\ProductController@delete')->name('product.delete');
 });
 
 require __DIR__ . '/auth.php';

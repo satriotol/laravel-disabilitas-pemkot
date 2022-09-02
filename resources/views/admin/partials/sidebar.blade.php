@@ -45,6 +45,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('product') }}" class="nav-link {{ active_class(['product']) }}">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Product
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['kategori']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
