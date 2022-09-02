@@ -28,8 +28,8 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="descriptiom">Description</label>
-                                    <input type="text" name="description" class="form-control" id="description"
-                                        placeholder="Enter description's Here ">
+                                    <textarea type="text" name="description" class="form-control" id="description"
+                                        placeholder="Enter description's Here "></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Gambar</label>

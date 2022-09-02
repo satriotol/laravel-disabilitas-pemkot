@@ -28,7 +28,7 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="description">Description</label>
-                      <input type="text" name="description" class="form-control" id="description" value="{{ $about->description }}">
+                      <textarea type="text" name="description" class="form-control" id="description" value="{{ $about->description }}"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Gambar</label>
