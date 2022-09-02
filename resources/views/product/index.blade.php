@@ -49,9 +49,6 @@
                             <td>{{ $p->discount_price }}</td>
                             <td>{{ $p->description }}</td>
                             <td>{{ $p->stock }}</td>
-                            <td>
-
-                            <td>
                                 <a href="{{ route('product.edit', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
                                 <a href="{{ route('product.delete', $p->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
