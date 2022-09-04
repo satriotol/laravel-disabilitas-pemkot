@@ -10,6 +10,11 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+    <style>
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -31,22 +36,21 @@
                     SEMARANG</a>.</strong>
             All rights reserved.
         </footer>
-
-        <aside class="control-sidebar control-sidebar-dark">
-        </aside>
     </div>
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-    <!-- bs-custom-file-input -->
     <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
-    <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
     <script>
         $(function() {
-            bsCustomFileInput.init();
-        });
+            $('.form-group:has(input[required]) > label')
+                .after('<span class="required"> *</span>')
+            $('.form-group:has(select[required]) > label')
+                .after('<span class="required"> *</span>')
+            $('.form-group:has(textarea[required]) > label')
+                .after('<span class="required"> *</span>')
+        })
     </script>
 </body>
 
