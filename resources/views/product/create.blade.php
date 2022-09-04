@@ -54,7 +54,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Stock</label>
-                        <input type="text" name="stock" class="form-control" id="exampleInputtext" placeholder="enter Stock"></textarea>
+                        <input type="text" name="stock" class="form-control" id="exampleInputtext" placeholder="enter Stock">
                     </div>
                   </div>
                   <!-- /.card-body -->

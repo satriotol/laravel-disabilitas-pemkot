@@ -44,8 +44,42 @@ class ProductController extends Controller
 
         $product->save();
 
-        Session::flash('flash_message', 'Data peminjam berhasil disimpan');
+        Session::flash('flash_message', 'Data Product berhasil disimpan');
 
+        return redirect('/product');
+    }
+
+    public function edit($id)
+    {
+        $product = Product::Find($id);
+        $list_category = Category::pluck('name', 'id');
+        return view('product.edit', compact('product', 'list_category'));
+    }
+
+    public function update(Request $request, $id){
+        $product = Product::find($id);
+        $product->category_id = $request->category_id;
+        $product->user_id = Auth::user()->id;
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->discount_price = $request->discount_price;
+        $product->description = $request->description;
+        $product->stock = $request->stock;
+
+        $product->update();
+
+        Session::flash('flash_message', 'Data Product berhasil disimpan');
+
+        return redirect('/product');
+    }
+
+    public function delete($id){
+        //menghapus data pada tabel data_peminjam
+        $product = Product::find($id);
+        $product->delete();
+
+        Session::flash('flash_message', 'Data Product berhasil dihapus');
+        Session::flash('penting', true);
         return redirect('/product');
     }
 }
