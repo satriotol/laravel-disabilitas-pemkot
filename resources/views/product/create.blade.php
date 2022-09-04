@@ -16,17 +16,13 @@
           <div class="row">
             <!-- left column -->
             <div class="col-md-12">
-              <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
                   <h3 class="card-title">Create Products</h3>
                 </div>
-                <!-- /.card-header -->
-                <!-- form start -->
                 <form method="POST" action="{{ route('product.store') }}">
                   <div class="card-body">
                     @csrf
-
                     <div class="form-group">
                         <label>Select Kategori</label>
                         <select name="category_id" class="form-control">
