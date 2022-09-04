@@ -45,7 +45,6 @@ class ProductController extends Controller
         $product->stock = $request->stock;
 
         $product->save();
-
         Session::flash('flash_message', 'Data Product berhasil disimpan');
 
         return redirect('/product');
