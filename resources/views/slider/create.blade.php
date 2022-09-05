@@ -35,8 +35,8 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Diskripsi Slider</label>
-                        <textarea type="text" name="description" class="form-control" id="exampleInputtext"  required placeholder="Masukkan Deskripsi Slider"
-                        value="{{ isset($slider) ? $slider->description : '' }}"></textarea>
+                        <textarea type="text" name="description" class="form-control" required placeholder="Masukkan Deskripsi Slider">
+                        {{ isset($slider) ? $slider->description : '' }}></textarea>
                       </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Gambar</label>
