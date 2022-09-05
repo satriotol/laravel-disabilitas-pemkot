@@ -28,12 +28,12 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="question">Question</label>
-                                    <input type="text" name="question" class="form-control" id="question"
+                                    <input type="text" name="question" class="form-control" required
                                         placeholder="Enter Question Here" value={{ isset($faq) ? $faq->question : '' }} >
                                 </div>
                                 <div class="form-group">
                                     <label for="answer">Answer</label>
-                                    <input type="text" name="answer" class="form-control" id="answer"
+                                    <input type="text" name="answer" class="form-control" required
                                         placeholder="Enter Answer Here" value={{ isset($faq) ? $faq->answer : ''}} >
                                 </div>
                             </div>
