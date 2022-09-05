@@ -93,18 +93,22 @@ class ProductController extends Controller
         return view('product.create_detail', compact('product', 'product_images'));
     }
 
-    public function store_detail(Request $request, ProductImage $product_images)
+    public function store_detail(Request $request, Product $product)
     {
         $this->validate($request, [
             'image' => 'required|image|mimes:jpeg, jpg, png'
         ]);
+        $foto_image = $request->image;
+        $nama_file = time() . '.' . $foto_image->getClientOriginalExtension();
+        $foto_image->move('gambar/', $nama_file);
 
-        $product_images->product_id = Auth::Product()->id;
-
-        $product->save();
+        $product_image = new ProductImage;
+        $product_image->product_id = $product->id;
+        $product_image->image = $nama_file;
+        $product_image->save();
         Session::flash('flash_message', 'Data Product berhasil disimpan');
 
-        return redirect('/product/detail/{id}');
+        return redirect(route('product.detail', $product->id));
     }
 
     public function delete(Product $product)

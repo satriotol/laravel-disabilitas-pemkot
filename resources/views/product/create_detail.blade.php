@@ -20,7 +20,8 @@
                             <h3 class="card-title">Product</h3>
                         </div>
                         <form method="POST"
-                            action="@isset($product_images) {{ route('product.update_detail', $product_images->id) }} @endisset @empty($product_images) {{ route('product.store_detail') }} @endempty" enctype="multipart/form-data">
+                            action="@isset($product_image) {{ route('product.update_detail', $product_image->id) }} @endisset @empty($product_image) {{ route('product.store_detail', $product->id) }} @endempty"
+                            enctype="multipart/form-data">
                             <div class="card-body">
                                 @include('partials.errors')
                                 @csrf
@@ -29,7 +30,7 @@
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" name="image" class="custom-file-input"
-                                            value={{ isset($product_images) ? $product_images->image : '' }}>
+                                                value={{ isset($product_image) ? $product_image->image : '' }}>
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
                                         <div class="input-group-append">
@@ -37,9 +38,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
                         </form>
                     </div>
                 </div>
