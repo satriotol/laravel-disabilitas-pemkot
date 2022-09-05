@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Storage;
@@ -79,6 +80,13 @@ class ProductController extends Controller
 
         return redirect('/product');
     }
+
+    public function detail(Product $product)
+    {
+        $product_images = ProductImage::where('product_id', $product->id)->get();
+        return view('product.detail', compact('product', 'product_images'));
+    }
+
 
     public function delete(Product $product)
     {
