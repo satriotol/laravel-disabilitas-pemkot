@@ -38,7 +38,7 @@ class FaqController extends Controller
     public function edit($id)
     {
         $faq = Faq::Find($id);
-        return view('faq.', compact('faq'));
+        return view('faq.create', compact('faq'));
     }
 
     public function update(Request $request, $id)

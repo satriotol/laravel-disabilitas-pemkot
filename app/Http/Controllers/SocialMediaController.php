@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SocialMedia;
 
-use Session;
+use Illuminate\Support\Facades\Session;
 
 use Storage;
 
@@ -45,15 +45,18 @@ class SocialMediaController extends Controller
         return redirect('/socialmedia');
     }
 
-    public function edit($id)
+    public function edit(SocialMedia $socialmedia)
     {
-        $socialmedia = SocialMedia::Find($id);
-        return view('socialmedia.edit', compact('socialmedia'));
+        return view('socialmedia.create', compact('socialmedia'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, SocialMedia $socialmedia)
     {
-        $socialmedia = SocialMedia::find($id);
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'required|image|mimes:jpeg, jpg, png',
+            'url' => 'required'
+        ]);
         if ($request->image) {
             $foto_socialmedia = $request->image;
             $nama_file = time() . '.' . $foto_socialmedia->getClientOriginalExtension();
