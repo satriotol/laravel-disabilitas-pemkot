@@ -19,24 +19,26 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Create Categories</h3>
+                            <h3 class="card-title">Category</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="POST" action="{{ route('kategori.store') }}" enctype="multipart/form-data">
-                            @csrf
+                        <form method="POST"
+                            action="@isset($kategori) {{ route('kategori.update', $kategori->id) }} @endisset @empty($kategori) {{ route('kategori.store') }} @endempty" enctype="multipart/form-data">
                             <div class="card-body">
+                                @include('partials.errors')
+                                @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Kategori</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter Category's Name ">
+                                    <input type="text" name="name" class="form-control" required
+                                        placeholder="Masukkan Nama Kategori" value= {{ isset($kategori) ? $kategori->name : '' }} >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input"
-                                                id="exampleInputFile">
+                                            <input type="file" name="image" class="custom-file-input" required
+                                                value={{ isset($kategori) ? $kategori->image : '' }} >
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
                                         <div class="input-group-append">

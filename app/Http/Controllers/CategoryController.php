@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 use Storage;
 
@@ -41,15 +41,19 @@ class CategoryController extends Controller
         return redirect('/category');
     }
 
-    public function edit($id)
+    public function edit(Category $kategori)
     {
-        $kategori = Category::Find($id);
-        return view('kategori.edit', compact('kategori'));
+        return view('kategori.create', compact('kategori'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $kategori)
     {
-        $kategori = Category::find($id);
+        $this->validate($request, [
+            'id' => 'required',
+            'name' => 'required',
+            'image' => 'required|image|mimes:jpeg, jpg, png'
+        ]);
+
         if ($request->image) {
             $foto_kategori = $request->image;
             $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
@@ -64,9 +68,9 @@ class CategoryController extends Controller
         return redirect('/category');
     }
 
-    public function delete(Category $category)
+    public function delete(Category $kategori)
     {
-        $category->delete();
+        $kategori->delete();
         Session::flash('flash_message', 'Data kategori berhasil dihapus');
         return redirect('/category');
     }
