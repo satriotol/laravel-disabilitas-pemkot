@@ -30,16 +30,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/slider', 'App\Http\Controllers\SliderController@index')->name('slider');
     Route::get('/slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
     Route::post('/slider/store', 'App\Http\Controllers\SliderController@store')->name('slider.store');
-    Route::get('/slider/edit/{id}', 'App\Http\Controllers\SliderController@edit')->name('slider.edit');
-    Route::post('/slider/update/{id}', 'App\Http\Controllers\SliderController@update')->name('slider.update');
+    Route::get('/slider/edit/{slider}', 'App\Http\Controllers\SliderController@edit')->name('slider.edit');
+    Route::post('/slider/update/{slider}', 'App\Http\Controllers\SliderController@update')->name('slider.update');
     Route::get('/slider/delete/{slider}', 'App\Http\Controllers\SliderController@delete')->name('slider.delete');
 
     // Social Media
     Route::get('/socialmedia', 'App\Http\Controllers\SocialMediaController@index')->name('socialmedia');
     Route::get('/socialmedia/create', 'App\Http\Controllers\SocialMediaController@create')->name('socialmedia.create');
     Route::post('/socialmedia/store', 'App\Http\Controllers\SocialMediaController@store')->name('socialmedia.store');
-    Route::get('/socialmedia/edit/{id}', 'App\Http\Controllers\SocialMediaController@edit')->name('socialmedia.edit');
-    Route::post('/socialmedia/update/{id}', 'App\Http\Controllers\SocialMediaController@update')->name('socialmedia.update');
+    Route::get('/socialmedia/edit/{socialmedia}', 'App\Http\Controllers\SocialMediaController@edit')->name('socialmedia.edit');
+    Route::post('/socialmedia/update/{socialmedia}', 'App\Http\Controllers\SocialMediaController@update')->name('socialmedia.update');
     Route::get('/socialmedia/delete/{socialmedia}', 'App\Http\Controllers\SocialMediaController@delete')->name('socialmedia.delete');
 
     //FAQ
