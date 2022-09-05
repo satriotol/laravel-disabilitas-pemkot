@@ -24,7 +24,7 @@
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form method="POST"
-                action="@isset($user) {{ route('user.update', $user->id) }} @endisset @empty($user) {{ route('user.store') }} @endempty">
+                action="">
                   <div class="card-body">
                     @include('partials.errors')
                     @csrf
@@ -36,19 +36,14 @@
                     <div class="form-group">
                         <label for="exampleInputText">Email</label>
                         <input type="text" name="email" class="form-control" required
-                        placeholder="Masukkan Email" value={{isset($user) ? $user->name : '' }} >
+                        placeholder="Masukkan Email" value={{isset($user) ? $user->email : '' }} >
                       </div>
                       <div>
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
                         <div class="col-md-6">
-                            <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                name="password_confirmation"
-                                required autocomplete="new-password">
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                            <label for="exampleInputText">Password</label>
+                            <input type="password" name="password" class="form-control" required
+                            placeholder="Masukkan Password" value={{isset($user) ? $user->password : '' }} >
                         </div>
                     </div>
                   <!-- /.card-body -->

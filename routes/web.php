@@ -17,6 +17,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'App\Http\Controllers\AdminController@tabel1')->name('tabel.1');
     Route::get('/admin1', 'App\Http\Controllers\AdminController@tabel2')->name('tabel.2');
     Route::get('/admin2', 'App\Http\Controllers\AdminController@tabel3')->name('tabel.3');
+    Route::get('/user', 'App\Http\Controllers\AdminController@user')->name('user');
 
     // Category
     Route::get('/category', 'App\Http\Controllers\CategoryController@index')->name('kategori');
@@ -72,11 +73,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //users
     Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user');
-    Route::get('/user/create', 'App\Http\Controllers\UserController@create')->name('user.create');
-    Route::post('/user/store', 'App\Http\Controllers\UserController@store')->name('user.store');
-    Route::get('/user/edit/{user}', 'App\Http\Controllers\UserController@edit')->name('user.edit');
-    Route::post('/user/update/{user}', 'App\Http\Controllers\UserController@update')->name('user.update');
-    Route::get('/user/delete/{user}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
+
 });
 
 require __DIR__ . '/auth.php';
