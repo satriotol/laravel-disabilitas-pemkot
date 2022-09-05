@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Models\Slider;
-use Session;
 use Storage;
 
 
@@ -46,25 +46,29 @@ class SliderController extends Controller
     public function edit($id)
     {
         $slider = Slider::Find($id);
-        return view('slider.edit', compact('slider'));
+        return view('slider.create', compact('slider'));
     }
 
     public function update(Request $request, $id)
     {
-        $slider = Slider::find($id);
-        if ($request->image) {
-            $foto_slider = $request->image;
-            $nama_file = time() . '.' . $foto_slider->getClientOriginalExtension();
-            $foto_slider->move('gambar/', $nama_file);
-            $slider->image = $nama_file;
-        }
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg'
+        ]);
+        $foto_slider = $request->image;
+        $nama_file = time().'.'.$foto_slider->getClientOriginalExtension();
+        $foto_slider->move('gambar/', $nama_file);
+
+        $slider = new Slider;
         $slider->name = $request->name;
         $slider->description = $request->description;
-        $slider->update();
+        $slider->image = $nama_file;
+        $slider->save();
 
-        Session::flash('flash_message', 'Data Slider berhasil diupdate');
+        Session::flash('flash_message', 'Slider berhasil disimpan');
 
-        return redirect('/slider');
+    	return redirect('/slider');
     }
 
     public function delete(Slider $slider)
