@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Models\Faq;
 
 class FaqController extends Controller
@@ -27,22 +28,33 @@ class FaqController extends Controller
         $faq = new Faq;
         $faq->question = $request->question;
         $faq->answer = $request->answer;
+
         $faq->save();
+        Session::flash('flash_message', 'Data FAQ berhasil disimpan');
+
         return redirect('/faq');
     }
 
     public function edit($id)
     {
         $faq = Faq::Find($id);
-        return view('faq.edit', compact('faq'));
+        return view('faq.', compact('faq'));
     }
 
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
         $faq = Faq::find($id);
         $faq->question = $request->question;
         $faq->answer = $request->answer;
+
         $faq->update();
+
+        Session::flash('flash_message', 'Data FAQ berhasil disimpan');
 
         return redirect('/faq');
     }
@@ -50,6 +62,9 @@ class FaqController extends Controller
     public function delete(Faq $faq)
     {
         $faq->delete();
+
+        Session::flash('flash_message', 'Data FAQ berhasil dihapus');
+        Session::flash('penting', true);
         return redirect('/faq');
     }
 }
