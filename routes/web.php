@@ -46,7 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/faq', 'App\Http\Controllers\FaqController@index')->name('faq');
     Route::get('/faq/create', 'App\Http\Controllers\FaqController@create')->name('faq.create');
     Route::post('/faq/store', 'App\Http\Controllers\FaqController@store')->name('faq.store');
-    Route::get('/faq/edit/{id}', 'App\Http\Controllers\FaqController@edit')->name('faq.edit');
+    Route::get('/faq/edit/{faq}', 'App\Http\Controllers\FaqController@edit')->name('faq.edit');
     Route::post('/faq/update/{id}', 'App\Http\Controllers\FaqController@update')->name('faq.update');
     Route::get('/faq/delete/{faq}', 'App\Http\Controllers\FaqController@delete')->name('faq.delete');
 
@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/about', 'App\Http\Controllers\AboutController@index')->name('about');
     Route::get('/about/create', 'App\Http\Controllers\AboutController@create')->name('about.create');
     Route::post('/about/store', 'App\Http\Controllers\AboutController@store')->name('about.store');
-    Route::get('/about/edit/{id}', 'App\Http\Controllers\AboutController@edit')->name('about.edit');
+    Route::get('/about/edit/{about}', 'App\Http\Controllers\AboutController@edit')->name('about.edit');
     Route::post('/about/update/{id}', 'App\Http\Controllers\AboutController@update')->name('about.update');
     Route::get('/about/delete/{about}', 'App\Http\Controllers\AboutController@delete')->name('about.delete');
 
