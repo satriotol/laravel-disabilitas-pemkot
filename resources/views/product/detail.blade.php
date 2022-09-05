@@ -20,21 +20,14 @@
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="{{ route('product.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <a href="{{ route('product_detail.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th style="width: 50px">Id</th>
-                            <th>Kategori</th>
-                            <th>
-                                User
-                            </th>
-                            <th>Nama</th>
-                            <th>Harga</th>
-                            <th>Harga Diskon</th>
-                            <th>Deskripsi</th>
-                            <th>Stock</th>
+                            <th>Product</th>
+                            <th>image</th>
                             <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
@@ -42,16 +35,12 @@
                         <tr>
                         @foreach ($product as $p)
                             <td>{{ $p->id }}</td>
-                            <td>{{ $p->category->name }}</td>
-                            <td>{{ $p->user->name }}</td>
-                            <td>{{ $p->name }}</td>
-                            <td>{{ $p->price }}</td>
-                            <td>{{ $p->discount_price }}</td>
-                            <td>{{ $p->description }}</td>
-                            <td>{{ $p->stock }}</td>
+                            <td>{{ $p->product->name }}</td>
+                            <td>
+                                <img src="{{ asset('gambar/'.$k->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
+                            </td>
                             <td>
                                 <a href="{{ route('product.edit', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <a href="{{ route('product.detail', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-success">Detail</button></a>
                                 <a href="{{ route('product.delete', $p->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>

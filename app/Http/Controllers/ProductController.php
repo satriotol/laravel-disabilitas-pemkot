@@ -80,6 +80,16 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
+    public function detail(Product $product)
+    {
+        return view('product.detail', compact('product'));
+    }
+
+    public function create_detail(Product $product)
+    {
+        return view('product.create_detail', compact('product'));
+    }
+
     public function delete(Product $product)
     {
         $product->delete();
