@@ -20,54 +20,27 @@
                             <h3 class="card-title">Product</h3>
                         </div>
                         <form method="POST"
-                            >
+                            action="@isset($product_image) {{ route('product.update_detail', $product_image->id) }} @endisset @empty($product_image) {{ route('product.store_detail', $product->id) }} @endempty"
+                            enctype="multipart/form-data">
                             <div class="card-body">
                                 @include('partials.errors')
                                 @csrf
                                 <div class="form-group">
-                                    <label>Pilih Kategori</label>
-                                    <select name="category_id" class="form-control" required>
-                                        <option value="">Pilih Kategori</option>
-                                        @foreach ($list_category as $key => $value)
-                                            <option value="{{ $key }}"
-                                                @isset($product)
-                                            {{ $product->category_id == $key ? 'selected' : '' }}
-                                            @endisset>
-                                                {{ $value }}
-                                            </option>
-                                        @endforeach
-                                    </select>
+                                    <label for="exampleInputFile">Gambar</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" name="image" class="custom-file-input"
+                                                value={{ isset($product_image) ? $product_image->image : '' }}>
+                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">Upload</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Nama Produk</label>
-                                    <input type="text" name="name" class="form-control" required
-                                        placeholder="Masukan Nama Produk" value={{isset($product) ? $product->name : '' }} >
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
-                                <div class="form-group">
-                                    <label>Harga</label>
-                                    <input required type="number" name="price" class="form-control" placeholder="Masukan Harga"
-                                        value="{{ isset($product) ? $product->price : '' }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Harga Diskon</label>
-                                    <input type="number" name="discount_price" class="form-control"
-                                        placeholder="Masukan Harga Diskon"
-                                        value="{{ isset($product) ? $product->discount_price : '' }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Deskripsi</label>
-                                    <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($product) ? $product->description : '' }}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Stok Produk</label>
-                                    <input required type="number" name="stock" class="form-control"
-                                        placeholder="Masukan Jumlah Stok"
-                                        value="{{ isset($product) ? $product->stock : '' }}">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
                         </form>
                     </div>
                 </div>

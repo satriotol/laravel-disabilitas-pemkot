@@ -20,7 +20,7 @@
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="#"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <a href="{{ route('product.create_detail', $product->id) }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
