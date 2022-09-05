@@ -22,9 +22,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/category', 'App\Http\Controllers\CategoryController@index')->name('kategori');
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('kategori.create');
     Route::post('/category/store', 'App\Http\Controllers\CategoryController@store')->name('kategori.store');
-    Route::get('/category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('kategori.edit');
-    Route::post('/category/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('kategori.update');
-    Route::get('/category/delete/{category}', 'App\Http\Controllers\CategoryController@delete')->name('kategori.delete');
+    Route::get('/category/edit/{kategori}', 'App\Http\Controllers\CategoryController@edit')->name('kategori.edit');
+    Route::post('/category/update/{kategori}', 'App\Http\Controllers\CategoryController@update')->name('kategori.update');
+    Route::get('/category/delete/{kategori}', 'App\Http\Controllers\CategoryController@delete')->name('kategori.delete');
 
     // Slider
     Route::get('/slider', 'App\Http\Controllers\SliderController@index')->name('slider');
