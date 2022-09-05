@@ -114,9 +114,7 @@ class ProductController extends Controller
     public function delete_detail(ProductImage $product_image)
     {
         $product_image->delete();
-
         Session::flash('flash_message', 'Data Product berhasil dihapus');
-
         return back();
     }
 
