@@ -42,8 +42,7 @@
                       <label for="exampleInputFile">Gambar</label>
                       <div class="input-group">
                         <div class="custom-file">
-                          <input type="file" name="image" class="custom-file-input" required id="exampleInputFile"
-                          value="{{ isset($slider) ? $slider->image : '' }}">
+                          <input type="file" name="image" class="custom-file-input" required value="{{ isset($slider) ? $slider->image : '' }}">
                           <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
                         <div class="input-group-append">
