@@ -20,7 +20,7 @@
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="{{ route('product_detail.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <a href="#"><button type="button" class="btn bg-gradient-primary">Create</button></a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
@@ -33,11 +33,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                        @foreach ($product as $p)
+                        @foreach ($productimage as $p)
                             <td>{{ $p->id }}</td>
                             <td>{{ $p->product->name }}</td>
                             <td>
-                                <img src="{{ asset('gambar/'.$k->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
+                                <img src="{{ asset('gambar/'.$p->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
                             </td>
                             <td>
                                 <a href="{{ route('product.edit', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>

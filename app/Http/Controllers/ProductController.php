@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Storage;
@@ -80,15 +81,12 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
-    public function detail(Product $product)
+    public function detail(ProductImage $productimage)
     {
-        return view('product.detail', compact('product'));
+        $list_product = Product::pluck('name', 'id');
+        return view('product.detail', compact('productimage', 'list_product'));
     }
 
-    public function create_detail(Product $product)
-    {
-        return view('product.create_detail', compact('product'));
-    }
 
     public function delete(Product $product)
     {
