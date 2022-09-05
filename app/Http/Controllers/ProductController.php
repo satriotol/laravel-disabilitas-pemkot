@@ -111,6 +111,15 @@ class ProductController extends Controller
         return redirect(route('product.detail', $product->id));
     }
 
+    public function delete_detail(ProductImage $product_image)
+    {
+        $product_image->delete();
+
+        Session::flash('flash_message', 'Data Product berhasil dihapus');
+
+        return back();
+    }
+
     public function delete(Product $product)
     {
         $product->delete();
