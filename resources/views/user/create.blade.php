@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Slider</h1>
+                    <h1>User</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -19,37 +19,38 @@
               <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Sliders</h3>
+                  <h3 class="card-title">User</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form method="POST"
-                action="@isset($slider) {{ route('slider.update', $slider->id) }} @endisset @empty($slider) {{ route('slider.store') }} @endempty" enctype="multipart/form-data">
+                action="@isset($user) {{ route('user.update', $user->id) }} @endisset @empty($user) {{ route('user.store') }} @endempty">
                   <div class="card-body">
                     @include('partials.errors')
                     @csrf
                     <div class="form-group">
-                      <label>Nama Slider</label>
+                      <label>Nama</label>
                       <input type="text" name="name" class="form-control" required
-                       placeholder="Masukkan Nama Slider" value={{isset($slider) ? $slider->name : '' }} >
+                       placeholder="Masukkan Nama" value={{isset($user) ? $user->name : '' }} >
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputText">Diskripsi Slider</label>
-                        <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($slider) ? $slider->description : '' }}</textarea>
+                        <label for="exampleInputText">Email</label>
+                        <input type="text" name="email" class="form-control" required
+                        placeholder="Masukkan Email" value={{isset($user) ? $user->name : '' }} >
                       </div>
-                    <div class="form-group">
-                      <label for="exampleInputFile">Gambar</label>
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" name="image" class="custom-file-input" required value={{ isset($slider) ? $slider->image : '' }}>
-                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      <div>
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                name="password_confirmation"
+                                required autocomplete="new-password">
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                         </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text">Upload</span>
-                        </div>
-                      </div>
                     </div>
-                  </div>
                   <!-- /.card-body -->
 
                   <div class="card-footer">

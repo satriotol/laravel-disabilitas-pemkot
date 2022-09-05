@@ -68,6 +68,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/product/detail/create_detail/{product}','App\Http\Controllers\ProductController@create_detail')->name('product_detail.create');
 
     Route::get('/product/delete/{product}', 'App\Http\Controllers\ProductController@delete')->name('product.delete');
+
+    //users
+    Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user');
+    Route::get('/user/create', 'App\Http\Controllers\UserController@create')->name('user.create');
+    Route::post('/user/store', 'App\Http\Controllers\UserController@store')->name('user.store');
+    Route::get('/user/edit/{user}', 'App\Http\Controllers\UserController@edit')->name('user.edit');
+    Route::post('/user/update/{user}', 'App\Http\Controllers\UserController@update')->name('user.update');
+    Route::get('/user/delete/{user}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
 });
 
 require __DIR__ . '/auth.php';
