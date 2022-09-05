@@ -21,20 +21,20 @@
                         <div class="card-header">
                             <h3 class="card-title">Create FAQ</h3>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form method="POST" action="{{ route('faq.store') }}">
-                            @csrf
+                        <form method="POST"
+                        action="@isset($faq) {{ route('faq.update', $faq->id) }} @endisset @empty($faq) {{ route('faq.store') }} @endempty ">
                             <div class="card-body">
+                                @include('partials.errors')
+                                @csrf
                                 <div class="form-group">
                                     <label for="question">Question</label>
                                     <input type="text" name="question" class="form-control" id="question"
-                                        placeholder="Enter Question Here">
+                                        placeholder="Enter Question Here" value={{ isset($faq) ? $faq->question : '' }} >
                                 </div>
                                 <div class="form-group">
                                     <label for="answer">Answer</label>
                                     <input type="text" name="answer" class="form-control" id="answer"
-                                        placeholder="Enter Answer Here">
+                                        placeholder="Enter Answer Here" value={{ isset($faq) ? $faq->answer : ''}} >
                                 </div>
                             </div>
                             <!-- /.card-body -->
