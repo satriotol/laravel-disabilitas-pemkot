@@ -26,8 +26,7 @@
                                 <div class="form-group">
                                     <label for="descriptiom">Description</label>
                                     <textarea type="text" name="description" class="form-control" required
-                                        placeholder="Enter description's Here " value={{ isset($about) ? $about->description :'' }} >
-                                    </textarea>
+                                        placeholder="Enter description's Here ">{{ isset($about) ? $about->description : '' }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Gambar</label>
