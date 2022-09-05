@@ -23,13 +23,15 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="POST" action="{{ route('about.store') }}" enctype="multipart/form-data">
-                            @csrf
+                        <form method="POST"
+                        action="@isset($about){{ route('about.update',$about->id) }} @endisset @empty($about) {{ route('about.store') }} @endempty" enctype="multipart/form-data">
                             <div class="card-body">
+                                @include('partials.errors')
+                                @csrf
                                 <div class="form-group">
                                     <label for="descriptiom">Description</label>
                                     <textarea type="text" name="description" class="form-control" id="description"
-                                        placeholder="Enter description's Here "></textarea>
+                                        placeholder="Enter description's Here " value={{ isset($about) ?$about->description :'' }}></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Gambar</label>
