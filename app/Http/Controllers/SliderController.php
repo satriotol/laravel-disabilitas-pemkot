@@ -43,28 +43,28 @@ class SliderController extends Controller
     	return redirect('/slider');
     }
 
-    public function edit($id)
+    public function edit(Slider $slider)
     {
-        $slider = Slider::Find($id);
         return view('slider.create', compact('slider'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Slider $slider)
     {
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg'
         ]);
+
+        if ($request->image){
         $foto_slider = $request->image;
         $nama_file = time().'.'.$foto_slider->getClientOriginalExtension();
         $foto_slider->move('gambar/', $nama_file);
-
-        $slider = new Slider;
+        $slider->image = $nama_file;
+        }
         $slider->name = $request->name;
         $slider->description = $request->description;
-        $slider->image = $nama_file;
-        $slider->save();
+        $slider->update();
 
         Session::flash('flash_message', 'Slider berhasil disimpan');
 
