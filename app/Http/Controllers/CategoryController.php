@@ -49,7 +49,6 @@ class CategoryController extends Controller
     public function update(Request $request, Category $kategori)
     {
         $this->validate($request, [
-            'id' => 'required',
             'name' => 'required',
             'image' => 'required|image|mimes:jpeg, jpg, png'
         ]);
