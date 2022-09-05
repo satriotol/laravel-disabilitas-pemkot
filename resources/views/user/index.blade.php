@@ -20,7 +20,7 @@
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="#"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <a href="{{ route('user.create') }}""><button type="button" class="btn bg-gradient-primary">Create</button></a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
@@ -40,8 +40,8 @@
                             <td>{{ $u->email}}</td>
                             <td>{{ $u->password }}</td>
                             <td>
-                                <a href="#"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <a href="#"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
+                                <a href="{{ route('user.edit', $u->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
+                                <a href="{{ route('user.delete', $u->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach
