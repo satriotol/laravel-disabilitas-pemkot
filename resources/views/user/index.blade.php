@@ -20,7 +20,7 @@
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
-                    <a href="{{ route('user.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
+                    <a href="#"><button type="button" class="btn bg-gradient-primary">Create</button></a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
@@ -36,11 +36,12 @@
                         <tr>
                             @foreach ($user as $u)
                             <td>{{ $u->id }}</td>
-                            <td>{{ $u->Nama }}</td>
-                            <td>{{ $u->Email}}</td>
+                            <td>{{ $u->name }}</td>
+                            <td>{{ $u->email}}</td>
+                            <td>{{ $u->password }}</td>
                             <td>
-                                <a href="{{ route('user.edit', $f->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                <a href="{{ route('user.delete', $f->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
+                                <a href="#"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
+                                <a href="#"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
                         </tr>
                         @endforeach
