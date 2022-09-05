@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Product</h1>
+                    <h1>{{$product->name}}</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -16,7 +16,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tabel Product</h3>
+                <h3 class="card-title">Tabel {{$product->name}}</h3>
             </div>
             <div class="card-body">
                 <div class="text-right mb-2">
@@ -33,7 +33,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                        @foreach ($productimage as $p)
+                        @foreach ($product_images as $p)
                             <td>{{ $p->id }}</td>
                             <td>{{ $p->product->name }}</td>
                             <td>

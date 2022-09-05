@@ -81,10 +81,10 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
-    public function detail(ProductImage $productimage)
+    public function detail(Product $product)
     {
-        $list_product = Product::pluck('name', 'id');
-        return view('product.detail', compact('productimage', 'list_product'));
+        $product_images = ProductImage::where('product_id', $product->id)->get();
+        return view('product.detail', compact('product', 'product_images'));
     }
 
 
