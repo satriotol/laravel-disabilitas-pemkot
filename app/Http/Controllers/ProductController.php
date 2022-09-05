@@ -87,6 +87,25 @@ class ProductController extends Controller
         return view('product.detail', compact('product', 'product_images'));
     }
 
+    public function create_detail(Product $product)
+    {
+        $product_images = ProductImage::pluck('id', 'image');
+        return view('product.create_detail', compact('product', 'product_images'));
+    }
+
+    public function store_detail(Request $request, ProductImage $product_images)
+    {
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpeg, jpg, png'
+        ]);
+
+        $product_images->product_id = Auth::Product()->id;
+
+        $product->save();
+        Session::flash('flash_message', 'Data Product berhasil disimpan');
+
+        return redirect('/product/detail/{id}');
+    }
 
     public function delete(Product $product)
     {
