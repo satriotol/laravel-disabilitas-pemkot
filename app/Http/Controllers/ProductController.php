@@ -116,7 +116,6 @@ class ProductController extends Controller
         $product->delete();
 
         Session::flash('flash_message', 'Data Product berhasil dihapus');
-        Session::flash('penting', true);
         return redirect('/product');
     }
 }
