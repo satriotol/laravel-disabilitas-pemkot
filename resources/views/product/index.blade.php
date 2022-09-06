@@ -25,7 +25,7 @@
                 </div>
                 <table class="table table-bordered">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center;">
                             <th style="width: 50px">Id</th>
                             <th>Kategori</th>
                             <th>

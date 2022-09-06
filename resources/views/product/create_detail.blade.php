@@ -26,20 +26,18 @@
                                 @include('partials.errors')
                                 @csrf
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Gambar</label>
-                                    <div class="input-group">
+                                    <label for="gambar">Gambar</label>
+                                    <div class="input-group mb-3">
                                         <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input"
+                                            <input type="file" name="image" class="form-control" id="inputGroupFile01"
                                                 value={{ isset($product_image) ? $product_image->image : '' }}>
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a href="{{ url()->previous() }}" class="btn btn-outline-secondary">Back</a>
                                 </div>
                         </form>
                     </div>
