@@ -24,7 +24,7 @@
                 </div>
                 <table class="table table-bordered">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center">
                             <th style="width: 50px">Id</th>
                             <th>Kategori</th>
                             <th>
@@ -35,11 +35,11 @@
                             <th>Harga Diskon</th>
                             <th>Deskripsi</th>
                             <th>Stock</th>
-                            <th style="width: 150px">Action</th>
+                            <th style="width: 200px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr style="text-align: center">
                         @foreach ($product as $p)
                             <td>{{ $p->id }}</td>
                             <td>{{ $p->category->name }}</td>
