@@ -19,7 +19,7 @@
                             <h3 class="card-title">Create About</h3>
                         </div>
                         <form method="POST"
-                        action="@isset($about){{ route('about.update',$about->id) }} @endisset @empty($about) {{ route('about.store') }} @endempty" enctype="multipart/form-data">
+                        action="@isset($about){{ route('about.update',$about->id) }} @endisset @empty($about) {{ route('about.store') }} @endempty" enctype="multipart/form-data" id="upload-image">
                             <div class="card-body">
                                 @include('partials.errors')
                                 @csrf
@@ -30,14 +30,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Gambar</label>
-                                    <div class="input-group">
+                                    <div class="input-group mb-3">
                                         <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input" required
+                                            <input type="file" name="image" class="form-control" id="inputGroupFile01"required
                                                 value={{ isset($about) ? $about->image : '' }} >
-                                            <label class="custom-file-label" for="image">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
                                         </div>
                                     </div>
                                 </div>
