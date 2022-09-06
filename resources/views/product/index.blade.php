@@ -25,7 +25,7 @@
                 </div>
                 <table class="table table-bordered">
                     <thead>
-                        <tr style="text-align: center">
+                        <tr>
                             <th style="width: 50px">Id</th>
                             <th>Kategori</th>
                             <th>
@@ -40,8 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-<<<<<<< HEAD
-                        <tr style="text-align: center">
+                        <tr>
                         @foreach ($product as $p)
                             <td>{{ $p->id }}</td>
                             <td>{{ $p->category->name }}</td>
@@ -56,26 +55,6 @@
                                 <a href="{{ route('product.detail', $p->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-success">Detail</button></a>
                                 <a href="{{ route('product.delete', $p->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
                             </td>
-=======
-                        <tr>
-                            @foreach ($product as $p)
-                                <td>{{ $p->id }}</td>
-                                <td>{{ $p->category->name }}</td>
-                                <td>{{ $p->user->name }}</td>
-                                <td>{{ $p->name }}</td>
-                                <td>{{ $p->price }}</td>
-                                <td>{{ $p->discount_price ?? 'Tidak Ada Diskon' }}</td>
-                                <td>{{ $p->description }}</td>
-                                <td>{{ $p->stock }}</td>
-                                <td>
-                                    <a href="{{ route('product.edit', $p->id) }}"><button type="button" name="edit"
-                                            class="btn btn-sm bg-gradient-warning">Edit</button></a>
-                                    <a href="{{ route('product.detail', $p->id) }}"><button type="button" name="edit"
-                                            class="btn btn-sm bg-gradient-success">Detail</button></a>
-                                    <a href="{{ route('product.delete', $p->id) }}"><button type="button" name="delete"
-                                            class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>
-                                </td>
->>>>>>> 9746db630127ed630c1680dcb3671fae4f169917
                         </tr>
                         @endforeach
                     </tbody>
