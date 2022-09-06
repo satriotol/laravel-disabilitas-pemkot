@@ -35,16 +35,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input" required
-                                            value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
-                                    </div>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                        <input type="file" class="form-control" id="inputGroupFile01">
+                                      </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">URL</label>
