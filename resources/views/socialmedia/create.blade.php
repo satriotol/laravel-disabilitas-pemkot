@@ -30,7 +30,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Social Media</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
+                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" required
                                         placeholder="Masukkan Nama Sosial Media" value={{ isset($socialmedia) ? $socialmedia->name : '' }}>
                                 </div>
                                 <div class="form-group">
