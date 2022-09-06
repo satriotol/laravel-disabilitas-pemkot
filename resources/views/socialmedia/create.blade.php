@@ -34,10 +34,11 @@
                                         placeholder="Masukkan Nama Sosial Media" value={{ isset($socialmedia) ? $socialmedia->name : '' }}>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Gambar</label>
-                                    <div class="custom-file">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        <input type="file" name="image" class="custom-file-input" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">Gambar</label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" name="image" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
