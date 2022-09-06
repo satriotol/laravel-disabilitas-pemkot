@@ -36,14 +36,13 @@
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group mb-3">
-                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                        <input type="file" class="form-control" id="inputGroupFile01">
+                                        <input type="file" name="image" class="form-control" required>
                                       </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">URL</label>
                                     <input type="url" name="url" class="form-control" id="exampleInputEmail1" required
-                                        placeholder="Enter URL ">
+                                        placeholder="Enter URL" value={{ isset($socialmedia) ? $socialmedia->url : '' }}>
                                 </div>
                             </div>
                             <!-- /.card-body -->
