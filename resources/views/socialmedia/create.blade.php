@@ -35,9 +35,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
-                                    <div class="input-group mb-3">
-                                        <input type="file" name="image" class="form-control" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
-                                      </div>
+                                    <div class="custom-file">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        <input type="file" name="image" class="custom-file-input" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">URL</label>
@@ -49,6 +50,8 @@
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a href="{{ url()->previous() }}" class="btn btn-outline-secondary">Back</a>
+
                             </div>
                         </form>
                     </div>
