@@ -24,18 +24,18 @@
                 </div>
                 <table class="table table-bordered">
                     <thead>
-                        <tr style="text-align: center">
+                        <tr>
                             <th style="width: 50px">Id</th>
-                            <th>Nama</th>
-                            <th>
+                            <th  style="text-align: center">Nama</th>
+                            <th  style="text-align: center">
                                 Image
                             </th>
-                            <th>URL</th>
-                            <th style="width: 150px">Action</th>
+                            <th  style="text-align: center">URL</th>
+                            <th style="width: 150px; text-align: center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="text-align: center">
+                        <tr>
                         @foreach ($socialmedia as $sm)
                             <td>{{ $sm->id }}</td>
                             <td>{{ $sm->name }}</td>
