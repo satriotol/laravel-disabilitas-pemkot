@@ -36,7 +36,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group mb-3">
-                                        <input type="file" name="image" class="form-control" required>
+                                        <input type="file" name="image" class="form-control" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
                                       </div>
                                 </div>
                                 <div class="form-group">
