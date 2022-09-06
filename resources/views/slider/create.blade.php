@@ -37,17 +37,11 @@
                         <label for="exampleInputText">Diskripsi Slider</label>
                         <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($slider) ? $slider->description : '' }}</textarea>
                       </div>
-                    <div class="form-group">
-                      <label for="exampleInputFile">Gambar</label>
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" name="image" class="custom-file-input" required value={{ isset($slider) ? $slider->image : '' }}>
-                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      <div class="form-group">
+                        <label for="exampleInputFile">Gambar</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="image" required value={{ isset($kategori) ? $kategori->image : '' }}>
                         </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text">Upload</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <!-- /.card-body -->
