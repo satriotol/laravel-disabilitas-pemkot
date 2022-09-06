@@ -37,7 +37,7 @@
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input"
+                                            <input type="file" name="image" class="custom-file-input" required
                                             value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">URL</label>
-                                    <input type="url" name="url" class="form-control" id="exampleInputEmail1"
+                                    <input type="url" name="url" class="form-control" id="exampleInputEmail1" required
                                         placeholder="Enter URL ">
                                 </div>
                             </div>
