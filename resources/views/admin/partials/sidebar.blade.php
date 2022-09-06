@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['kategori']) }}">
+                    <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['kategori','kategori.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Kategori
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('slider') }}" class="nav-link {{ active_class(['slider']) }}">
+                    <a href="{{ route('slider') }}" class="nav-link {{ active_class(['slider','slider.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Slider
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('about') }}" class="nav-link {{ active_class(['about']) }}">
+                    <a href="{{ route('about') }}" class="nav-link {{ active_class(['about','about.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             About
@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('faq') }}" class="nav-link {{ active_class(['faq']) }}">
+                    <a href="{{ route('faq') }}" class="nav-link {{ active_class(['faq','faq.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             FAQ
@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('socialmedia') }}" class="nav-link {{ active_class(['socialmedia']) }}">
+                    <a href="{{ route('socialmedia') }}" class="nav-link {{ active_class(['socialmedia','socialmedia.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Social Media
@@ -69,7 +69,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('user') }}" class="nav-link {{ active_class(['user']) }}">
+                    <a href="{{ route('user') }}" class="nav-link {{ active_class(['user','user.*']) }}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             User

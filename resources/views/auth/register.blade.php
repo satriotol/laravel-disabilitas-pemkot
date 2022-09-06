@@ -29,6 +29,8 @@
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
+                    @include('partials.errors')
+
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Full name" name="name" required
                             autofocus value="{{ old('name') }}">
