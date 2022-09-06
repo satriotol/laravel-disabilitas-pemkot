@@ -36,14 +36,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input" required
-                                                value={{ isset($kategori) ? $kategori->image : '' }} >
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
+                                        <input type="file" class="form-control" name="image" id="inputGroupFile01">
                                     </div>
                                 </div>
                             </div>
