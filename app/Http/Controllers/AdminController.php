@@ -17,4 +17,8 @@ class AdminController extends Controller
     public function tabel3(){
         return view('admin');
     }
+
+    public function dashboard(){
+        return view('dashboard1');
+    }
 }

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', 'App\Http\Controllers\AdminController@tabel1')->name('tabel.1');
+    Route::get('/', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard');
     Route::get('/user', 'App\Http\Controllers\AdminController@user')->name('user');
 
     // Category
