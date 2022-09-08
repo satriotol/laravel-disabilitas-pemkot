@@ -31,7 +31,7 @@
                             <th>
                                 User
                             </th>
-                            <th>Nama</th>
+                            <th>Nama Produk</th>
                             <th>Harga</th>
                             <th>Harga Diskon</th>
                             <th>Deskripsi</th>
