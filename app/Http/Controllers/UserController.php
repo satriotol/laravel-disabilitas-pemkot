@@ -30,7 +30,7 @@ class UserController extends Controller
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
+        $user->password = $request->password;
         $user->save();
         Session::flash('flash_message', 'Data User berhasil disimpan');
         return redirect('/user');
@@ -50,13 +50,7 @@ class UserController extends Controller
         $pass_lama = $user->password;
         $user->name = $request->name;
         $user->email = $request->email;
-        $pass_baru = $request->password;
-        if($pass_lama == $pass_baru){
-
-        }
-        else{
-            $user->password = Hash::make($request->password);
-        }
+        $user->password = $request->password;
         $user->update();
         return redirect('/user');
 
