@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label for="exampleInputText">Password</label>
                             <input type="password" name="password" class="form-control"
-                            placeholder="Masukkan Password" value={{isset($user) ? $user->password : '' }} >
+                            placeholder="Masukkan Password" >
                         </div>
                     </div>
                   <!-- /.card-body -->
