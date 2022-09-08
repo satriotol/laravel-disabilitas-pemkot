@@ -22,7 +22,7 @@
                 data-accordion="false">
                 <li class="nav-item">
                     <a href="{{ route('product') }}" class="nav-link {{ active_class(['product', 'product.*']) }}">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon fas fa-tshirt"></i>
                         <p>
                             Product
                         </p>
