@@ -36,8 +36,14 @@
                                 <div class="form-group">
                                     <label for="exampleInputFile">Gambar</label>
                                     <div class="input-group">
-                                        <input type="file" class="form-control" name="image" required value={{ isset($kategori) ? $kategori->image : '' }}>
+                                        <input type="file" class="form-control" name="image" value={{ isset($kategori) ? $kategori->image : '' }}>
                                     </div>
+                                </div>
+                                <br>
+                                <div style="height: 150px; width: 150px;">
+                                    @isset($kategori)
+                                        <img style="height: 150px; width: 150px;" src="{{ asset('gambar/'.$kategori->image) }}" alt="{{ $kategori->name }}">
+                                    @endisset
                                 </div>
                             </div>
                             <!-- /.card-body -->

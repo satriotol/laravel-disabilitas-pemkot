@@ -37,7 +37,13 @@
                                     <div class="form-group">
                                         <label for="exampleInputFile">Gambar</label>
                                         <div class="input-group">
-                                            <input type="file" class="form-control" name="image" required value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
+                                            <input type="file" class="form-control" name="image" value={{ isset($socialmedia) ? $socialmedia->image : '' }}>
+                                        </div>
+                                        <br>
+                                        <div style="height: 150px; width: 150px;">
+                                            @isset($socialmedia)
+                                                <img style="height: 150px; width: 150px;" src="{{ asset('gambar/'.$socialmedia->image) }}" alt="{{ $socialmedia->name }}">
+                                            @endisset
                                         </div>
                                     </div>
                                 </div>
