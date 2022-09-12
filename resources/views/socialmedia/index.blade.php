@@ -42,7 +42,7 @@
                             <td>
                                 <img src="{{ asset('gambar/'.$sm->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
                             </td>
-                            <td>{{ $sm->url }}</td>
+                            <td><a href="{{ $sm->url }}">{{ $sm->url }}</a></td>
                             <td>
                                 <a href="{{ route('socialmedia.edit', $sm->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
                                 <a href="{{ route('socialmedia.delete', $sm->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>

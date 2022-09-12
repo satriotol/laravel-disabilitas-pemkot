@@ -50,7 +50,7 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required|image|mimes:jpeg, jpg, png'
+            'image' => 'nullable'
         ]);
 
         if ($request->image) {

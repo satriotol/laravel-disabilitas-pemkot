@@ -22,7 +22,7 @@
                     <button type="button" class="btn bg-gradient-primary">Create</button>
                 </div>
                 <table class="table table-bordered">
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
                             <th>Nama</th>
                             <th>Deskripsi</th>
