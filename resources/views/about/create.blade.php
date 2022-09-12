@@ -29,14 +29,19 @@
                                         placeholder="Enter description's Here ">{{ isset($about) ? $about->description : '' }}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="gambar">Gambar</label>
-                                    <div class="input-group mb-3">
-                                        <div class="custom-file">
-                                            <input type="file" name="image" class="form-control" id="inputGroupFile01"required
+                                    <label for="exampleInputFile">Gambar</label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" name="image" class="form-control"
                                                 value={{ isset($about) ? $about->image : '' }} >
                                         </div>
-                                    </div>
+                                        <br>
+                                        <div style="height: 150px; width: 150px;">
+                                        @isset($about)
+                                            <img style="height: 150px; width: 150px;" src="{{ asset('gambar/'.$about->image) }}" alt="{{ $about->name }}">
+                                        @endisset
+                                        </div>
                                 </div>
+
                             </div>
                             <!-- /.card-body -->
 

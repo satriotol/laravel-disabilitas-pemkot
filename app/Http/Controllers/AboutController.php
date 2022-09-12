@@ -49,7 +49,7 @@ class AboutController extends Controller
     {
         $this->validate($request, [
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg, jpg, png'
+            'image' => 'nullable'
         ]);
 
         $about = About::find($id);
