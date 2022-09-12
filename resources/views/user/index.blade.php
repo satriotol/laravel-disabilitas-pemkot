@@ -28,7 +28,6 @@
                             <th style="width: 50px">Id</th>
                             <th>Nama</th>
                             <th>Email</th>
-                            <th>Password</th>
                             <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
@@ -38,7 +37,6 @@
                             <td>{{ $u->id }}</td>
                             <td>{{ $u->name }}</td>
                             <td>{{ $u->email}}</td>
-                            <td>{{ $u->password }}</td>
                             <td>
                                 <a href="{{ route('user.edit', $u->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
                                 <a href="{{ route('user.delete', $u->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>

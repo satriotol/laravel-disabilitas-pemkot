@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+
 
 class UserController extends Controller
 {
@@ -30,7 +31,7 @@ class UserController extends Controller
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
         Session::flash('flash_message', 'Data User berhasil disimpan');
         return redirect('/user');
@@ -43,17 +44,17 @@ class UserController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'email' => 'required',
-            'password' => 'required'
+            'email' => 'required'
         ]);
 
         $pass_lama = $user->password;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $pass_baru = $request->password;
+        if($request->password)
+            $user->password = Hash::make($request->password);
         $user->update();
         return redirect('/user');
-
     }
     public function delete(User $user)
     {
