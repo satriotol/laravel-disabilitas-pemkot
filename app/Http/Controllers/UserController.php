@@ -54,6 +54,7 @@ class UserController extends Controller
         if($request->password)
             $user->password = Hash::make($request->password);
         $user->update();
+        Session::flash('flash_message', 'Data User berhasil diupdate');
         return redirect('/user');
     }
     public function delete(User $user)
