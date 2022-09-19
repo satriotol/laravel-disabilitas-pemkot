@@ -87,9 +87,6 @@
                                     <p class="prod-i-addwrap">
                                         <a href="product.html" class="prod-i-add">Pergi Ke Detail</a>
                                     </p>
-                                    <div class="prod-sticker">
-                                        <p class="prod-sticker-3">-30%</p><p class="prod-sticker-4 countdown" data-date="29 Jan 2022, 14:30:00"></p>
-                                    </div>
                                 </div>
                                 <h3>
                                     <a href="product.html">Kursi Roda Bahan Stenless</a>
