@@ -80,3 +80,10 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('/home', 'App\Http\Controllers\InterfaceController@index')->name('home');
+Route::get('/home/cart', 'App\Http\Controllers\InterfaceController@cart')->name('cart');
+Route::get('/home/login', 'App\Http\Controllers\InterfaceController@login')->name('login');
+Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
+Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
+Route::get('/product/detail', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
