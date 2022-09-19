@@ -102,7 +102,7 @@
 
             <div class="prod-info">
                 <p class="prod-addwrap">
-                    <a href="#" class="prod-add" rel="nofollow">Add to cart</a>
+                    <a href="#" class="prod-add" rel="nofollow">Masukkan Keranjang</a>
                 </p>
             </div>
             <ul class="prod-i-props" style="font-size: 25px;">

@@ -91,7 +91,6 @@
             <ul class="section-mode">
                 <li class="section-mode-gallery"><a title="View mode: Gallery" href="{{route('product-gallery')}}"></a></li>
                 <li class="section-mode-list active"><a title="View mode: List" href="{{route('product-list')}}"></a></li>
-                <li class="section-mode-table"><a title="View mode: Table" href="{{route('product-list')}}"></a></li>
             </ul>
 
             <!-- Sorting -->
