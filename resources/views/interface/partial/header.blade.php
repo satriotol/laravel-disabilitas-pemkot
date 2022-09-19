@@ -105,7 +105,7 @@
 
             <ul class="mainmenu">
                 <li>
-                    <a href="{{route('home')}}" class="active">
+                    <a href="/home" class="{{ Request()->is('home') ? 'active' : '' }}">
                         Home
                     </a>
                 </li>
@@ -115,7 +115,7 @@
                     </a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{route('product-gallery')}}">
+                    <a href="/product/gallery" class="{{ Request()->is('product/gallery') ? 'active' : '' }}">
                         Produk
                     </a>
                 </li>
