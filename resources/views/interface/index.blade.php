@@ -70,11 +70,11 @@
                                 <div class="prod-i-top">
                                     <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="https://s3.bukalapak.com/img/3897836966/large/kURSI_RODA_BEKAS_MEREK_TRANSMED.jpg" alt="Kursi Roda Bekas"><!-- NO SPACE --></a>
                                     <p class="prod-i-addwrap">
-                                        <a href="product.html" class="prod-i-add">Pergi Ke Detail</a>
+                                        <a href="{{route('product-gallery')}}" class="prod-i-add">Pergi Ke Detail</a>
                                     </p>
                                 </div>
                                 <h3>
-                                    <a href="product.html">Kursi Roda Bekas Merk Transmed</a>
+                                    <a href="{{route('product-gallery')}}">Kursi Roda Bekas Merk Transmed</a>
                                 </h3>
                                 <p class="prod-i-price">
                                     <b>Rp. 78.000</b>
