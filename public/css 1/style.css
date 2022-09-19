@@ -180,7 +180,7 @@ body {
 	margin: 0 0 27px;
 }
 /* new */
-.navBar {
+.navBar .toplogo .shop-menu {
 	position: fixed;
     top: 0;
     left: 0;

@@ -18,6 +18,7 @@
                             <img src="{{asset('img/ikon user-02.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official">
                         </a>
                     </li>
+                </ul>
             </div>
         </div>
     </div>
