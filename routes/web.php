@@ -77,13 +77,22 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/user/update/{user}', 'App\Http\Controllers\UserController@update')->name('user.update');
     Route::get('/user/delete/{user}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
 
+    //Kontak Kami
+    // Social Media
+    Route::get('/kontakkami', 'App\Http\Controllers\KontakKamiController@index')->name('kontakkami');
+    Route::get('/kontakkami/create', 'App\Http\Controllers\KontakKamiController@create')->name('kontakkami.create');
+    Route::post('/kontakkami/store', 'App\Http\Controllers\KontakKamiController@store')->name('kontakkami.store');
+    Route::get('/kontakkami/edit/{kontakkami}', 'App\Http\Controllers\KontakKamiController@edit')->name('kontakkami.edit');
+    Route::post('/kontakkami/update/{kontakkami}', 'App\Http\Controllers\KontakKamiController@update')->name('kontakkami.update');
+    Route::get('/kontakkami/delete/{kontakkami}', 'App\Http\Controllers\KontakKamiController@delete')->name('kontakkami.delete');
+
 });
 
 require __DIR__ . '/auth.php';
 
 Route::get('/home', 'App\Http\Controllers\InterfaceController@index')->name('home');
 Route::get('/home/cart', 'App\Http\Controllers\InterfaceController@cart')->name('cart');
-Route::get('/home/login', 'App\Http\Controllers\InterfaceController@login')->name('login');
+Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
 Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
 Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
 Route::get('/product/detail', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');

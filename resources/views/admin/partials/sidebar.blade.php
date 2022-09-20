@@ -77,6 +77,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('kontakkami') }}" class="nav-link {{ active_class(['kontakkami','kontakkami.*']) }}">
+                        <i class="nav-icon fas fa-headset"></i>
+                        <p>
+                            Kontak Kami
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('user') }}" class="nav-link {{ active_class(['user','user.*']) }}">
                         <i class="nav-icon fas fa-user-circle"></i>
                         <p>

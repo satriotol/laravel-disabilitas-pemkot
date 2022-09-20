@@ -14,7 +14,7 @@ class InterfaceController extends Controller
         return view('interface.cart');
     }
 
-    public function login() {
+    public function daftar() {
         return view('interface.login');
     }
 
