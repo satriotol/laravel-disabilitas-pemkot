@@ -146,7 +146,7 @@
             <li class="cart-summ">TOTAL: <b>Rp. 800.000</b></li>
         </ul>
         <div class="cart-submit">
-            <a href="#" class="cart-submit-btn">Bayar</a>
+            <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A" class="cart-submit-btn">Bayar</a>
             <a href="#" class="cart-clear">Bersihkan Keranjang</a>
         </div>
     </form>

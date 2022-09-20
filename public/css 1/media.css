@@ -226,7 +226,7 @@
 
     /* Header */
     .header-middle {
-        padding: 30px 0 15px;
+        padding: 70px 0px 10px;
     }
     .toplogo {
         text-align: center;
@@ -234,18 +234,19 @@
         margin: 0 0 30px;
     }
     .toplogo img {
-        max-width: 100%;
+        max-width: 90%;
         margin: 0 auto;
     }
     .shop-menu {
         text-align: center;
         display: block;
+        float: right;
     }
     .shop-menu ul li {
         margin: 0 0 15px;
     }
     .shop-menu ul li:last-child {
-        padding-right: 15px;
+        padding-right: 10px;
     }
     /* Header */
 

@@ -4,7 +4,7 @@
 
             <!-- Catalog menu - start -->
             <div class="topcatalog">
-                <a class="topcatalog-btn" href="{{route('product-gallery')}}"><span>Semua</span><span> Kategori</span></a>
+                <a class="topcatalog-btn" href="{{route('product-gallery')}}"><span>Semua</span> Kategori</a>
                 <ul class="topcatalog-list">
                     <li>
                         <a href="{{route('product-gallery')}}">
@@ -119,7 +119,7 @@
                         Produk
                     </a>
                 </li>
-                <li>
+                <li class="menu-item-has-children">
                     <a href="{{route('home')}}#tentang-bab">
                         Tentang
                     </a>
