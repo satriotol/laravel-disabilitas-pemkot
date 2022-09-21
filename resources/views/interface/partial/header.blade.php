@@ -142,7 +142,7 @@
             <div class="topsearch" style="color:#fff !important">
                 <a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
                 <form class="topsearch-form" action="#">
-                    <input type="text" placeholder="Search products">
+                    <input type="text" placeholder="Cari Produk">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
