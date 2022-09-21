@@ -13,8 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'App\Http\Controllers\InterfaceController@index')->name('home');
+Route::get('/home/cart', 'App\Http\Controllers\InterfaceController@cart')->name('cart');
+Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
+Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
+Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
+Route::get('/product/detail', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
+
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard');
+    Route::get('/dashboard', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard');
     Route::get('/user', 'App\Http\Controllers\AdminController@user')->name('user');
 
     // Category
@@ -85,14 +92,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/kontakkami/edit/{kontakkami}', 'App\Http\Controllers\KontakKamiController@edit')->name('kontakkami.edit');
     Route::post('/kontakkami/update/{kontakkami}', 'App\Http\Controllers\KontakKamiController@update')->name('kontakkami.update');
     Route::get('/kontakkami/delete/{kontakkami}', 'App\Http\Controllers\KontakKamiController@delete')->name('kontakkami.delete');
-
 });
 
 require __DIR__ . '/auth.php';
-
-Route::get('/home', 'App\Http\Controllers\InterfaceController@index')->name('home');
-Route::get('/home/cart', 'App\Http\Controllers\InterfaceController@cart')->name('cart');
-Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
-Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
-Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
-Route::get('/product/detail', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
