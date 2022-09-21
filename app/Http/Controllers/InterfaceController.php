@@ -17,7 +17,8 @@ class InterfaceController extends Controller
         $abouts = About::all();
         $faqs = Faq::all();
         $categories = Category::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'categories'));
+        $socialmedia = SocialMedia::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'categories', 'socialmedia'));
 
 
 
