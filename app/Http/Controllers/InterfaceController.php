@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Faq;
 use App\Models\Slider;
 use App\Models\About;
+use App\Models\SocialMedia;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
@@ -14,7 +15,8 @@ class InterfaceController extends Controller
         $sliders = Slider::all();
         $abouts = About::all();
         $faqs = Faq::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs'));
+        $socialmedia = SocialMedia::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'socialmedia'));
 
 
 
@@ -22,26 +24,31 @@ class InterfaceController extends Controller
 
     public function cart()
     {
-        return view('interface.cart');
+        $socialmedia = SocialMedia::all();
+        return view('interface.cart', compact('socialmedia'));
     }
 
     public function daftar()
     {
-        return view('interface.login');
+        $socialmedia = SocialMedia::all();
+        return view('interface.login', compact('socialmedia'));
     }
 
     public function productgallery()
     {
-        return view('interface.gallery');
+        $socialmedia = SocialMedia::all();
+        return view('interface.gallery', compact('socialmedia'));
     }
 
     public function productlist()
     {
-        return view('interface.list');
+        $socialmedia = SocialMedia::all();
+        return view('interface.list', compact('socialmedia'));
     }
 
     public function detail()
     {
-        return view('interface.detail');
+        $socialmedia = SocialMedia::all();
+        return view('interface.detail', compact('socialmedia'));
     }
 }
