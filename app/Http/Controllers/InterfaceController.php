@@ -8,6 +8,7 @@ use App\Models\About;
 use App\Models\KontakKami;
 use App\Models\SocialMedia;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
@@ -20,7 +21,8 @@ class InterfaceController extends Controller
         $kontak_kami = KontakKami::all();
         $socialmedia = SocialMedia::all();
         $categories = Category::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia'));
+        $products = Product::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia', 'products'));
 
 
     }
@@ -52,6 +54,7 @@ class InterfaceController extends Controller
     public function detail()
     {
         $socialmedia = SocialMedia::all();
-        return view('interface.detail', compact('socialmedia'));
+        $products = Product::all();
+        return view('interface.detail', compact('socialmedia', 'products'));
     }
 }
