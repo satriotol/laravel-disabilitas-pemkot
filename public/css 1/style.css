@@ -817,14 +817,14 @@ body {
 .topmenu .mainmenu li.mainmenu-more .mainmenu-sub li a {
 	text-transform: none;
 	font-weight: 400;
-	color: #373d54;
+	color: #053742;
 	font-size: 14px;
 	line-height: 120%;
 	border-bottom: 1px solid #e0e4f6;
 	display: block;
 	padding: 11px 15px 11px 15px;
 	transition: all 0.2s;
-	background: #f8fafc;
+	background: #D4F0FF;
 	position: relative;
 	width: 201px;
 	overflow: hidden;
@@ -836,7 +836,7 @@ body {
 }
 .topmenu .mainmenu li.mainmenu-more .mainmenu-sub li:after {
 	content: '';
-	background: #373d54;
+	background: #D4F0FF;
 	position: absolute;
 	top: -1px;
 	bottom: -1px;
@@ -869,8 +869,8 @@ body {
 	margin: 0;
 	position: absolute;
 	top: -1px;
-	background: #fff;
-	border: 1px solid #e0e4f6;
+	background: #D4F0FF;
+	border: 1px solid #D4F0FF;
 	transition: all 0.3s ease;
 	-webkit-transform: translate3d(0, 8px, 0);
 	-moz-transform: translate3d(0, 8px, 0);
@@ -916,13 +916,13 @@ body {
 	line-height: 43px;
 	width: 41px;
 	text-align: center;
-	border: 1px solid #e0e4f6;
+	border: 1px solid #053742;
 	display: block;
-	background: #f8fafc;
+	background: #053742;
 	position: relative;
 }
 .topsearch .topsearch-btn:hover {
-	color: #3a89cf;
+	color: #39A2DB;
 }
 .topsearch .topsearch-btn .fa {
 	display: inline-block;
@@ -958,24 +958,24 @@ body {
 	opacity: 1;
 }
 .topsearch .topsearch-form input[type=text] {
-	border: 1px solid #e0e4f6;
-	background: #f8fafc;
+	border: 1px solid #053742;
+	background: #D4F0FF;
 	height: 39px;
 	width: 300px;
-	color: #373d54;
+	color: #053742;
 	font-size: 14px;
 	padding: 0 45px 0 15px;
 	transition: all 0.2s;
 }
 .topsearch .topsearch-form input[type=text]::-webkit-input-placeholder {
-	color: #373d54;
+	color: #053742;
 }
 .topsearch .topsearch-form input[type=text]::-moz-placeholder {
-	color: #373d54;
+	color: #053742;
 	opacity: 1;
 }
 .topsearch .topsearch-form input[type=text]:-ms-input-placeholder {
-	color: #373d54;
+	color: #053742;
 }
 .topsearch .topsearch-form button[type=submit] {
 	position: absolute;
@@ -983,13 +983,14 @@ body {
 	bottom: 0;
 	right: 0;
 	width: 41px;
-	background: #373d54;
+	background: #053742;
 	color: #FFFFFF;
 	transition: all 0.2s;
 	border: none;
 }
 .topsearch .topsearch-form button[type=submit]:hover {
-	background: #474f6e;
+	background: #053742;
+    color: #39A2DB;
 }
 /*----------------------------------
 3 - Topmenu
