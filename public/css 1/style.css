@@ -315,9 +315,10 @@ body {
 	height: 80px;
 }
 .shop-menu {
+
 	text-align: right;
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 }
 .shop-menu ul li {
 	display:inline-block;
