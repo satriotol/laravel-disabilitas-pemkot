@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
+use App\Models\About;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
@@ -10,7 +11,11 @@ class InterfaceController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        return view('interface.index', compact('sliders'));
+        $abouts = About::all();
+        return view('interface.index', compact('sliders', 'abouts'));
+
+
+
     }
 
     public function cart()

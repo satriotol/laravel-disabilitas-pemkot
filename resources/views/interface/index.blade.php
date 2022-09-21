@@ -11,7 +11,7 @@
                 <ul class="slides">
                     @foreach ($sliders as $slider)
                         <li>
-                            <img src="{{ asset('gambar/' . $slider->image) }}" alt="">
+                            <img src="{{ asset('gambar/' . $slider->image) }}" alt="" style="width: 100%" height="auto">
                             <div class="fr-slider-cont">
                                 <h3>{{ $slider->name }}</h3>
                                 <p>{{ $slider->description }}</p>
@@ -945,14 +945,12 @@
             <div id="about" class="layout_padding about_section">
                 <div class="container">
                     <div class="row">
+                        @foreach ($abouts as $about )
                         <div class="col-md-6">
-                            <div><img src="img/semarang.jpg" style="max-width: 100%;"></div>
+                            <div><img src="{{ asset('gambar/'. $about->image ) }}" alt="gambar" style="max-width: 100%;"></div>
                         </div>
                         <div class="col-md-6">
-                            <p class="about_taital"><strong>S-Care</strong> merupakan website e-commerce khusus jual beli
-                                alat bantu disabilitas bekas yang tidak terpakai untuk membantu mereka yang membutuhkan dan
-                                ditujukan khusus untuk warga <strong>Kota Semarang</strong>, Jawa Tengah</p>
-                            <br>
+                            <p class="about_taital">{{ $about->description }}</p>
                             <br>
 
                             <div style="float: right;">
@@ -962,8 +960,8 @@
                             <div style="float:right;">
                                 Selengkapnya
                             </div>
-
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
