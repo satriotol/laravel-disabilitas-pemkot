@@ -29,13 +29,12 @@
             <h3 class="component-ttl"><span>Kategori</span></h3>
 
             <ul class="fr-pop-tabs sections-show">
+                @foreach ($categories as $cate)
                 <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
                         Kategori</a></li>
-                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Kursi Roda</a></li>
-                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Tongkat Bantu</a></li>
-                <li><a data-frpoptab-num="4" data-frpoptab="#frpoptab-tab-4" href="#">Alat Bantu Dengar</a></li>
-                <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Kaki Palsu</a></li>
-                <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Tangan Palsu</a></li>
+                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{$cate->name}}</a></li>
+
+                @endforeach
             </ul>
 
             <div class="fr-pop-tab-cont">
@@ -44,12 +43,12 @@
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
 
                     <ul class="slides">
-			        @foreach ($categories as $kategori)
+			        @foreach ($products as $produk)
                          <li>
-                            <img src="{{ asset('gambar/' . $kategori->image) }}" alt="">
+                            <img src="{{ asset('gambar/' . $produk->image) }}" alt="">
                             <div class="fr-slider-cont">
-                                <h3>{{ $kategori->name }}</h3>
-                                <p>{{ $kategori->image }}</p>
+                                <h3>{{ $produk->name }}</h3>
+                                <p>{{ $produk->price }}</p>
                             </div>
                         </li>
                     @endforeach
