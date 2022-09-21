@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Faq;
 use App\Models\Slider;
 use App\Models\About;
+use App\Models\KontakKami;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
@@ -14,8 +15,8 @@ class InterfaceController extends Controller
         $sliders = Slider::all();
         $abouts = About::all();
         $faqs = Faq::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs'));
-
+        $kontak_kami = KontakKami::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami'));
 
 
     }

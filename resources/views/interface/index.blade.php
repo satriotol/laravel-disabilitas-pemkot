@@ -999,8 +999,12 @@
                 <section class="container stylization maincont">
                     <!-- Contact Form -->
                     <div class="contactform-wrap">
-                        <form action="#" class="form-validate">
+                        <form action="{{ url('kontakkami.store') }}" method="POST" class="form-validate">
+                            @foreach ($kontak_kami as $kontakkami )
+                            @csrf
+                            @method('PUT')
                             <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan Anda</p>
+                            {{-- kolom --}}
                             <p class="contactform-field contactform-text">
                                 <label class="contactform-label">Nama</label><!-- NO SPACE --><span
                                     class="contactform-input"><input placeholder="Nama" type="text" name="name"
@@ -1009,17 +1013,18 @@
                             <p class="contactform-field contactform-email">
                                 <label class="contactform-label">E-mail</label><!-- NO SPACE --><span
                                     class="contactform-input"><input placeholder="E-mail Anda" type="text"
-                                        name="email" data-required="text" data-required-email="email"></span>
+                                        name="email" data-required="text" data-required-email="email" ></span>
                             </p>
                             <p class="contactform-field contactform-textarea">
                                 <label class="contactform-label">Message</label><!-- NO SPACE --><span
                                     class="contactform-input">
-                                    <textarea placeholder="Pesan Anda" name="mess" data-required="text"></textarea>
+                                    <textarea placeholder="Pesan Anda" name="mess" data-required="text" ></textarea>
                                 </span>
                             </p>
                             <p class="contactform-submit">
                                 <input value="Kirim" type="submit">
                             </p>
+                            @endforeach
                         </form>
                     </div>
                     <!-- Contacts - end -->
