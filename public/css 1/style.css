@@ -542,7 +542,7 @@ body {
 .topmenu .mainmenu-btn {
 	position: relative;
 	color: #053742;
-	text-transform: uppercase;
+	text-transform: none;
 	border: 1px solid #e0e4f6;
 	border-right: none;
 	width: 100%;
@@ -578,7 +578,7 @@ body {
 }
 .topmenu .mainmenu > li {
 	float: left;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 14px;
 	font-weight: 500;
 	margin: 0 0 0 0;
@@ -1318,7 +1318,7 @@ body {
 	color: #ffffff;
 	letter-spacing: 0.01em;
 	cursor: pointer;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 1px;
 	font-size: 14px;
 }
@@ -1331,7 +1331,7 @@ body {
 }
 .main-ttl {
 	font-size: 22px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #053742;
 	margin: 0 0 35px;
 	font-weight: 900;
@@ -1561,7 +1561,7 @@ ul.b-crumbs {
 	color: #fff;
 	font-size: 12px;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: none;
 	padding: 11px 15px 12px;
 	letter-spacing: 0.05em;
 	vertical-align: top;
@@ -1640,7 +1640,7 @@ ul.b-crumbs {
 .fr-pop-tabs li a {
 	display: block;
 	padding: 15px 22px 15px;
-	text-transform: uppercase;
+	text-transform: none;
 	transition: all 0.2s;
 	font-size: 14px;
 	position: relative;
@@ -1683,7 +1683,7 @@ ul.b-crumbs {
 	cursor: pointer;
 	border-top: 1px solid #e0e4f6;
 	padding: 15px 0px 15px;
-	text-transform: uppercase;
+	text-transform: none;
 	transition: all 0.2s;
 	color: #053742;
 	font-size: 16px;
@@ -1970,10 +1970,10 @@ ul.b-crumbs {
 	display: inline-block;
 	min-width: 45px;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #ffffff;
-	font-size: 11px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 600;
 	letter-spacing: 1px;
 }
 .prod-sticker br {
@@ -2170,7 +2170,7 @@ ul.b-crumbs {
 	background: rgba(255,255,255,0.9);
 	transition: all 0.3s;
 	color: #053742;
-	text-transform: uppercase;
+	text-transform: none;
 	top: 137px;
 	left: 50%;
 	margin: 0 0 0 -60px;
@@ -2201,7 +2201,7 @@ ul.b-crumbs {
 	font-weight: 700;
 	transition: all 0.3s;
 	color: #053742;
-	text-transform: uppercase;
+	text-transform: none;
 	top: 137px;
 	left: 50%;
 	margin: 0 0 0 -60px;
@@ -2782,7 +2782,7 @@ ul.b-crumbs {
 .prod-items .prodlist-i-cont h3 {
 	font-size: 20px;
 	color: #053742;
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: 500;
 	margin: 0 0 18px;
 }
@@ -2860,7 +2860,7 @@ ul.b-crumbs {
 	text-align: center;
 	margin: 0 0 20px 0;
 	font-size: 11px;
-	text-transform: uppercase;
+	text-transform: none;
 	position: relative;
 	color: #7b7b7b;
 	transition: all 0.2s;
@@ -2975,7 +2975,7 @@ ul.b-crumbs {
 	letter-spacing: 1px;
 	font-weight: 500;
 	transition: all 0.2s;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	background: #053742;
 	position: relative;
@@ -2988,7 +2988,7 @@ ul.b-crumbs {
 	letter-spacing: 1px;
 	font-weight: 500;
 	transition: all 0.2s;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	background: #053742;
 	position: relative;
@@ -3095,7 +3095,7 @@ ul.b-crumbs {
 }
 .prod-items .prodlist-i .prodlist-i-skuttl {
 	font-size: 11px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 11px;
 	color: #7b7b7b;
 }
@@ -3666,7 +3666,7 @@ ul.b-crumbs {
 .section-sb-current h3 {
 	color: #053742;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 15px;
 	margin: 0;
 	position: relative;
@@ -3889,7 +3889,7 @@ ul.b-crumbs {
 	transition: all 0.2s;
 	color: #fff;
 	display: none;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 13px;
 	font-weight: 500;
 	border: none;
@@ -4092,7 +4092,7 @@ ul.b-crumbs {
 	border-radius: 0;
 	transition: all 0.2s;
 	color: #fff;
-	text-transform: uppercase;
+	text-transform: none;
 	outline: none;
 }
 .section-sb .section-filter .btn-themes:hover {
@@ -4679,7 +4679,7 @@ ul.b-crumbs {
 	font-size: 15px;
 	font-weight: 500;
 	color: #fff;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 3px 0 10px;
 	padding: 8px 0 7px 23px;
 	border-radius: 20px;
@@ -4721,7 +4721,7 @@ ul.b-crumbs {
 	letter-spacing: 1px;
 	font-weight: 500;
 	transition: all 0.2s;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	background: #053742;
 	position: relative;
@@ -4844,7 +4844,7 @@ ul.b-crumbs {
 	text-align: center;
 	margin: 0 30px 15px 0;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	position: relative;
 	color: #7b7b7b;
 	transition: all 0.2s;
@@ -4897,7 +4897,7 @@ ul.b-crumbs {
 }
 .prod-cont .prod-skuttl {
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 11px;
 	color: #7b7b7b;
 	letter-spacing: 1px;
@@ -5112,7 +5112,7 @@ ul.b-crumbs {
 	border: none;
 	display: block;
 	padding: 15px 22px 15px;
-	text-transform: uppercase;
+	text-transform: none;
 	transition: all 0.2s;
 	font-size: 14px;
 	position: relative;
@@ -5174,7 +5174,7 @@ ul.b-crumbs {
 	cursor: pointer;
 	border-top: 1px solid #e0e4f6;
 	padding: 15px 0px 15px;
-	text-transform: uppercase;
+	text-transform: none;
 	transition: all 0.2s;
 	color: #053742;
 	font-size: 16px;
@@ -5361,7 +5361,7 @@ ul.b-crumbs {
 	letter-spacing: 1px;
 	font-weight: 500;
 	transition: all 0.2s;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	background: #053742;
 	position: relative;
@@ -5416,7 +5416,7 @@ ul.b-crumbs {
 .prod-related h2 {
 	font-size: 16px;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: none;
 	padding: 0px 0 20px;
 	font-weight: 700;
 	margin: 0;
@@ -6020,7 +6020,7 @@ Single Product V2
 }
 .prod2-related h2 {
 	font-size: 22px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #053742;
 	margin: 0 0 10px;
 	font-weight: 900;
@@ -6110,7 +6110,7 @@ body .blog-categs li:after {
 body .blog-categs li a {
 	color: #053742;
 	font-size: 14px;
-	text-transform: uppercase;
+	text-transform: none;
 	padding: 0;
 	transition: all 0.2s;
 	font-weight: 500;
@@ -6194,7 +6194,7 @@ Blog V2
 	transform: scale3d(1.05,1.05,1);
 }
 .posts2-i .posts-i-date {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 13px;
 	text-align: center;
 	font-weight: 300;
@@ -6237,7 +6237,7 @@ Blog V2
 }
 .posts2-i .posts-i-ctg {
 	font-size: 11px;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 2px;
 	margin: 0 0 6px;
 	display: inline-block;
@@ -6426,7 +6426,7 @@ Blog V2
 	margin: 0 0 0 5px;
 	position: relative;
 	font-size: 13px;
-	text-transform: uppercase;
+	text-transform: none;
 }
 .post-share-wrap .post-info li:after {
 	display: block;
@@ -6568,7 +6568,7 @@ Blog V2
 	font-size: 14px;
 }
 .cart-items-wrap .cart-items thead td {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 13px;
 	border: none;
 	border-bottom: 1px solid #e0e4f6;
@@ -6597,7 +6597,7 @@ Blog V2
 	margin: 0 auto;
 }
 .cart-items-wrap .cart-items tbody .cart-ttl {
-	text-transform: uppercase;
+	text-transform: none;
 	color: #053742;
 	text-align: left;
 }
@@ -6780,7 +6780,7 @@ Blog V2
 	cursor: pointer;
 	text-align: center;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: none;
 	background: #39A2DB;
 	transition: all 0.2s;
 	height: auto;
@@ -6799,7 +6799,7 @@ Blog V2
 	cursor: pointer;
 	text-align: center;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: none;
 	background: #053742;
 	letter-spacing: 1px;
 	transition: all 0.2s;
@@ -6880,7 +6880,7 @@ body .cart-total .cart-summ {
 	padding: 0 0 0 20px;
 	font-size: 18px;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: none;
 	position: relative;
 }
 body .cart-total .cart-summ:after {
@@ -6981,7 +6981,7 @@ body .cart-total .cart-summ b {
 	transform: scale3d(1.05,1.05,1);
 }
 .posts-i .posts-i-date {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 13px;
 	text-align: center;
 	font-weight: 300;
@@ -7038,7 +7038,7 @@ body .cart-total .cart-summ b {
 }
 .posts-i .posts-i-ctg {
 	font-size: 11px;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 2px;
 	margin: 0 0 7px;
 	display: inline-block;
@@ -7191,7 +7191,7 @@ body .cart-total .cart-summ b {
 	font-style: normal;
 	font-family: Poppins, sans-serif;
 	font-size: 14px;
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: 700;
 	margin: 25px 0 10px;
 	padding-top: 25px;
@@ -7228,7 +7228,7 @@ body .cart-total .cart-summ b {
 	font-style: normal;
 	font-family: Poppins, sans-serif;
 	font-size: 14px;
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: 700;
 	margin: 0;
 	padding: 0;
@@ -7252,7 +7252,7 @@ body .cart-total .cart-summ b {
 	display: none;
 	color: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 13px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -7449,7 +7449,7 @@ body .cart-total .cart-summ b {
 	width: 280px;
 }
 .modalform .modalform-ttl {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 18px;
 	padding: 0 0 11px;
 	font-weight: 500;
@@ -7528,7 +7528,7 @@ body .cart-total .cart-summ b {
 	cursor: pointer;
 	text-align: center;
 	font-weight: 500;
-	text-transform: uppercase;
+	text-transform: none;
 	background: #313b54;
 	transition: all 0.2s;
 	height: auto;
@@ -7595,7 +7595,7 @@ body .cart-total .cart-summ b {
 ----------------------------------*/
 body .component-ttl {
 	font-size: 22px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #053742;
 	margin: 0 0 50px;
 	font-weight: 900;
@@ -7694,7 +7694,7 @@ body .component-desc.component-desc-ct {
 .pricing-i .pricing-i-ttl {
 	font-size: 32px;
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 5px;
 	line-height: 1.2;
 	color: #fff;
@@ -7748,7 +7748,7 @@ body .component-desc.component-desc-ct {
 	display: block;
 	width: 100%;
 	padding: 16px 0;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 500;
@@ -7822,7 +7822,7 @@ body .component-desc.component-desc-ct {
 .team-i .team-i-post {
 	color: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 13px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -7921,7 +7921,7 @@ body .component-desc.component-desc-ct {
 	text-align: right;
 	padding-right: 15px;
 	margin: 0;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 1px;
 	font-size: 13px;
 }
@@ -8148,7 +8148,7 @@ body .component-desc.component-desc-ct {
 .banner-i .banner-i-subttl {
 	font-size: 11px;
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 3px;
 	margin: 0 0 11px;
 }
@@ -8158,7 +8158,7 @@ body .component-desc.component-desc-ct {
 .banner-i .banner-i-link a {
 	background: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	padding: 8px 20px;
 	font-weight: 700;
@@ -8288,7 +8288,7 @@ body .component-desc.component-desc-ct {
 }
 .discounts-i .discounts-i-ttl {
 	color: #053742;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.2;
@@ -8330,7 +8330,7 @@ body .component-desc.component-desc-ct {
 .discounts-wrap .discounts-info a {
 	background: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	padding: 8px 20px;
 	font-weight: 500;
@@ -8366,7 +8366,7 @@ body .component-desc.component-desc-ct {
 	padding: 35px 40px 21px;
 }
 .newsletter h3 {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 20px;
 	margin: 0 0 6px;
 	font-weight: 700;
@@ -8393,7 +8393,7 @@ body .component-desc.component-desc-ct {
 	height: 35px;
 	background: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #fff;
 	padding: 0 20px;
 	font-weight: 500;
@@ -8457,7 +8457,7 @@ body .component-desc.component-desc-ct {
 	font-weight: 500;
 	font-size: 15px;
 	position: relative;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 1px;
 }
 .iconbox-i .iconbox-i-ttl:after {
@@ -8474,7 +8474,7 @@ body .component-desc.component-desc-ct {
 .iconbox-i .iconbox-i-link {
 	color: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 10px;
 	font-weight: 500;
 	display: inline-block;
@@ -8558,7 +8558,7 @@ body .component-desc.component-desc-ct {
 .iconbox-2-i .iconbox-2-i-link {
 	color: #053742;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 10px;
 	font-weight: 500;
 	display: inline-block;
@@ -8677,7 +8677,7 @@ body .component-desc.component-desc-ct {
 .style-2 .facts-i .facts-i-ttl {
 	font-weight: 700;
 	font-size: 13px;
-	text-transform: uppercase;
+	text-transform: none;
 }
 /*----------------------------------
 37 - Counters
@@ -8731,7 +8731,7 @@ body .component-desc.component-desc-ct {
 	color: #053742;
 }
 .social-i .social-i-ttl {
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 13px;
 	color: #053742;
 	font-weight: 500;
@@ -8775,7 +8775,7 @@ body .component-desc.component-desc-ct {
 	cursor: pointer;
 	border-top: 1px solid #e0e4f6;
 	padding: 15px 0px 15px;
-	text-transform: uppercase;
+	text-transform: none;
 	transition: all 0.2s;
 	color: #053742;
 	font-size: 14px;
@@ -9469,7 +9469,7 @@ This file is generated by `grunt build`, do not edit it by hand.
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 15px;
-	text-transform: uppercase;
+	text-transform: none;
 }
 .f-menu-list .f-menu ul li a{
 	color: #616161;
@@ -10044,7 +10044,7 @@ This file is generated by `grunt build`, do not edit it by hand.
 	text-align: right;
 	padding-right: 15px;
 	margin: 0;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 1px;
 	font-size: 13px;
 	vertical-align: middle;
