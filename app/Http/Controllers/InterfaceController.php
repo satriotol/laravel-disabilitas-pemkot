@@ -6,6 +6,7 @@ use App\Models\Faq;
 use App\Models\Slider;
 use App\Models\About;
 use App\Models\KontakKami;
+use App\Models\SocialMedia;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
