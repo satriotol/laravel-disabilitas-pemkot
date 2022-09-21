@@ -3,8 +3,8 @@
 @section('container')
 <section class="container">
 
-
-    <ul class="b-crumbs">
+    @foreach ($products as $product )
+    <ul class="b-crumbs">da sp
         <li>
             <a href="{{route('home')}}">
                 Home
@@ -21,21 +21,20 @@
             </a>
         </li>
         <li>
-            <span>Kursi Roda Spesial</span>
+            <span>{{ $product->name }}</span>
         </li>
     </ul>
-    <h1 class="main-ttl"><span>Kursi Roda Spesial</span></h1>
+    <h1 class="main-ttl"><span>{{ $product->name }}</span></h1>
     <!-- Single Product - start -->
     <div class="prod-wrap">
-        @foreach ($products as $product )
+
                <!-- Product Images -->
         <div class="prod-slider-wrap">
             <div class="prod-slider">
                 <ul class="prod-slider-car">
                     <li>
-                        <a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x642">
+
                             <img src="{{ asset('gambar/' . $product->image) }}" alt="" style="width: 100%" height="auto">
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -64,6 +63,8 @@
             <ul class="prod-i-props" style="font-size: 25px;">
                 <li>Rp.{{ $product->price  }}</li>
             </ul>
+            <br>
+            <h3>Stok : {{ $product->stock }}</h3>
         </div>
 
 
