@@ -971,76 +971,27 @@
         <!-- FAQ -->
         <div class="discounts-wrap" id="faq-bab">
             <h3 class="component-ttl"><span>Frequently Asked Questions</span></h3>
-            <div id="about" class="layout_padding about_section">
+            <div id="faq" class="layout_padding about_section">
                 <div class="faqs-container">
+                @foreach ($faqs as $faq)
                     <div class="faq active">
                         <h3 class="faq-title">
-                            Bagaimana cara membuat akun di S-care?
+                            <h3>{{ $faq->question }}</h3>
                         </h3>
                         <p class="faq-text">
-                            They make up everything.
+                           {{ $faq->answer }}
                         </p>
                         <button class="faq-toggle">
                             <i class="fa fa-chevron-down"></i>
                             <i class="fa fa-times"></i>
                         </button>
                     </div>
-
-                    <div class="faq">
-                        <h3 class="faq-title">
-                            Bagaimana cara order di S-care?
-                        </h3>
-                        <p class="faq-text">
-                            Nobody knows.
-                        </p>
-                        <button class="faq-toggle">
-                            <i class="fa fa-chevron-down"></i>
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </div>
-
-                    <div class="faq">
-                        <h3 class="faq-title">
-                            Bagaimana cara menghapus akun di S-care?
-                        </h3>
-                        <p class="faq-text">
-                            Inheritance.
-                        </p>
-                        <button class="faq-toggle">
-                            <i class="fa fa-chevron-down"></i>
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </div>
-
-                    <div class="faq">
-                        <h3 class="faq-title">
-                            Bagaimana cara log in di website S-care?
-                        </h3>
-                        <p class="faq-text">
-                            Ten-tickles!
-                        </p>
-                        <button class="faq-toggle">
-                            <i class="fa fa-chevron-down"></i>
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </div>
-
-                    <div class="faq">
-                        <h3 class="faq-title">
-                            Bagaimana cara log out di website S-care?
-                        </h3>
-                        <p class="faq-text">
-                            Depends on who are you asking.
-                        </p>
-                        <button class="faq-toggle">
-                            <i class="fa fa-chevron-down"></i>
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </div>
+			    @endforeach
                 </div>
             </div>
         </div>
 
+{{-- kontak kami --}}
         <div class="discounts-wrap" id="kontakkami-bab">
             <h3 class="component-ttl"><span>Kontak Kami</span></h3>
             <!-- Main Content - start -->
