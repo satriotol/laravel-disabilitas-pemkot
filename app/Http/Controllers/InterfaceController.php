@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,8 @@ class InterfaceController extends Controller
     {
         $sliders = Slider::all();
         return view('interface.index', compact('sliders'));
+        $faqs = Faq::all();
+        return view('interface.index', compact('faqs'));
     }
 
     public function cart()
