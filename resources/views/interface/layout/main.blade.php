@@ -114,26 +114,14 @@
             <div class="container">
                 <div class="row">
                     <ul class="social-icons nav navbar-nav" style="color: #fff;">
+                        @foreach ($socialmedia as $sm)
                         <li >
-                            <a href="http://youtube.com/" rel="nofollow" target="_blank">
-                                <img src="{{asset('img/youtube-09.png')}}" style="width:35px; height:35px; margin-right: 3px;">
+                            <a href="{{$sm->url}}" rel="nofollow" target="_blank">
+                                <img src="{{asset('gambar/' . $sm->image)}}" style="width:35px; height:35px; margin-right: 3px;">
                             </a>
                         </li>
-                        <li>
-                            <a href="http://facebook.com/" rel="nofollow" target="_blank">
-                                <img src="{{asset('img/facebook-10.png')}}" style="width:35px; height:35px; margin-right: 3px;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/" rel="nofollow" target="_blank">
-                                <img src="{{asset('img/instagram-11.png')}}" style="width:35px; height:35px; margin-right: 3px;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://semarangkota.go.id/" rel="nofollow" target="_blank">
-                                <img src="{{asset('img/pemkot.png')}}" style="width:35px; height:35px;">
-                            </a>
-                        </li>
+
+                        @endforeach
                     </ul>
                     <div class="footer-copyright">
                         <i><a href="https://semarangkota.go.id/" style="color: #fff;">Pemkot Semarang</a></i> ©Copyright 2022
