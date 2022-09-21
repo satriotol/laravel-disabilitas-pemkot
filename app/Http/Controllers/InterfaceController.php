@@ -13,7 +13,8 @@ class InterfaceController extends Controller
     {
         $sliders = Slider::all();
         $abouts = About::all();
-        return view('interface.index', compact('sliders', 'abouts'));
+        $faqs = Faq::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs'));
 
 
 
