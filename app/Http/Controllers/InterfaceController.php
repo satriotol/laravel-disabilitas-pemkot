@@ -7,6 +7,7 @@ use App\Models\Slider;
 use App\Models\About;
 use App\Models\KontakKami;
 use App\Models\SocialMedia;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class InterfaceController extends Controller
@@ -18,7 +19,8 @@ class InterfaceController extends Controller
         $faqs = Faq::all();
         $kontak_kami = KontakKami::all();
         $socialmedia = SocialMedia::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami', 'socialmedia'));
+        $categories = Category::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia'));
 
 
     }
