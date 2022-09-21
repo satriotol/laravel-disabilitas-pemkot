@@ -23,26 +23,31 @@ class InterfaceController extends Controller
 
     public function cart()
     {
-        return view('interface.cart');
+        $socialmedia = SocialMedia::all();
+        return view('interface.cart', compact('socialmedia'));
     }
 
     public function daftar()
     {
-        return view('interface.login');
+        $socialmedia = SocialMedia::all();
+        return view('interface.login', compact('socialmedia'));
     }
 
     public function productgallery()
     {
-        return view('interface.gallery');
+        $socialmedia = SocialMedia::all();
+        return view('interface.gallery', compact('socialmedia'));
     }
 
     public function productlist()
     {
-        return view('interface.list');
+        $socialmedia = SocialMedia::all();
+        return view('interface.list', compact('socialmedia'));
     }
 
     public function detail()
     {
-        return view('interface.detail');
+        $socialmedia = SocialMedia::all();
+        return view('interface.detail', compact('socialmedia'));
     }
 }
