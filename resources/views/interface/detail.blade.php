@@ -3,7 +3,7 @@
 @section('container')
 <section class="container">
 
-    @foreach ($products as $product  )
+    @foreach ($products as $product )
     <ul class="b-crumbs">
         <li>
             <a href="{{route('home')}}">
@@ -51,20 +51,29 @@
 
         <!-- Product Description/Info -->
         <div class="prod-cont">
+            <div class="prod-sticker">
+                <p class="prod-sticker-3">-20%</p>
+            </div> <br><br>
             <div class="prod-cont-txt">
                 <p>{{  $product->description }}</p>
             </div>
-
             <div class="prod-info">
                 <p class="prod-addwrap">
                     <a href="#" class="prod-add" rel="nofollow">Masukkan Keranjang</a>
                 </p>
             </div>
+
             <ul class="prod-i-props" style="font-size: 25px;">
-                <li>Rp.{{ $product->price  }}</li>
+                <li><h1>Rp. {{ $product->discount_price }}</h1></li>
+                <li> <del> Rp. {{ $product->price }}</del></li>
             </ul>
-            <br>
+
             <h3>Stok : {{ $product->stock }}</h3>
+
+
+
+
+
         </div>
 
 
