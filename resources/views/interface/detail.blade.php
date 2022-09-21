@@ -3,8 +3,8 @@
 @section('container')
 <section class="container">
 
-    @foreach ($products as $product )
-    <ul class="b-crumbs">da sp
+    @foreach ($products as $product  )
+    <ul class="b-crumbs">
         <li>
             <a href="{{route('home')}}">
                 Home
@@ -34,7 +34,7 @@
                 <ul class="prod-slider-car">
                     <li>
 
-                            <img src="{{ asset('gambar/' . $product->image) }}" alt="" style="width: 100%" height="auto">
+                            <img src="{{ asset('gambar/' .  $product->image) }}" alt="" style="width: 100%" height="auto">
                     </li>
                 </ul>
             </div>
