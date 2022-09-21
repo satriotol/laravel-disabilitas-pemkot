@@ -44,13 +44,17 @@ class InterfaceController extends Controller
     public function productgallery()
     {
         $socialmedia = SocialMedia::all();
-        return view('interface.gallery', compact('socialmedia'));
+        $products = Product::all();
+        $categories = Category::all();
+        return view('interface.gallery', compact('socialmedia', 'products', 'categories'));
     }
 
     public function productlist()
     {
         $socialmedia = SocialMedia::all();
-        return view('interface.list', compact('socialmedia'));
+        $products = Product::all();
+        $categories = Category::all();
+        return view('interface.list', compact('socialmedia', 'products', 'categories'));
     }
 
     public function detail()
