@@ -14,7 +14,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('login') }}">
+                        <a href="{{ route('/home/login') }}">
                             <img src="{{asset('img/ikon user-02.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official">
                         </a>
                     </li>
