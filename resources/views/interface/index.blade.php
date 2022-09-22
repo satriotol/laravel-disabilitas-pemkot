@@ -116,10 +116,7 @@
                         <section class="container stylization maincont">
                             <!-- Contact Form -->
                             <div class="contactform-wrap">
-                                <form action="{{ url('kontakkami.store') }}" method="POST" class="form-validate">
-                                    @foreach ($kontak_kami as $kontakkami)
-                                        @csrf
-                                        @method('PUT')
+                                <form action="#" class="form-validate">
                                         <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan
                                             Anda</p>
                                         {{-- kolom --}}
@@ -129,8 +126,8 @@
                                                     name="name" data-required="text"></span>
                                         </p>
                                         <p class="contactform-field contactform-email">
-                                            <label class="contactform-label">E-mail</label><!-- NO SPACE --><span
-                                                class="contactform-input"><input placeholder="E-mail Anda" type="text"
+                                            <label class="contactform-label">Email</label><!-- NO SPACE --><span
+                                                class="contactform-input"><input placeholder="Email Anda" type="text"
                                                     name="email" data-required="text" data-required-email="email"></span>
                                         </p>
                                         <p class="contactform-field contactform-textarea">
@@ -142,7 +139,6 @@
                                         <p class="contactform-submit">
                                             <input value="Kirim" type="submit">
                                         </p>
-                                    @endforeach
                                 </form>
                             </div>
                             <!-- Contacts - end -->

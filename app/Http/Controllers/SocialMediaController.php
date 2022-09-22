@@ -25,7 +25,7 @@ class SocialMediaController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required|image|mimes:jpeg, jpg, png',
+            'image' => 'required|image',
             'url' => 'required'
         ]);
 

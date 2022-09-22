@@ -6,6 +6,7 @@
             <div class="topcatalog">
                 <a class="topcatalog-btn" href="{{ route('product-gallery') }}"><span>Semua</span> Kategori</a>
                 <ul class="topcatalog-list">
+
                     <li>
                         <a href="{{ route('product-gallery') }}">
                             Kursi Roda

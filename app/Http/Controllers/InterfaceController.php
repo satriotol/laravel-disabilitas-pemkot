@@ -31,14 +31,16 @@ class InterfaceController extends Controller
 
     public function cart()
     {
+        $categories = Category::all();
         $socialmedia = SocialMedia::all();
-        return view('interface.cart', compact('socialmedia'));
+        return view('interface.cart', compact('socialmedia', 'categories'));
     }
 
     public function daftar()
     {
+        $categories = Category::all();
         $socialmedia = SocialMedia::all();
-        return view('interface.login', compact('socialmedia'));
+        return view('interface.login', compact('socialmedia', 'categories'));
     }
 
     public function productgallery()
@@ -59,6 +61,7 @@ class InterfaceController extends Controller
 
     public function detail(Product $product)
     {
+        $categories = Category::all();
         $socialmedia = SocialMedia::all();
         // $products = Product::all();
         return view('interface.detail', compact('socialmedia', 'product'));

@@ -27,18 +27,23 @@
                                 @include('partials.errors')
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">Nama</label>
-                                    <input type="text" name="name" class="form-control" required
-                                        placeholder="Masukkan Nama" value={{ isset($kontakkami) ? $kontakkami->name : '' }} >
+                                    <label for="name">Telepon</label>
+                                    <input type="text" name="telp" class="form-control" required
+                                        placeholder="Masukkan Telepon" value={{ isset($kontakkami) ? $kontakkami->telp : '' }} >
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Kode Pos</label>
+                                    <input type="text" name="kode_pos" class="form-control" required
+                                        placeholder="Masukkan Kode Pos" value={{ isset($kontakkami) ? $kontakkami->kode_pos : '' }} >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputText">Alamat</label>
+                                    <textarea required type="text" name="alamat" class="form-control" placeholder="Masukan Alamat">{{ isset($kontakkami) ? $kontakkami->alamat : '' }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="email" name="email" class="form-control" required
                                         placeholder="Masukkan Email" value={{ isset($kontakkami) ? $kontakkami->email : ''}} >
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputText">Message</label>
-                                    <textarea required type="text" name="message" class="form-control" placeholder="Masukan Message">{{ isset($kontakkami) ? $kontakkami->message : '' }}</textarea>
                                 </div>
                             </div>
                             <!-- /.card-body -->

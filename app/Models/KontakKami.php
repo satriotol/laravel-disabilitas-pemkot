@@ -11,5 +11,5 @@ class KontakKami extends Model
 
     protected $table = 'kontak_kami';
 
-    protected $fillable = ['name', 'email', 'message'];
+    protected $fillable = ['telp', 'kode_pos', 'alamat', 'email'];
 }

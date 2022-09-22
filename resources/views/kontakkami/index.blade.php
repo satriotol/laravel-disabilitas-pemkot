@@ -26,9 +26,10 @@
                     <thead>
                         <tr>
                             <th style="width: 50px">Id</th>
-                            <th  style="text-align: center">Nama</th>
+                            <th  style="text-align: center">Telepon</th>
+                            <th  style="text-align: center">Kode Pos</th>
+                            <th  style="text-align: center">Alamat</th>
                             <th  style="text-align: center">Email</th>
-                            <th  style="text-align: center">Message</th>
                             <th style="width: 150px; text-align: center">Action</th>
                         </tr>
                     </thead>
@@ -36,9 +37,10 @@
                         <tr>
                         @foreach ($kontakkami as $kk)
                             <td>{{ $kk->id }}</td>
-                            <td>{{ $kk->name }}</td>
+                            <td>{{ $kk->telp }}</td>
+                            <td>{{ $kk->kode_pos }}</td>
+                            <td>{{ $kk->alamat }}</td>
                             <td>{{ $kk->email }}</td>
-                            <td>{{ $kk->message }}</td>
                             <td>
                                 <a href="{{ route('kontakkami.edit', $kk->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
                                 <a href="{{ route('kontakkami.delete', $kk->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>

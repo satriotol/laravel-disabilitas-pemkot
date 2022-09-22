@@ -45,6 +45,13 @@
                                         <img style="height: 150px; width: 150px;" src="{{ asset('gambar/'.$kategori->image) }}" alt="{{ $kategori->name }}">
                                     @endisset
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Keterangan</label>
+                                    <select name="keterangan" class="form-control">
+                                        <option>Baru</option>
+                                        <option>Bekas</option>
+                                    </select>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 
