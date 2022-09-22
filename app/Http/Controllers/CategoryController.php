@@ -25,7 +25,8 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required|image|mimes:jpeg, jpg, png'
+            'image' => 'required|image|mimes:jpeg, jpg, png',
+            'keterangan' => 'required'
         ]);
         $foto_kategori = $request->image;
         $nama_file = time() . '.' . $foto_kategori->getClientOriginalExtension();
@@ -34,6 +35,7 @@ class CategoryController extends Controller
         $kategori = new Category;
         $kategori->name = $request->name;
         $kategori->image = $nama_file;
+        $kategori->keterangan = $request->keterangan;
         $kategori->save();
 
         Session::flash('flash_message', 'Data Kategori berhasil disimpan');
@@ -50,7 +52,8 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'nullable'
+            'image' => 'nullable',
+            'keterangan' => 'required'
         ]);
 
         if ($request->image) {
@@ -60,6 +63,7 @@ class CategoryController extends Controller
             $kategori->image = $nama_file;
         }
         $kategori->name = $request->name;
+        $kategori->keterangan = $request->keterangan;
         $kategori->update();
 
         Session::flash('flash_message', 'Data Kategori berhasil diupdate');
