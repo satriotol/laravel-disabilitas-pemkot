@@ -94,13 +94,12 @@
         <!-- Catalog Topbar - end -->
         <div class="prod-items section-items">
             @foreach ($products as $product)
+            @if ($product->product_images->count() > 0)
             <div class="prod-i">
                 <div class="prod-i-top">
-                    <a href="#" class="prod-i-img"><!-- NO SPACE --><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/3/26/25055431/25055431_2ca7e39d-3859-412f-9742-ec34f6c411f0_1000_1000.jpg" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
+                    <a href="#" class="prod-i-img"><img src="{{asset('gambar/' . $product->product_images[0]->image)}}" alt=""></a>
 
                     <a href="{{route('product-detail', $product->id)}}" class="prod-i-buy">Pergi Ke Detail</a>
-
-
                 </div>
                 <h3>
                     <a href="#">{{$product->name}}</a>
@@ -110,7 +109,7 @@
                 </p>
 
             </div>
-
+            @endif
             @endforeach
         </div>
 

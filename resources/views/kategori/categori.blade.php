@@ -28,6 +28,7 @@
                             <th style="width: 50px">Id</th>
                             <th>Nama</th>
                             <th>Image</th>
+                            <th>Keterangan</th>
                             <th style="width: 150px">Action</th>
                         </tr>
                     </thead>
@@ -39,6 +40,7 @@
                             <td>
                                 <img src="{{ asset('gambar/'.$k->image) }}" alt="" style="width:80px;height:50px;display:block;margin-right:auto;margin-left:auto;">
                             </td>
+                            <td>{{ $k->keterangan }}</td>
                             <td>
                                 <a href="{{ route('kategori.edit', $k->id) }}"><button type="button" name="edit" class="btn btn-sm bg-gradient-warning">Edit</button></a>
                                 <a href="{{ route('kategori.delete', $k->id) }}"><button type="button" name="delete" class="btn btn-sm bg-gradient-danger"onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button></a>

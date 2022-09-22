@@ -48,6 +48,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Keterangan</label>
                                     <select name="keterangan" class="form-control">
+                                        <option>Pilih</option>
                                         <option>Baru</option>
                                         <option>Bekas</option>
                                     </select>

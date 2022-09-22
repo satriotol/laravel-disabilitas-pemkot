@@ -45,12 +45,19 @@
                     <ul class="slides">
                         @foreach ($products as $produk)
                         @if ($produk->product_images->count() > 0)
-                        <li>
-                            <img src="{{ asset('gambar/' . $produk->product_images[0]->image) }}" alt="">
-                            <div class="fr-slider-cont">
-                                <h3>{{ $produk->name }}</h3>
-                                <p>{{ $produk->price }}</p>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="#" class="prod-i-img"><img src="{{asset('gambar/' . $produk->product_images[0]->image)}}" alt=""></a>
+                                <p class="prod-i-addwrap">
+                                    <a href="{{route('product-detail', $produk->id)}}" class="prod-i-add">Pergi Ke Detail</a>
+                                </p>
                             </div>
+                            <h3>
+                                <a href="#">{{$produk->name}}</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>{{$produk->price}}</b>
+                            </p>
                         </li>
                         @endif
                         @endforeach
