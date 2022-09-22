@@ -98,7 +98,7 @@
                 <div class="prod-i-top">
                     <a href="#" class="prod-i-img"><!-- NO SPACE --><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/3/26/25055431/25055431_2ca7e39d-3859-412f-9742-ec34f6c411f0_1000_1000.jpg" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
 
-                    <a href="{{route('product-detail')}}" class="prod-i-buy">Pergi Ke Detail</a>
+                    <a href="{{route('product-detail', $product->id)}}" class="prod-i-buy">Pergi Ke Detail</a>
 
 
                 </div>

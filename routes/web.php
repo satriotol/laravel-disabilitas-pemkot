@@ -18,7 +18,7 @@ Route::get('/home/cart', 'App\Http\Controllers\InterfaceController@cart')->name(
 Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
 Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
 Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
-Route::get('/product/detail', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
+Route::get('/product/show/{product}', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard');

@@ -44,13 +44,15 @@
 
                     <ul class="slides">
                         @foreach ($products as $produk)
-                            <li>
-                                <img src="{{ asset('gambar/' . $produk->product_images[0]->image) }}" alt="">
-                                <div class="fr-slider-cont">
-                                    <h3>{{ $produk->name }}</h3>
-                                    <p>{{ $produk->price }}</p>
-                                </div>
-                            </li>
+                        @if ($produk->product_images->count() > 0)
+                        <li>
+                            <img src="{{ asset('gambar/' . $produk->product_images[0]->image) }}" alt="">
+                            <div class="fr-slider-cont">
+                                <h3>{{ $produk->name }}</h3>
+                                <p>{{ $produk->price }}</p>
+                            </div>
+                        </li>
+                        @endif
                         @endforeach
                 </div>
 
@@ -77,7 +79,6 @@
                                         Selengkapnya
                                     </div>
                                 </div>
-                                1
                             </div>
                         </div>
                     </div>

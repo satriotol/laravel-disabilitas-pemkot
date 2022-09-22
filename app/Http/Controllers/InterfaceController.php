@@ -57,10 +57,10 @@ class InterfaceController extends Controller
         return view('interface.list', compact('socialmedia', 'products', 'categories'));
     }
 
-    public function detail()
+    public function detail(Product $product)
     {
         $socialmedia = SocialMedia::all();
-        $products = Product::all();
-        return view('interface.detail', compact('socialmedia', 'products'));
+        // $products = Product::all();
+        return view('interface.detail', compact('socialmedia', 'product'));
     }
 }
