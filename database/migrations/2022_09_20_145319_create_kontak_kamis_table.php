@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('kontak_kami', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('telp');
+            $table->string('kode_pos');
+            $table->string('alamat');
             $table->string('email');
-            $table->string('message');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kontak_kamis');
+        Schema::dropIfExists('kontak_kami');
     }
 };

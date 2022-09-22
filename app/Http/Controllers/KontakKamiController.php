@@ -22,15 +22,17 @@ class KontakKamiController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'message' => 'required'
+            'telp' => 'required',
+            'kode_pos' => 'required',
+            'alamat' => 'required',
+            'email' => 'required'
         ]);
 
         $kontakkami = new KontakKami;
-        $kontakkami->name = $request->name;
+        $kontakkami->telp = $request->telp;
+        $kontakkami->kode_pos = $request->kode_pos;
+        $kontakkami->alamat = $request->alamat;
         $kontakkami->email = $request->email;
-        $kontakkami->message = $request->message;
 
         $kontakkami->save();
 
@@ -47,13 +49,15 @@ class KontakKamiController extends Controller
     public function update(Request $request, kontakkami $kontakkami)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'message' => 'required'
+            'telp' => 'required',
+            'kode_pos' => 'required',
+            'alamat' => 'required',
+            'email' => 'required'
         ]);
-        $kontakkami->name = $request->name;
+        $kontakkami->telp = $request->telp;
+        $kontakkami->kode_pos = $request->kode_pos;
+        $kontakkami->alamat = $request->alamat;
         $kontakkami->email = $request->email;
-        $kontakkami->message = $request->message;
         $kontakkami->update();
 
         Session::flash('flash_message', 'Data Kontak Kami berhasil diupdate');
