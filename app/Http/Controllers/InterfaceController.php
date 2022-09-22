@@ -33,14 +33,16 @@ class InterfaceController extends Controller
     {
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
-        return view('interface.cart', compact('socialmedia', 'categories'));
+        $kontak_kami = KontakKami::all();
+        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami'));
     }
 
     public function daftar()
     {
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
-        return view('interface.login', compact('socialmedia', 'categories'));
+        $kontak_kami = KontakKami::all();
+        return view('interface.login', compact('socialmedia', 'categories', 'kontak_kami'));
     }
 
     public function productgallery()
@@ -48,7 +50,8 @@ class InterfaceController extends Controller
         $socialmedia = SocialMedia::all();
         $products = Product::all();
         $categories = Category::all();
-        return view('interface.gallery', compact('socialmedia', 'products', 'categories'));
+        $kontak_kami = KontakKami::all();
+        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'kontak_kami'));
     }
 
     public function productlist()
@@ -56,7 +59,8 @@ class InterfaceController extends Controller
         $socialmedia = SocialMedia::all();
         $products = Product::all();
         $categories = Category::all();
-        return view('interface.list', compact('socialmedia', 'products', 'categories'));
+        $kontak_kami = KontakKami::all();
+        return view('interface.list', compact('socialmedia', 'products', 'categories', 'kontak_kami'));
     }
 
     public function detail(Product $product)
@@ -64,6 +68,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         // $products = Product::all();
-        return view('interface.detail', compact('socialmedia', 'product'));
+        $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
+        $kontak_kami = KontakKami::all();
+        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post', 'kontak_kami'));
     }
 }

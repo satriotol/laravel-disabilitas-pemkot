@@ -6,97 +6,13 @@
             <div class="topcatalog">
                 <a class="topcatalog-btn" href="{{ route('product-gallery') }}"><span>Semua</span> Kategori</a>
                 <ul class="topcatalog-list">
-
+                    @foreach ($categories as $cate)
                     <li>
                         <a href="{{ route('product-gallery') }}">
-                            Kursi Roda
+                            {{$cate->name}}
                         </a>
-                        <i class="fa fa-angle-right"></i>
-                        <ul>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Kursi Roda Baru
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Kursi Roda Bekas
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <li>
-                        <a href="{{ route('product-gallery') }}">
-                            Tongkat Bantu
-                        </a>
-                        <i class="fa fa-angle-right"></i>
-                        <ul>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Tongkat Bantu Baru
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Tongkat Bantu Bekas
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{ route('product-gallery') }}">
-                            Alat Bantu Dengar
-                        </a>
-                        <i class="fa fa-angle-right"></i>
-                        <ul>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Alat Bantu Dengar Baru
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Alat Bantu Dengar Bekas
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{ route('product-gallery') }}">
-                            Kaki Palsu
-                        </a>
-                        <i class="fa fa-angle-right"></i>
-                        <ul>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Kaki Palsu Baru
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Kaki Palsu Bekas
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{ route('product-gallery') }}">
-                            Tangan Palsu
-                        </a>
-                        <i class="fa fa-angle-right"></i>
-                        <ul>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Tangan Palsu Baru
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product-gallery') }}">
-                                    Tangan Palsu Bekas
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <!-- Catalog menu - end -->

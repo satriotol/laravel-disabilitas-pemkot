@@ -36,26 +36,32 @@
 
             <div class="prod-slider">
                 <ul class="prod-slider-car">
+                    @foreach ($product->product_images as $product_image)
                     <li>
+                        <a data-fancybox-group="product" class="fancy-img" href="#">
                             {{-- <img src="{{ asset('gambar/' .  $product->image) }}" alt="" style="width: 100%" height="auto"> --}}
-                            <img src="{{ asset('gambar/' . $product->product_images[0]->image) }}" alt="">
+                            <img src="{{ asset('gambar/' . $product_image->image) }}" alt="">
+                        </a>
                     </li>
+                    @endforeach
                 </ul>
             </div>
 
 
-            @foreach ($product->product_images as $product_image)
+
             <div class="prod-thumbs">
                 <div class="bx-wrapper" style="max-width: 25032px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 102px;"><ul class="prod-thumbs-car" style="width: 1015%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                    @foreach ($product->product_images as $product_image)
                     <li style="float: left; list-style: none; position: relative; width: 83.4px; margin-right: 8px;">
                         <a data-slide-index="0" href="#" class="active">
                             <img src="{{ asset('gambar/' . $product_image->image) }}" alt="">
                         </a>
                     </li>
+                    @endforeach
                 </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
             </div>
 
-            @endforeach
+
         </div>
 
         <!-- Product Description/Info -->
@@ -89,26 +95,32 @@
     <!-- Single Product - end -->
 
     <!-- Related Products - start -->
-    {{-- <div class="prod-related">
-        <h2><span>Produk Terkait</span></h2>
+    <div class="prod-related">
+        <h2>Produk Terkait</h2>
         <div class="prod-related-car" id="prod-related-car">
             <ul class="slides">
+
                 <li class="prod-rel-wrap">
+                    @foreach ($post as $po)
+                    @if ($po->product_images->count() > 0)
                     <div class="prod-rel">
-                        <a href="{{route('product-detail')}}" class="prod-rel-img">
-                            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2020/7/31/1721278/1721278_adc869e5-4955-4705-b661-77f9610b24aa_1080_1080.jpg" alt="Adipisci aperiam commodi">
+                        <a href="#" class="prod-rel-img">
+                            <img src="{{asset('gambar/' . $po->product_images[0]->image)}}" alt="">
                         </a>
                         <div class="prod-rel-cont">
-                            <h3><a href="{{route('product-detail')}}">Tongkat Bantu</a></h3>
+                            <h3><a href="#">{{$po->name}}</a></h3>
                             <p class="prod-rel-price">
-                                <b>Rp. 30.000</b>
+                                <b>Rp. {{$po->price}}</b>
                             </p>
                         </div>
                     </div>
+                    @endif
+                @endforeach
                 </li>
+
             </ul>
         </div>
-    </div> --}}
+    </div>
     <!-- Related Products - end -->
 
 

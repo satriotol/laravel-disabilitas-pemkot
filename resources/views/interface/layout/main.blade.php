@@ -81,11 +81,9 @@
                         Kategori
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
-                        <li><a href="{{route('product-gallery')}}">Kursi Roda</a></li>
-                        <li><a href="{{route('product-gallery')}}">Tongkat Bantu</a></li>
-                        <li><a href="{{route('product-gallery')}}">Alat Bantu  Dengar</a></li>
-                        <li><a href="{{route('product-gallery')}}">Kaki Palsu</a></li>
-                        <li><a href="{{route('product-gallery')}}">Tangan Palsu</a></li>
+                        @foreach ($categories as $cate)
+                        <li><a href="{{route('product-gallery')}}">{{$cate->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="f-menu" style="text-size-adjust: 20px;">
@@ -93,10 +91,12 @@
                         Kontak Kami
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
-                        <li><a> Telp: (024) 3513366</a></li>
-                        <li><a> Kode: Pos 50132</a></li>
-                        <li><a> Alamat: Jl.Pemuda No.148, Semarang</a></li>
-                        <li><a> E-mail: pemkotsmg@semarangkota.go.id</a></li>
+                        @foreach ($kontak_kami as $kk)
+                        <li><a> Telp: {{$kk->telp}}</a></li>
+                        <li><a> Kode Pos: {{$kk->kode_pos}}</a></li>
+                        <li><a> Alamat: {{$kk->alamat}}</a></li>
+                        <li><a> E-mail: {{$kk->email}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="f-subscribe" style="color: #fff;">
