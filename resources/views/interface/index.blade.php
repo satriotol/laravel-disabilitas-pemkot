@@ -11,7 +11,8 @@
                 <ul class="slides">
                     @foreach ($sliders as $slider)
                         <li>
-                            <img src="{{ asset('gambar/' . $slider->image) }}" alt="" style="width: 100%" height="auto">
+                            <img src="{{ asset('gambar/' . $slider->image) }}" alt=""
+                                style="width: 100%;height: 300px;object-fit:cover">
                             <div class="fr-slider-cont">
                                 <h3>{{ $slider->name }}</h3>
                                 <p>{{ $slider->description }}</p>
@@ -30,10 +31,9 @@
 
             <ul class="fr-pop-tabs sections-show">
                 @foreach ($categories as $cate)
-                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
-                        Kategori</a></li>
-                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{$cate->name}}</a></li>
-
+                    <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
+                            Kategori</a></li>
+                    <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{ $cate->name }}</a></li>
                 @endforeach
             </ul>
 
@@ -43,112 +43,113 @@
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
 
                     <ul class="slides">
-			        @foreach ($products as $produk)
-                         <li>
-                            <img src="{{ asset('gambar/' . $produk->image) }}" alt="">
-                            <div class="fr-slider-cont">
-                                <h3>{{ $produk->name }}</h3>
-                                <p>{{ $produk->price }}</p>
-                            </div>
-                        </li>
-                    @endforeach
-                </div>
-
-
-        <!-- Special offer -->
-        <div class="discounts-wrap" id="tentang-bab">
-            <h3 class="component-ttl"><span>Tentang</span></h3>
-            <div id="about" class="layout_padding about_section">
-                <div class="container">
-                    <div class="row">
-                        @foreach ($abouts as $about )
-                        <div class="col-md-6">
-                            <div><img src="{{ asset('gambar/'. $about->image ) }}" alt="gambar" style="max-width: 100%;"></div>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="about_taital">{{ $about->description }}</p>
-                            <br>
-
-                            <div style="float: right;">
-                                <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png"
-                                        style="max-width: 25%;"></a>
-                            </div>
-                            <div style="float:right;">
-                                Selengkapnya
-                            </div>
-                        </div>
+                        @foreach ($products as $produk)
+                            <li>
+                                <img src="{{ asset('gambar/' . $produk->product_images[0]->image) }}" alt="">
+                                <div class="fr-slider-cont">
+                                    <h3>{{ $produk->name }}</h3>
+                                    <p>{{ $produk->price }}</p>
+                                </div>
+                            </li>
                         @endforeach
-                    </div>
                 </div>
-            </div>
-            <br><br>
-        </div>
 
-        <!-- FAQ -->
-        <div class="discounts-wrap" id="faq-bab">
-            <h3 class="component-ttl"><span>Frequently Asked Questions</span></h3>
-            <div id="faq" class="layout_padding about_section">
-                <div class="faqs-container">
-                @foreach ($faqs as $faq)
-                    <div class="faq active">
-                        <h3 class="faq-title">
-                            <h3>{{ $faq->question }}</h3>
-                        </h3>
-                        <p class="faq-text">
-                           {{ $faq->answer }}
-                        </p>
-                        <button class="faq-toggle">
-                            <i class="fa fa-chevron-down"></i>
-                            <i class="fa fa-times"></i>
-                        </button>
+
+                <!-- Special offer -->
+                <div class="discounts-wrap" id="tentang-bab">
+                    <h3 class="component-ttl"><span>Tentang</span></h3>
+                    <div id="about" class="layout_padding about_section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div><img src="{{ asset('gambar/' . $abouts[0]->image) }}" alt="gambar"
+                                            style="max-width: 100%;"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="about_taital">{{ $abouts[0]->description }}</p>
+                                    <br>
+
+                                    <div style="float: right;">
+                                        <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png"
+                                                style="max-width: 25%;"></a>
+                                    </div>
+                                    <div style="float:right;">
+                                        Selengkapnya
+                                    </div>
+                                </div>
+                                1
+                            </div>
+                        </div>
                     </div>
-			    @endforeach
+                    <br><br>
                 </div>
-            </div>
-        </div>
 
-{{-- kontak kami --}}
-        <div class="discounts-wrap" id="kontakkami-bab">
-            <h3 class="component-ttl"><span>Kontak Kami</span></h3>
-            <!-- Main Content - start -->
-            <main>
-                <section class="container stylization maincont">
-                    <!-- Contact Form -->
-                    <div class="contactform-wrap">
-                        <form action="{{ url('kontakkami.store') }}" method="POST" class="form-validate">
-                            @foreach ($kontak_kami as $kontakkami )
-                            @csrf
-                            @method('PUT')
-                            <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan Anda</p>
-                            {{-- kolom --}}
-                            <p class="contactform-field contactform-text">
-                                <label class="contactform-label">Nama</label><!-- NO SPACE --><span
-                                    class="contactform-input"><input placeholder="Nama" type="text" name="name"
-                                        data-required="text"></span>
-                            </p>
-                            <p class="contactform-field contactform-email">
-                                <label class="contactform-label">E-mail</label><!-- NO SPACE --><span
-                                    class="contactform-input"><input placeholder="E-mail Anda" type="text"
-                                        name="email" data-required="text" data-required-email="email" ></span>
-                            </p>
-                            <p class="contactform-field contactform-textarea">
-                                <label class="contactform-label">Message</label><!-- NO SPACE --><span
-                                    class="contactform-input">
-                                    <textarea placeholder="Pesan Anda" name="mess" data-required="text" ></textarea>
-                                </span>
-                            </p>
-                            <p class="contactform-submit">
-                                <input value="Kirim" type="submit">
-                            </p>
+                <!-- FAQ -->
+                <div class="discounts-wrap" id="faq-bab">
+                    <h3 class="component-ttl"><span>Frequently Asked Questions</span></h3>
+                    <div id="faq" class="layout_padding about_section">
+                        <div class="faqs-container">
+                            @foreach ($faqs as $faq)
+                                <div class="faq active">
+                                    <h3 class="faq-title">
+                                        <h3>{{ $faq->question }}</h3>
+                                    </h3>
+                                    <p class="faq-text">
+                                        {{ $faq->answer }}
+                                    </p>
+                                    <button class="faq-toggle">
+                                        <i class="fa fa-chevron-down"></i>
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
                             @endforeach
-                        </form>
+                        </div>
                     </div>
-                    <!-- Contacts - end -->
+                </div>
 
-                </section>
-            </main>
-            <!-- Main Content - end -->
-        </div>
+                {{-- kontak kami --}}
+                <div class="discounts-wrap" id="kontakkami-bab">
+                    <h3 class="component-ttl"><span>Kontak Kami</span></h3>
+                    <!-- Main Content - start -->
+                    <main>
+                        <section class="container stylization maincont">
+                            <!-- Contact Form -->
+                            <div class="contactform-wrap">
+                                <form action="{{ url('kontakkami.store') }}" method="POST" class="form-validate">
+                                    @foreach ($kontak_kami as $kontakkami)
+                                        @csrf
+                                        @method('PUT')
+                                        <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan
+                                            Anda</p>
+                                        {{-- kolom --}}
+                                        <p class="contactform-field contactform-text">
+                                            <label class="contactform-label">Nama</label><!-- NO SPACE --><span
+                                                class="contactform-input"><input placeholder="Nama" type="text"
+                                                    name="name" data-required="text"></span>
+                                        </p>
+                                        <p class="contactform-field contactform-email">
+                                            <label class="contactform-label">E-mail</label><!-- NO SPACE --><span
+                                                class="contactform-input"><input placeholder="E-mail Anda" type="text"
+                                                    name="email" data-required="text" data-required-email="email"></span>
+                                        </p>
+                                        <p class="contactform-field contactform-textarea">
+                                            <label class="contactform-label">Message</label><!-- NO SPACE --><span
+                                                class="contactform-input">
+                                                <textarea placeholder="Pesan Anda" name="mess" data-required="text"></textarea>
+                                            </span>
+                                        </p>
+                                        <p class="contactform-submit">
+                                            <input value="Kirim" type="submit">
+                                        </p>
+                                    @endforeach
+                                </form>
+                            </div>
+                            <!-- Contacts - end -->
+
+                        </section>
+                    </main>
+                    <!-- Main Content - end -->
+                </div>
     </section>
 
     <!-- Main Content - end -->
