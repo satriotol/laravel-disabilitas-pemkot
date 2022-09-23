@@ -30,11 +30,12 @@
             <h3 class="component-ttl"><span>Kategori</span></h3>
 
             <ul class="fr-pop-tabs sections-show">
-                @foreach ($categories as $cate)
+
                     <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
                             Kategori</a></li>
+                    @foreach ($categories as $cate)
                     <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{ $cate->name }}</a></li>
-                @endforeach
+                    @endforeach
             </ul>
 
             <div class="fr-pop-tab-cont">

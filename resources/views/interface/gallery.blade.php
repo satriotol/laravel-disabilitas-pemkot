@@ -25,7 +25,7 @@
 
         <!-- Catalog Categories - start -->
         <div class="section-sb-current">
-            <h3><a href="{{route('product-list')}}">Kursi Roda<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
+            <h3><a href="{{route('product-list')}}">Kategori<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
             <ul class="section-sb-list" id="section-sb-list">
                 @foreach ($categories as $cate)
                 <li class="categ-1">

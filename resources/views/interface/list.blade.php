@@ -25,7 +25,7 @@
 
         <!-- Catalog Categories - start -->
         <div class="section-sb-current">
-            <h3><a href="{{route('product-list')}}">Kursi Roda<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
+            <h3><a href="{{route('product-list')}}">Kategori<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
             <ul class="section-sb-list" id="section-sb-list">
                 @foreach ($categories as $cate)
                 <li class="categ-1">
@@ -91,9 +91,10 @@
         </div>
         <!-- Catalog Topbar - end -->
         @foreach ($products as $product)
+        @if ($product->product_images->count() > 0)
         <div class="prod-items section-items">
             <div class="prodlist-i">
-                <a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="https://s3.bukalapak.com/img/3897836966/large/kURSI_RODA_BEKAS_MEREK_TRANSMED.jpg" alt="Kursi Roda Bekas"><!-- NO SPACE --></a>
+                <a class="prodlist-i-img" href="#"><img src="{{asset('gambar/' . $product->product_images[0]->image)}}" alt="#"></a>
                 <div class="prodlist-i-cont">
                     <h3><a href="product.html">{{$product->name}}</a></h3>
                     <div class="prodlist-i-top">
@@ -112,8 +113,9 @@
                     </div>
                 </div>
             </div>
-            @endforeach
         </div>
+        @endif
+        @endforeach
 
         <!-- Pagination - start -->
         <ul class="pagi">

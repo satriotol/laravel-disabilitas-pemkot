@@ -19,9 +19,9 @@
                 <h3 class="card-title">Tabel Kontak Kami</h3>
             </div>
             <div class="card-body">
-                <div class="text-right mb-2">
+                {{-- <div class="text-right mb-2">
                     <a href="{{ route('kontakkami.create') }}"><button type="button" class="btn bg-gradient-primary">Create</button></a>
-                </div>
+                </div> --}}
                 <table class="table table-bordered">
                     <thead>
                         <tr>
