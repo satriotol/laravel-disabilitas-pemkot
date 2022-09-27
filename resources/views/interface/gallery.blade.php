@@ -33,7 +33,6 @@
                         <span class="categ-1-label">{{$cate->name}}</span>
                     </a>
                 </li>
-
                 @endforeach
             </ul>
         </div>
@@ -105,7 +104,7 @@
                     <a href="#">{{$product->name}}</a>
                 </h3>
                 <p class="prod-i-price">
-                    <b>Rp. {{$product->price}}</b>
+                    <b>@currency($product->price)</b>
                 </p>
 
             </div>

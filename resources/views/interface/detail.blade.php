@@ -38,7 +38,7 @@
                 <ul class="prod-slider-car">
                     @foreach ($product->product_images as $product_image)
                     <li>
-                        <a data-fancybox-group="product" class="fancy-img" href="#">
+                        <a data-fancybox-group="product" class="fancy-img" href="{{ asset('gambar/' . $product_image->image) }}">
                             {{-- <img src="{{ asset('gambar/' .  $product->image) }}" alt="" style="width: 100%" height="auto"> --}}
                             <img src="{{ asset('gambar/' . $product_image->image) }}" alt="">
                         </a>
@@ -74,13 +74,13 @@
             </div>
             <div class="prod-info">
                 <p class="prod-addwrap">
-                    <a href="#" class="prod-add" rel="nofollow">Masukkan Keranjang</a>
+                    <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A"" class="prod-add" rel="nofollow">Chat dengan penjual</a>
                 </p>
             </div>
 
             <ul class="prod-i-props" style="font-size: 25px;">
-                <li><h1>Rp. {{ $product->discount_price }}</h1></li>
-                <li> <del> Rp. {{ $product->price }}</del></li>
+                <li><h1> @currency($product->discount_price)</h1></li>
+                <li> <del> @currency($product->price) </del></li>
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
@@ -110,7 +110,7 @@
                         <div class="prod-rel-cont">
                             <h3><a href="#">{{$po->name}}</a></h3>
                             <p class="prod-rel-price">
-                                <b>Rp. {{$po->price}}</b>
+                                <b>@currency($po->price)</b>
                             </p>
                         </div>
                     </div>
