@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!-- FAQ -->
     <link rel="stylesheet" href="{{asset('css 1/faq.css')}}">
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}"> --}}
 
 </head>
 <body>
