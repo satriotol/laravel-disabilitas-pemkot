@@ -105,7 +105,8 @@
                     </div>
                     <div class="prodlist-i-action">
                         <p class="prodlist-i-addwrap">
-                            <a href="#" class="prodlist-i-add">Pergi Ke Detail</a>
+
+                            <a href="{{route('product-detail', $product->id)}}" class="prodlist-i-add">Pergi Ke Detail</a>
                         </p>
                     <span class="prodlist-i-price">
                         <b style="font-size: 15px;" !important>@currency($product->price)</b>
