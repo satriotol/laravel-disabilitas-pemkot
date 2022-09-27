@@ -33,7 +33,6 @@
                         <span class="categ-1-label">{{$cate->name}}</span>
                     </a>
                 </li>
-
                 @endforeach
             </ul>
         </div>
