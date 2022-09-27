@@ -29,14 +29,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('product') }}" class="nav-link {{ active_class(['product', 'product.*']) }}">
-                        <i class="nav-icon fas fa-tshirt"></i>
-                        <p>
-                            Product
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['kategori','kategori.*']) }}">
                         <i class="nav-icon fas fa-grip-horizontal"></i>
                         <p>
@@ -44,6 +36,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('product') }}" class="nav-link {{ active_class(['product', 'product.*']) }}">
+                        <i class="nav-icon fas fa-tshirt"></i>
+                        <p>
+                            Product
+                        </p>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{ route('slider') }}" class="nav-link {{ active_class(['slider','slider.*']) }}">
                         <i class="nav-icon fas fa-sliders-h"></i>
