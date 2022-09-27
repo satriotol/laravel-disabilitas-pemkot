@@ -108,7 +108,7 @@
                             <a href="#" class="prodlist-i-add">Pergi Ke Detail</a>
                         </p>
                     <span class="prodlist-i-price">
-                        <b style="font-size: 15px;" !important>Rp. {{$product->price}}</b>
+                        <b style="font-size: 15px;" !important>@currency($product->price)</b>
                                                 </span>
                     </div>
                 </div>

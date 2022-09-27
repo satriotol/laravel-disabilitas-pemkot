@@ -79,8 +79,8 @@
             </div>
 
             <ul class="prod-i-props" style="font-size: 25px;">
-                <li><h1>Rp. {{ $product->discount_price }}</h1></li>
-                <li> <del> Rp. {{ $product->price }}</del></li>
+                <li><h1> @currency($product->discount_price)</h1></li>
+                <li> <del> @currency($product->price) </del></li>
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
