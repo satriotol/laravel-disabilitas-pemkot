@@ -110,7 +110,7 @@
                         <div class="prod-rel-cont">
                             <h3><a href="#">{{$po->name}}</a></h3>
                             <p class="prod-rel-price">
-                                <b>Rp. {{$po->price}}</b>
+                                <b>@currency($po->price)</b>
                             </p>
                         </div>
                     </div>
