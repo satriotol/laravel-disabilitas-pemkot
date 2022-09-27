@@ -62,6 +62,7 @@ TABLE OF CONTENTS:
 
 * {
     font-family: 'Poppins', sans-serif;
+
 }
 
 html, body, div, span, applet, object, iframe,
@@ -160,6 +161,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	color: #053742;
+
 }
 
 
@@ -193,7 +195,6 @@ body {
     display: flex;
     align-items: center;
     padding-left: 1rem;
-
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
     transition: all 80ms ease-out;
@@ -320,10 +321,51 @@ body {
 	display: inline-block;
 	vertical-align: middle;
 }
-.shop-menu ul li {
+.shop-menu ul li  {
 	display:inline-block;
-	padding-left: 15px;
+	padding-left: 30px;
 	padding-right: 15px;
+
+    /* margin-bottom: 0px; */
+}
+.shop-menu ul li .btn-login{
+    margin-top: 20px;
+    padding-top: 20px;
+    display: inline-block;
+    /* margin: 15px 0; */
+    padding: 15px 15px;
+    border: 3px solid #19697b ;
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-size: 200%;
+    background-image: linear-gradient(to right, #dfeaed, #fff, #05a5d5);
+    transition: 0.8s;
+    margin-bottom: 30px;
+}
+.shop-menu ul li .btn-jual{
+    display: inline-block;
+    /* margin: 15px 0; */
+    padding: 15px 25px;
+    border: 3px solid #19697b ;
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-size: 200%;
+    background-image: linear-gradient(to right, #01829f, #fff, #05a5d5 );
+    transition: 0.8s;
+    margin-bottom: 30px;
+
+}
+.btn-jual:hover{
+    background-position: right;
+}
+.btn-login:hover {
+    background-position: right;
 }
 .shop-menu ul li:last-child {
 	padding-right: 0;
@@ -378,7 +420,7 @@ body {
 3 - Topmenu
 ----------------------------------*/
 .topmenu {
-    margin-top: 170px;
+    margin-top: 200px;
 	position: relative;
 	padding: 0 41px 0 203px;
 	font-size: 14px;
