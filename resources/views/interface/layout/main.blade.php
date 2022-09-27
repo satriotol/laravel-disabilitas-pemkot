@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="{{asset('css 1/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css 1/ion.rangeSlider.css')}}">
     <link rel="stylesheet" href="{{asset('css 1/ion.rangeSlider.skinFlat.css')}}">
@@ -35,6 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!-- FAQ -->
     <link rel="stylesheet" href="{{asset('css 1/faq.css')}}">
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 
 </head>
 <body>

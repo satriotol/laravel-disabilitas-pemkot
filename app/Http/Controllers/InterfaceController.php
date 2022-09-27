@@ -35,7 +35,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
-        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami'));
+        $list_category = Category::pluck('name', 'id');
+        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami', 'list_category'));
     }
 
     public function daftar()

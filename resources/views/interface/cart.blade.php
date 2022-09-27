@@ -1,156 +1,82 @@
 @extends('interface.layout.main')
 
 @section('container')
-<section class="container stylization maincont">
-
-
-    <ul class="b-crumbs">
-        <li>
-            <a href="{{route('home')}}">
-                Home
-            </a>
-        </li>
-        <li>
-            <span>Keranjang</span>
-        </li>
-    </ul>
-    <h1 class="main-ttl"><span>Keranjang</span></h1>
-    <!-- Cart Items - start -->
-    <form action="#">
-
-        <div class="cart-items-wrap">
-            <table class="cart-items">
-                <thead>
-                <tr>
-                    <td class="cart-image">Gambar</td>
-                    <td class="cart-ttl">Produk</td>
-                    <td class="cart-price">Harga</td>
-                    <td class="cart-quantity">Jumlah</td>
-                    <td class="cart-summ">Total Harga</td>
-                    <td class="cart-del">&nbsp;</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/621675472/w-1000/Kursi_Roda_Standard_Velg_Racing_Sella_KY_809B.jpg" alt="Similique delectus totam">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Kursi Roda</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 200.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 200.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 200.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/99/MTA-1573794/ottobock_kaki-palsu_full04.jpg" alt="Eveniet nobis minus">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Kaki Palsu</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 100.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 100.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 100.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/1500314121/w-1000/img20170505_091519_alat_bantu_dengar_nbs_2.jpg" alt="Quod soluta corrupti">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Alat Bantu Dengar</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 200.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 200.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 200.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/1933370611/w-1000/Tongkat_kaki_3_Alat_Bantu_Jalan_Fisioterapi___Sella.jpg" alt="Perferendis recusandae">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Tongkat Bantu</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 300.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 300.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 300.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <ul class="cart-total">
-            <li class="cart-summ">TOTAL: <b>Rp. 800.000</b></li>
-        </ul>
-        <div class="cart-submit">
-            <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A" class="cart-submit-btn">Bayar</a>
-            <a href="#" class="cart-clear">Bersihkan Keranjang</a>
-        </div>
-    </form>
-    <!-- Cart Items - end -->
-
-</section>
+    {{-- <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Product</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section> --}}
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        {{-- <div class="card-header">
+                            <h3 class="card-title">Product</h3>
+                        </div> --}}
+                        <form method="POST"
+                            action="@isset($product) {{ route('product.update', $product->id) }} @endisset @empty($product) {{ route('product.store') }} @endempty">
+                            <div class="card-body">
+                                @include('partials.errors')
+                                @csrf
+                                <div class="form-group">
+                                    <label>Pilih Kategori</label>
+                                    <select name="category_id" class="form-control" required>
+                                        <option value="">Pilih Kategori</option>
+                                        @foreach ($list_category as $key => $value)
+                                            <option value="{{ $key }}"
+                                                @isset($product)
+                                            {{ $product->category_id == $key ? 'selected' : '' }}
+                                            @endisset>
+                                                {{ $value }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama Produk</label>
+                                    <input type="text" name="name" class="form-control" required
+                                        placeholder="Masukan Nama Produk" value={{isset($product) ? $product->name : '' }} >
+                                </div>
+                                <div class="form-group">
+                                    <label>Harga</label>
+                                    <input required type="number" name="price" class="form-control" placeholder="Masukan Harga"
+                                        value="{{ isset($product) ? $product->price : '' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Harga Diskon</label>
+                                    <input type="number" name="discount_price" class="form-control"
+                                        placeholder="Masukan Harga Diskon"
+                                        value="{{ isset($product) ? $product->discount_price : '' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Deskripsi</label>
+                                    <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($product) ? $product->description : '' }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Stok Produk</label>
+                                    <input required type="number" name="stock" class="form-control"
+                                        placeholder="Masukan Jumlah Stok"
+                                        value="{{ isset($product) ? $product->stock : '' }}">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary">Back</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <br><br>
+    <!-- /.content -->
 @endsection

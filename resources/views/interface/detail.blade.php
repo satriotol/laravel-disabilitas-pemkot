@@ -71,9 +71,11 @@
             </div> <br><br>
             <div class="prod-cont-txt">
                 <p>{{  $product->description }}</p>
+                <i class="fa-solid fa-square-share-nodes"></i>
             </div>
             <div class="prod-info">
                 <p class="prod-addwrap">
+                    {{-- <i class="nav-icon fa-solid fa-square-share-nodes"></i> --}}
                     <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A"" class="prod-add" rel="nofollow">Chat dengan penjual</a>
                 </p>
             </div>
@@ -84,6 +86,7 @@
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
+
 
 
 
