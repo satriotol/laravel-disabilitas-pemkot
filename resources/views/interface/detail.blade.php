@@ -38,7 +38,7 @@
                 <ul class="prod-slider-car">
                     @foreach ($product->product_images as $product_image)
                     <li>
-                        <a data-fancybox-group="product" class="fancy-img" href="#">
+                        <a data-fancybox-group="product" class="fancy-img" href="{{ asset('gambar/' . $product_image->image) }}">
                             {{-- <img src="{{ asset('gambar/' .  $product->image) }}" alt="" style="width: 100%" height="auto"> --}}
                             <img src="{{ asset('gambar/' . $product_image->image) }}" alt="">
                         </a>
