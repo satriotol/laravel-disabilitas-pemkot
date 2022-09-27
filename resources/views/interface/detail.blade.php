@@ -74,7 +74,7 @@
             </div>
             <div class="prod-info">
                 <p class="prod-addwrap">
-                    <a href="#" class="prod-add" rel="nofollow">Masukkan Keranjang</a>
+                    <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A"" class="prod-add" rel="nofollow">Chat dengan penjual</a>
                 </p>
             </div>
 
