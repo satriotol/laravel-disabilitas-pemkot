@@ -30,13 +30,21 @@ class InterfaceController extends Controller
 
     }
 
-    public function cart()
+    public function jual()
     {
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
         $list_category = Category::pluck('name', 'id');
-        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami', 'list_category'));
+        return view('interface.jual', compact('socialmedia', 'categories', 'kontak_kami', 'list_category'));
+    }
+
+    public function cart()
+    {
+        $categories = Category::all();
+        $socialmedia = SocialMedia::all();
+        $kontak_kami = KontakKami::all();
+        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami'));
     }
 
     public function daftar()

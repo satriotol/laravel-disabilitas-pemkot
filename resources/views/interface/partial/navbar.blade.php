@@ -9,9 +9,16 @@
             <div class="shop-menu">
                 <ul>
                     <li>
-                        <a href="{{ route('cart') }}">
+                        <a href="{{ route('jual') }}">
                             {{-- <img src="{{asset('img/ikon keranjang-01.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
                             <button class="btn-jual">Jual</button>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="{{ route('cart') }}">
+                            {{-- <img src="{{asset('img/ikon keranjang-01.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
+                            <button class="btn-cart">Keranjang</button>
                         </a>
 
                     </li>
