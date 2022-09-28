@@ -12,10 +12,10 @@
         </div><!-- /.container-fluid -->
     </section> --}}
     <!-- Main content -->
-    <section class="content" style="margin-top: 0; position: relative; padding:0 1px 0 43px;">
+    <section class="content" style="margin-top: 0; position: relative; padding:0 1px 0 150px;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <div class="card card-primary">
                         {{-- <div class="card-header">
                             <h3 class="card-title">Product</h3>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="{{ url()->previous() }}" class="btn btn-outline-secondary">Back</a>
+                                <a href="{{ url()->previous() }}" class="btn btn-danger">Back</a>
                             </div>
                         </form>
                     </div>
