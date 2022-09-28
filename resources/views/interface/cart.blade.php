@@ -1,4 +1,5 @@
 @extends('interface.layout.main')
+{{-- <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}"> --}}
 
 @section('container')
     {{-- <section class="content-header">
@@ -11,10 +12,10 @@
         </div><!-- /.container-fluid -->
     </section> --}}
     <!-- Main content -->
-    <section class="content">
+    <section class="content" style="margin-top: 0; position: relative; padding:0 1px 0 43px;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <div class="card card-primary">
                         {{-- <div class="card-header">
                             <h3 class="card-title">Product</h3>
