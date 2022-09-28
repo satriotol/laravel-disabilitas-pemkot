@@ -11,9 +11,8 @@ class UserController extends Controller
 {
     protected function index()
     {
-       $batas = 5;
        $jumlah_user = User::count();
-       $user = User::orderBy('id', 'asc')->paginate($batas);
+       $user = User::all();
        $no = 0;
        return view('user.index', compact('user', 'no', 'jumlah_user'));
     }

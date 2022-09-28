@@ -11,7 +11,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $about = About::orderBy('id', 'asc')->paginate(5);
+        $about = About::all();
         return view('about.index', compact('about'));
     }
 

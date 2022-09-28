@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 class KontakKamiController extends Controller
 {
     public function index(){
-        $kontakkami = KontakKami::orderBy('id', 'asc')->paginate(5);
+        $kontakkami = KontakKami::all();
         return view('kontakkami.index', compact('kontakkami'));
     }
 
