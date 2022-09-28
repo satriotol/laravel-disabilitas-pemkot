@@ -60,6 +60,11 @@
                                     <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($product) ? $product->description : '' }}</textarea>
                                 </div>
                                 <div class="form-group">
+                                    <label for="exampleInputFile">Gambar</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="images" value={{ isset($product) ? $product->images : '' }}>
+                                    </div>
+                                <div class="form-group">
                                     <label>Stok Produk</label>
                                     <input required type="number" name="stock" class="form-control"
                                         placeholder="Masukan Jumlah Stok"
