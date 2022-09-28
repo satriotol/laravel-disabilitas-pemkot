@@ -64,6 +64,7 @@
                                     <div class="input-group">
                                         <input type="file" class="form-control" name="images" value={{ isset($product) ? $product->images : '' }}>
                                     </div>
+                                    <br>
                                 <div class="form-group">
                                     <label>Stok Produk</label>
                                     <input required type="number" name="stock" class="form-control"
