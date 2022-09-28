@@ -12,7 +12,7 @@ use Storage;
 class SocialMediaController extends Controller
 {
     public function index(){
-        $socialmedia = SocialMedia::orderBy('id', 'asc')->paginate(5);
+        $socialmedia = SocialMedia::all();
         return view('socialmedia.index', compact('socialmedia'));
     }
 

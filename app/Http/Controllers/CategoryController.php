@@ -12,7 +12,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $kategori = Category::orderBy('id', 'asc')->paginate(5);
+        $kategori = Category::all();
         return view('kategori.categori', compact('kategori'));
     }
 

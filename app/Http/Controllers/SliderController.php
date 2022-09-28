@@ -12,7 +12,7 @@ class SliderController extends Controller
 {
     public function index()
     {
-        $slider = Slider::orderBy('id', 'asc')->paginate(5);
+        $slider = Slider::all();
         return view('slider.slide', compact('slider'));
     }
 
