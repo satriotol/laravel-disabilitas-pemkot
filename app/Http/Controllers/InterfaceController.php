@@ -39,6 +39,10 @@ class InterfaceController extends Controller
         return view('interface.jual', compact('socialmedia', 'categories', 'kontak_kami', 'list_category'));
     }
 
+    public function pesan(Request $request){
+        dd('haloo');
+    }
+
     public function cart()
     {
         $categories = Category::all();

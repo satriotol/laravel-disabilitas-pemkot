@@ -15,142 +15,62 @@
         </li>
     </ul>
     <h1 class="main-ttl"><span>Keranjang</span></h1>
+    @if(!empty($pesanan))
+    <p align="right">Tanggal Pesan : {{ $pesanan->tanggal }}</p>
     <!-- Cart Items - start -->
-    <form action="#">
-
         <div class="cart-items-wrap">
             <table class="cart-items">
                 <thead>
                 <tr>
-                    <td class="cart-image">Gambar</td>
-                    <td class="cart-ttl">Produk</td>
+                    {{-- <td class="cart-image">Gambar</td> --}}
+                    <td class="cart-ttl" style="width:90px;">Produk</td>
                     <td class="cart-price">Harga</td>
-                    <td class="cart-quantity">Jumlah</td>
+                    <td class="cart-quantity" style="width: 40px;">Jumlah</td>
                     <td class="cart-summ">Total Harga</td>
                     <td class="cart-del">&nbsp;</td>
                 </tr>
                 </thead>
                 <tbody>
+                    @foreach ($pesanan_details as $pd)
                 <tr>
-                    <td class="cart-image">
+                    {{-- <td class="cart-image">
                         <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/621675472/w-1000/Kursi_Roda_Standard_Velg_Racing_Sella_KY_809B.jpg" alt="Similique delectus totam">
+                            <img src="{{ asset('gambar/'.$pd->product_images->image) }}" alt="Similique delectus totam">
                         </a>
-                    </td>
+                    </td> --}}
                     <td class="cart-ttl">
-                        <a href="product.html">Kursi Roda</a>
+                        {{ $pd->product->name }}
                     </td>
                     <td class="cart-price">
-                        <b>Rp. 200.000</b>
+                        <b>@currency($pd->product->price)</b>
                     </td>
                     <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
+                        {{$pd->jumlah}}
                     </td>
                     <td class="cart-summ">
-                        <b>Rp. 200.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 200.000</b></p>
+                        <b>@currency($pd->price)</b>
+                        <p class="cart-forone">unit price <b>@currency($pd->price)</b></p>
                     </td>
                     <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
+                        <form action="{{ $pd->id }}" method="post">
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus data ?');"><i class="fa fa-trash"></i></button>
+                        </form>
                     </td>
                 </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/99/MTA-1573794/ottobock_kaki-palsu_full04.jpg" alt="Eveniet nobis minus">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Kaki Palsu</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 100.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 100.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 100.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/1500314121/w-1000/img20170505_091519_alat_bantu_dengar_nbs_2.jpg" alt="Quod soluta corrupti">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Alat Bantu Dengar</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 200.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 200.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 200.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cart-image">
-                        <a href="product.html">
-                            <img src="https://s1.bukalapak.com/img/1933370611/w-1000/Tongkat_kaki_3_Alat_Bantu_Jalan_Fisioterapi___Sella.jpg" alt="Perferendis recusandae">
-                        </a>
-                    </td>
-                    <td class="cart-ttl">
-                        <a href="product.html">Tongkat Bantu</a>
-                    </td>
-                    <td class="cart-price">
-                        <b>Rp. 300.000</b>
-                    </td>
-                    <td class="cart-quantity">
-                        <p class="cart-qnt">
-                            <input value="1" type="text">
-                            <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                            <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                        </p>
-                    </td>
-                    <td class="cart-summ">
-                        <b>Rp. 300.000</b>
-                        <p class="cart-forone">unit price <b>Rp. 300.000</b></p>
-                    </td>
-                    <td class="cart-del">
-                        <a href="#" class="cart-remove"></a>
-                    </td>
-                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>
         <ul class="cart-total">
-            <li class="cart-summ">TOTAL: <b>Rp. 800.000</b></li>
+            <li class="cart-summ">TOTAL: <b>@currency($pd->price)</b></li>
         </ul>
         <div class="cart-submit">
             <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A" class="cart-submit-btn">Bayar</a>
             <a href="#" class="cart-clear">Bersihkan Keranjang</a>
         </div>
-    </form>
     <!-- Cart Items - end -->
-
+    @endif
 </section>
 @endsection

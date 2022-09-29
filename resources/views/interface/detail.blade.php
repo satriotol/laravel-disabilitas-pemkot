@@ -76,7 +76,13 @@
             <div class="prod-info">
                 <p class="prod-addwrap">
                     {{-- <i class="nav-icon fa-solid fa-square-share-nodes"></i> --}}
-                    <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A"" class="prod-add" rel="nofollow">Chat dengan penjual</a>
+                    <div class="col-md-6">
+                    <form method="POST" action="{{ route('pesan', $product->id) }}">
+                        @csrf
+                        <input type="number" name="jumlah_pesan" class="form-control" required placeholder="Jumlah Pesan">
+                        <button type="submit" class="btn btn-danger" style="margin-top: 8px"><i class="fa fa-shopping-cart"></i>&nbsp;Masukkan Keranjang</button>
+                    </form>
+                    </div>
                 </p>
             </div>
 
