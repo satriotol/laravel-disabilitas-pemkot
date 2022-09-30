@@ -23,7 +23,7 @@
             <table class="cart-items">
                 <thead>
                 <tr>
-                    {{-- <td class="cart-image">Gambar</td> --}}
+                    <td class="cart-image">Gambar</td>
                     <td class="cart-ttl" style="width:90px;">Produk</td>
                     <td class="cart-price">Harga</td>
                     <td class="cart-quantity" style="width: 40px;">Jumlah</td>
@@ -34,11 +34,11 @@
                 <tbody>
 		@foreach($pesanan_details as $pd)
                 <tr>
-                    {{-- <td class="cart-image">
+                    <td class="cart-image">
                         <a href="product.html">
-                            <img src="{{$pd->product_images->image}}" alt="Similique delectus totam">
+                            <img src="{{asset('gambar/'.$pd->product->product_images[0]->image)}}" alt="Similique delectus totam">
                         </a>
-                    </td> --}}
+                    </td>
                     <td class="cart-ttl">
                         <a href="product.html">{{ $pd->product->name }}</a>
                     </td>
