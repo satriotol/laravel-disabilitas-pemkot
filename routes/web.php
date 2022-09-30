@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\InterfaceController@index')->name('home');
 Route::get('/home/cart', 'App\Http\Controllers\PesanController@cart')->name('cart');
+Route::get('/home/cart/delete/{id}', 'App\Http\Controllers\PesanController@delete')->name('hapus-cart');
 Route::get('/home/jual', 'App\Http\Controllers\InterfaceController@jual')->name('jual');
 Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
 Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');

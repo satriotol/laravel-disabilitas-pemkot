@@ -11,7 +11,7 @@ use App\Models\ProductImage;
 use App\Models\SocialMedia;
 use Carbon\Carbon;
 use Auth;
-use Alert;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class PesanController extends Controller
@@ -80,6 +80,7 @@ class PesanController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
+        $product = Product::all();
         // $product_images = ProductImage::where('product_id', $product->id)->get();
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
  	    $pesanan_details = [];
@@ -89,21 +90,21 @@ class PesanController extends Controller
 
         }
 
-        return view('interface.cart', compact('pesanan', 'pesanan_details','socialmedia', 'categories', 'kontak_kami'));
+        return view('interface.cart', compact('pesanan', 'pesanan_details','socialmedia', 'categories', 'kontak_kami','product'));
     }
 
-    public function delete($id)
+    public function delete(Request $request, $id)
     {
-        $pesanan_detail = PesananDetail::where('id', $id)->first();
+        $pesanan_detail = PesananDetail::find($id);
+        $pesanan_detail->delete();
+
+        //jumlah total
 
         $pesanan = Pesanan::where('id', $pesanan_detail->pesanan_id)->first();
         $pesanan->price = $pesanan->price-$pesanan_detail->price;
         $pesanan->update();
 
-
-        $pesanan_detail->delete();
-
-        Alert::error('Pesanan Sukses Dihapus', 'Hapus');
+        Session::flash('flash_message', 'Data berhasil dihapus');
         return redirect('/home/cart');
     }
 }
