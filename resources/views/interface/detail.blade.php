@@ -73,18 +73,7 @@
                 <p>{{  $product->description }}</p>
                 <i class="fa-solid fa-square-share-nodes"></i>
             </div>
-            <div class="prod-info">
-                <p class="prod-addwrap">
-                    {{-- <i class="nav-icon fa-solid fa-square-share-nodes"></i> --}}
-                    <div class="col-md-6">
-                    <form method="POST" action="{{ route('pesan', $product->id) }}">
-                        @csrf
-                        <input type="number" name="jumlah_pesan" class="form-control" required placeholder="Jumlah Pesan">
-                        <button type="submit" class="btn btn-danger" style="margin-top: 8px"><i class="fa fa-shopping-cart"></i>&nbsp;Masukkan Keranjang</button>
-                    </form>
-                    </div>
-                </p>
-            </div>
+
 
             <ul class="prod-i-props" style="font-size: 25px;">
                 <li><h1> @currency($product->discount_price)</h1></li>
@@ -92,8 +81,15 @@
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
-
-
+            <br> <br>
+            <div class="prod-info">
+                <p class="prod-addwrap">
+                    <i class="nav-icon fa-solid fa-square-share-nodes"></i>
+                    <div class="col-md-10">
+                        <a href="https://wa.me/628983424846?"><img src="{{ asset('img/tombol-chat-penjual-08.png') }}" alt=""></a>
+                    </div>
+                </p>
+            </div>
 
 
 
