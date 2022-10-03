@@ -47,6 +47,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <select class="custom-select rounded-0" name="role">
+                            <option name="admin">Admin</option>
+                            <option name="penjual">Penjual</option>
+                        </select>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">

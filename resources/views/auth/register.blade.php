@@ -66,6 +66,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <select class="form-control" name="role">
+                            {{-- <option>Admin</option> --}}
+                            <option value="penjual">Penjual</option>
+                        </select>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
