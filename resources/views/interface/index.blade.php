@@ -57,7 +57,7 @@
                                 <a href="#">{{$produk->name}}</a>
                             </h3>
                             <p class="prod-i-price">
-                                <b>@currency($produk->price)</b>
+                                <b>@currency($produk->discount_price)</b>
                             </p>
                         </li>
                         @endif
