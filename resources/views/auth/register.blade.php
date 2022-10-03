@@ -66,6 +66,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" placeholder="Telepon" name="telepon" required
+                            autofocus value="{{ old('telepon') }}">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-address-book"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">

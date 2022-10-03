@@ -32,6 +32,7 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->role = 'penjual';
+        $user->telepon = $request->telepon;
         $user->save();
         Session::flash('flash_message', 'Data User berhasil disimpan');
         return redirect('/user');
