@@ -23,7 +23,7 @@
             <table class="cart-items">
                 <thead>
                 <tr>
-                    <td class="cart-image">Gambar</td>
+                    <td class="cart-image" style="text-align:center">Gambar</td>
                     <td class="cart-ttl" style="width:90px;">Produk</td>
                     <td class="cart-price">Harga</td>
                     <td class="cart-quantity" style="width: 40px;">Jumlah</td>
@@ -66,7 +66,7 @@
             <li class="cart-summ">TOTAL: <b>@currency($pd->pesanan->price)</b></li>
         </ul>
         <div class="cart-submit">
-            <a href="https://wa.me/6285735501035?text=Nama%3A%0ANo.%20HP%3A%0AAlamat%3A%0APesanan%3A%0AJumlah%3A" class="cart-submit-btn">Bayar</a>
+            <a href="https://wa.me/628983424846?text=Nama%3A%20{{$pd->product->name}}%0AHarga%3A%20{{$pd->price}}%0AJumlah%3A%20{{$pd->jumlah}}%0ATotal%20Harga%3A%20{{$pd->pesanan->price}}%0ADimohon%20menyertakan%20Bukti%20Screenshoot%20sebagai%20bukti%20pembayaran%20%0ABarang%20yang%20dipesan%20masih%20dalam%20satu%20toko" class="cart-submit-btn">Bayar</a>
             <a href="#" class="cart-clear">Bersihkan Keranjang</a>
         </div>
     @else
