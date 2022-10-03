@@ -15,13 +15,6 @@
                         </a>
 
                     </li>
-                    <li>
-                        <a href="{{ route('cart') }}">
-                            {{-- <img src="{{asset('img/ikon keranjang-01.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
-                            <button class="btn-cart">Keranjang</button>
-                        </a>
-
-                    </li>
                     <li class="login">
                         <a href="{{ route('login') }}">
                             {{-- <img src="{{asset('img/ikon user-02.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
