@@ -16,10 +16,10 @@
                 <a href="#" class="d-block">{{ Auth::user()->name }}</a>
             </div>
         </div>
-
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
+                @if (Auth::user()->role == 'admin')
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}" class="nav-link {{ active_class(['dashboard', 'dashboard.*']) }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -104,6 +104,35 @@
                         </x-responsive-nav-link>
                     </form>
                 </li>
+                @else
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="nav-link {{ active_class(['dashboard', 'dashboard.*']) }}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('product') }}" class="nav-link {{ active_class(['product', 'product.*']) }}">
+                        <i class="nav-icon fas fa-tshirt"></i>
+                        <p>
+                            Product
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-responsive-nav-link :href="route('logout')" class="nav-link"
+                            onclick="event.preventDefault();
+                            this.closest('form').submit();">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <p>Log Out</p>
+                        </x-responsive-nav-link>
+                    </form>
+                </li>
+                @endif
             </ul>
         </nav>
     </div>

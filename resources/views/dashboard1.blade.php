@@ -11,6 +11,7 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
+    @if (Auth::user()->role == 'admin')
     <section class="content">
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
@@ -79,5 +80,6 @@
           <!-- /.row -->
         </div><!-- /.container-fluid -->
       </section>
+      @endif
     <!-- /.content -->
 @endsection
