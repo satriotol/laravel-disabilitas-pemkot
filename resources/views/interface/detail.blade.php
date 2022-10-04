@@ -86,7 +86,7 @@
                 <p class="prod-addwrap">
                     <i class="nav-icon fa-solid fa-square-share-nodes"></i>
                     <div class="col-md-10">
-                        <a href="https://wa.me/628983424846?"><img src="{{ asset('img/tombol-chat-penjual-08.png') }}" alt=""></a>
+                        <a href="https://wa.me/{{$product->user->telepon}}?"><img src="{{ asset('img/tombol-chat-penjual-08.png') }}" alt=""></a>
                     </div>
                 </p>
             </div>
