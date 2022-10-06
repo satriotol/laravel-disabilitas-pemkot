@@ -11,14 +11,13 @@
                     <li>
                         <a href="{{ route('jual') }}">
                             {{-- <img src="{{asset('img/ikon keranjang-01.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
-                            <button class="btn-jual">Jual</button>
+                            {{-- <button class="btn-jual">Jual</button>
                         </a>
-
-                    </li>
+                    </li> --}}
                     <li class="login">
                         <a href="{{ route('login') }}">
                             {{-- <img src="{{asset('img/ikon user-02.png')}}" style="width: 57px; height: 54px;" alt="Semarang Care Official"> --}}
-                            <button class="btn-login">Masuk</button>
+                            <button class="btn-login">Donasikan Sekarang!</button>
                         </a>
                     </li>
                 </ul>
