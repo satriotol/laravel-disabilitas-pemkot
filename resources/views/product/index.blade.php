@@ -32,8 +32,8 @@
                                 User
                             </th>
                             <th>Nama Produk</th>
-                            <th>Harga</th>
-                            <th>Harga Diskon</th>
+                            <th>Harga Donasi</th>
+                            {{-- <th>Harga Diskon</th> --}}
                             <th>Deskripsi</th>
                             <th>Stock</th>
                             <th style="width: 200px">Action</th>
@@ -47,7 +47,7 @@
                             <td>{{ $p->user->name }}</td>
                             <td>{{ $p->name }}</td>
                             <td>{{ $p->price }}</td>
-                            <td>{{ $p->discount_price }}</td>
+                            {{-- <td>{{ $p->discount_price }}</td> --}}
                             <td>{{ $p->description }}</td>
                             <td>{{ $p->stock }}</td>
                             <td>

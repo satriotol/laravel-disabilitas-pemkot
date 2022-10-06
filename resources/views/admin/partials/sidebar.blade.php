@@ -29,6 +29,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('tagline') }}" class="nav-link {{ active_class(['tagline','tagline.*']) }}">
+                        <i class="nav-icon fas fa-solid fa-tag"></i>
+                        <p>
+                            Tagline
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('kategori') }}" class="nav-link {{ active_class(['kategori','kategori.*']) }}">
                         <i class="nav-icon fas fa-grip-horizontal"></i>
                         <p>
