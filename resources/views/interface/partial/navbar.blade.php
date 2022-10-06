@@ -6,6 +6,7 @@
                     <img src="{{asset('img/S-care logo-01.png')}}" alt="Semarang Care Official">
                 </a>
             </div>
+
             <div class="shop-menu">
                 <ul>
                     <li>
@@ -22,6 +23,7 @@
                     </li>
                 </ul>
             </div>
+
         </div>
     </div>
 </nav>

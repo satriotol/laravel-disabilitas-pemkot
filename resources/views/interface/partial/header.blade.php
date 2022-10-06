@@ -2,8 +2,9 @@
     <div class="container">
         <nav class="topmenu">
 
+
             <!-- Catalog menu - start -->
-            <div class="topcatalog">
+            {{-- <div class="topcatalog">
                 <a class="topcatalog-btn" href="{{ route('product-gallery') }}"><span>Semua</span> Kategori</a>
                 <ul class="topcatalog-list">
                     @foreach ($categories as $cate)
@@ -14,11 +15,11 @@
                     </li>
                     @endforeach
                 </ul>
-            </div>
+            </div> --}}
             <!-- Catalog menu - end -->
 
             <!-- Main menu - start -->
-            <button type="button" class="mainmenu-btn" style="font-family: 'Poppins', sans-serif ;">Menu</button>
+            {{-- <button type="button" class="mainmenu-btn" style="font-family: 'Poppins', sans-serif ;">Menu</button>
 
             <ul class="mainmenu">
                 <li>
@@ -52,17 +53,17 @@
                     </a>
                 </li>
 
-            </ul>
+            </ul> --}}
             <!-- Main menu - end -->
 
             <!-- Search - start -->
-            <div class="topsearch" style="color:#fff !important">
+            {{-- <div class="topsearch" style="color:#fff !important">
                 <a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
                 <form class="topsearch-form" action="#">
                     <input type="text" placeholder="Cari Produk">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-            </div>
+            </div> --}}
             <!-- Search - end -->
 
         </nav>
