@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/tagline', 'App\Http\Controllers\TaglineController@index')->name('tagline');
     Route::get('/tagline/create', 'App\Http\Controllers\TaglineController@create')->name('tagline.create');
     Route::post('/tagline/store', 'App\Http\Controllers\TaglineController@store')->name('tagline.store');
-    Route::get('/tagline/edit/{tagline}', 'App\Http\Controllers\TaglineController@edit')->name('faq.edit');
+    Route::get('/tagline/edit/{tagline}', 'App\Http\Controllers\TaglineController@edit')->name('tagline.edit');
     Route::post('/tagline/update/{tagline}', 'App\Http\Controllers\TaglineController@update')->name('tagline.update');
     Route::get('/tagline/delete/{tagline}', 'App\Http\Controllers\TaglineController@delete')->name('tagline.delete');
 
