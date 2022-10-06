@@ -73,9 +73,10 @@
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
                         <li><a href="{{ route('home') }}#kategori-bab">Kategori</a></li>
-                        <li><a href="{{ route('home') }}#tentang-bab">Tentang</a></li>
+                        <li><a href="{{ route('home') }}#tentang-bab">Produk</a></li>
                         <li><a href="{{ route('home') }}#faq-bab">FAQ</a></li>
                         <li><a href="{{ route('home') }}#kontakkami-bab">Kontak kami</a></li>
+                        <li><a href="{{ route('home') }}#kontakkami-bab">Tentang</a></li>
                     </ul>
                 </div>
                 <div class="f-menu">
