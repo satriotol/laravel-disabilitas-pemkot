@@ -117,17 +117,17 @@
                 </div>
 
                 {{-- kontak kami --}}
-                <div class="discounts-wrap" id="kontakkami-bab">
+                {{-- <div class="discounts-wrap" id="kontakkami-bab">
                     <h3 class="component-ttl"><span>Kontak Kami</span></h3>
-                    <!-- Main Content - start -->
+
                     <main>
                         <section class="container stylization maincont">
-                            <!-- Contact Form -->
+
                             <div class="contactform-wrap">
                                 <form action="#" class="form-validate">
                                         <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan
                                             Anda</p>
-                                        {{-- kolom --}}
+
                                         <p class="contactform-field contactform-text">
                                             <label class="contactform-label">Nama</label><!-- NO SPACE --><span
                                                 class="contactform-input"><input placeholder="Nama" type="text"
@@ -148,8 +148,8 @@
                                             <input value="Kirim" type="submit">
                                         </p>
                                 </form>
-                            </div>
-                            <!-- Contacts - end -->
+                            </div> --}}
+
 
                         </section>
                     </main>
