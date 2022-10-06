@@ -15,7 +15,14 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $product = Product::where('user_id', Auth::user()->id)->get();
+        if (Auth::user()->role == 'admin')
+        {
+            $product = Product::all();
+        }
+        else
+        {
+            $product =  Product::where('user_id', Auth::user()->id)->get();
+        }
         return view('product.index', compact('product'));
     }
 
