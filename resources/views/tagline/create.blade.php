@@ -28,7 +28,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="question">Nama Website</label>
-                                    <input type="text" name="question" class="form-control" required
+                                    <input type="text" name="nama_website" class="form-control" required
                                         placeholder="Enter Tagline Here" value={{ isset($tagline) ? $tagline->nama_website : '' }} >
                                 </div>
                             </div>
