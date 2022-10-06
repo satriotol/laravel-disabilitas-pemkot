@@ -37,14 +37,18 @@
                         <label for="exampleInputText">Email</label>
                         <input type="text" name="email" class="form-control" required
                         placeholder="Masukkan Email" value={{isset($user) ? $user->email : '' }} >
-                      </div>
-                      <div>
-                        <div class="form-group">
-                            <label for="exampleInputText">Password</label>
-                            <input type="password" name="password" class="form-control"
-                            placeholder="Masukkan Password" >
-                        </div>
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Telepon</label>
+                        <input type="text" name="telepon" class="form-control" required
+                        placeholder="Masukkan Telepon" value={{isset($user) ? $user->telepon : '' }} >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Password</label>
+                        <input type="password" name="password" class="form-control"
+                        placeholder="Masukkan Password" >
+                    </div>
+                </div>
                   <!-- /.card-body -->
 
                   <div class="card-footer">
