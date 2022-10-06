@@ -28,6 +28,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\AdminController@dashboard')->name('dashboard');
     Route::get('/user', 'App\Http\Controllers\AdminController@user')->name('user');
 
+    //tagline
+    Route::get('/tagline', 'App\Http\Controllers\TaglineController@index')->name('tagline');
+    Route::get('/tagline/create', 'App\Http\Controllers\TaglineController@create')->name('tagline.create');
+    Route::post('/tagline/store', 'App\Http\Controllers\TaglineController@store')->name('tagline.store');
+    Route::get('/tagline/edit/{tagline}', 'App\Http\Controllers\TaglineController@edit')->name('faq.edit');
+    Route::post('/tagline/update/{tagline}', 'App\Http\Controllers\TaglineController@update')->name('tagline.update');
+    Route::get('/tagline/delete/{tagline}', 'App\Http\Controllers\TaglineController@delete')->name('tagline.delete');
+
     // Category
     Route::get('/category', 'App\Http\Controllers\CategoryController@index')->name('kategori');
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('kategori.create');
@@ -88,7 +96,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/user/update/{user}', 'App\Http\Controllers\UserController@update')->name('user.update');
     Route::get('/user/delete/{user}', 'App\Http\Controllers\UserController@delete')->name('user.delete');
 
-    //Kontak Kami
+
     // Social Media
     Route::get('/kontakkami', 'App\Http\Controllers\KontakKamiController@index')->name('kontakkami');
     Route::get('/kontakkami/create', 'App\Http\Controllers\KontakKamiController@create')->name('kontakkami.create');
@@ -96,6 +104,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/kontakkami/edit/{kontakkami}', 'App\Http\Controllers\KontakKamiController@edit')->name('kontakkami.edit');
     Route::post('/kontakkami/update/{kontakkami}', 'App\Http\Controllers\KontakKamiController@update')->name('kontakkami.update');
     Route::get('/kontakkami/delete/{kontakkami}', 'App\Http\Controllers\KontakKamiController@delete')->name('kontakkami.delete');
+
+
 });
 
 require __DIR__ . '/auth.php';
