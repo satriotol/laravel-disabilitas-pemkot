@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->bigInteger('price');
+            $table->string('price');
             $table->bigInteger('discount_price')->nullable();
             $table->longText('description');
             $table->bigInteger('stock');
