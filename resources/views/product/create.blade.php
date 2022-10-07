@@ -44,16 +44,19 @@
                                         placeholder="Masukan Nama Produk" value={{isset($product) ? $product->name : '' }} >
                                 </div>
                                 <div class="form-group">
-                                    <label>Harga</label>
+                                    <label>Harga Donasi</label>
                                     <input required type="number" name="price" class="form-control" placeholder="Masukan Harga"
                                         value="{{ isset($product) ? $product->price : '' }}">
                                 </div>
-                                <div class="form-group">
+		                        <div class="col-8">
+			                    <p>Jika akan diberi harga, maka tuliskan nominalnya, jika gratis maka tulis gratis</p>
+                                </div>
+                                {{-- <div class="form-group">
                                     <label>Harga Diskon</label>
                                     <input type="number" name="discount_price" class="form-control"
                                         placeholder="Masukan Harga Diskon"
                                         value="{{ isset($product) ? $product->discount_price : '' }}">
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <label>Deskripsi</label>
                                     <textarea required type="text" name="description" class="form-control" placeholder="Masukan Deskripsi">{{ isset($product) ? $product->description : '' }}</textarea>
@@ -82,8 +85,8 @@
                                         position:fixed;
                                         top: 0px;
                                         left: 0px;
-                                        width: 100vw;
-                                        height: 100vh;
+                                        width: 90vw;
+                                        height: 90vh;
                                         background: rgba(0, 0, 0, 0.7);
                                         z-index: 1;
                                         display: none;
@@ -93,9 +96,9 @@
                                         top: 50%;
                                         left: 50%;
                                         transform: translate(-50%, -50%) scale(0);
-                                        background: #fff;
-                                        width: 450px;
-                                        height: 220px;
+                                        background: red;
+                                        width: 400px;
+                                        height: 120px;
                                         z-index: 2;
                                         text-align: center;
                                         padding: 20px;
