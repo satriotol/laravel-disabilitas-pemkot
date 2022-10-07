@@ -5,6 +5,7 @@
             <a href="index.html">
                 <img src="{{asset('img/pemkot.png')}}" alt="Semarang Pemkot">
             </a>
+            <h5>{{ $taglines->nama_website }}</h5>
         </div>
         <div class="shop-menu">
             <ul>

@@ -10,6 +10,7 @@ use App\Models\SocialMedia;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Tagline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
 
@@ -25,7 +26,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $products = Product::all();
         $productimages = ProductImage::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia', 'products', 'productimages'));
+        $taglines = Tagline::all();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia', 'products', 'productimages', 'taglines'));
 
 
     }
