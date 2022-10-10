@@ -38,7 +38,8 @@ class InterfaceController extends Controller
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
         $list_category = Category::pluck('name', 'id');
-        return view('interface.jual', compact('socialmedia', 'categories', 'kontak_kami', 'list_category'));
+        $taglines = Tagline::all();
+        return view('interface.jual', compact('socialmedia', 'categories', 'kontak_kami', 'list_category', 'taglines'));
     }
 
     public function pesan(Request $request){
@@ -50,7 +51,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
-        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami'));
+        $taglines = Tagline::all();
+        return view('interface.cart', compact('socialmedia', 'categories', 'kontak_kami', 'taglines'));
     }
 
     public function daftar()
@@ -58,7 +60,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $kontak_kami = KontakKami::all();
-        return view('interface.login', compact('socialmedia', 'categories', 'kontak_kami'));
+        $taglines = Tagline::all();
+        return view('interface.login', compact('socialmedia', 'categories', 'kontak_kami', 'taglines'));
     }
 
     public function productgallery()
@@ -67,7 +70,8 @@ class InterfaceController extends Controller
         $products = Product::all();
         $categories = Category::all();
         $kontak_kami = KontakKami::all();
-        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'kontak_kami'));
+        $taglines = Tagline::all();
+        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'kontak_kami', 'taglines'));
     }
 
     public function productlist()
@@ -76,7 +80,8 @@ class InterfaceController extends Controller
         $products = Product::all();
         $categories = Category::all();
         $kontak_kami = KontakKami::all();
-        return view('interface.list', compact('socialmedia', 'products', 'categories', 'kontak_kami'));
+        $taglines = Tagline::all();
+        return view('interface.list', compact('socialmedia', 'products', 'categories', 'kontak_kami', 'taglines'));
     }
 
     public function detail(Product $product)
@@ -86,6 +91,7 @@ class InterfaceController extends Controller
         // $products = Product::all();
         $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
         $kontak_kami = KontakKami::all();
-        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post', 'kontak_kami'));
+        $taglines = Tagline::all();
+        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post', 'kontak_kami','taglines'));
     }
 }

@@ -2,10 +2,13 @@
 <div class="header-middle">
     <div class="container header-middle-cont">
         <div class="toplogo">
-            <a href="index.html">
+            <a href="index.html" style="text-align: justify; font-size: 20px;">
+                @foreach ($taglines as $t)
                 <img src="{{asset('img/pemkot.png')}}" alt="Semarang Pemkot">
+                <p>{{ $t->nama_website }}</p>
+                @endforeach
             </a>
-            <h5>{{ $taglines->nama_website }}</h5>
+
         </div>
         <div class="shop-menu">
             <ul>

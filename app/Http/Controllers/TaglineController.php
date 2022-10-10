@@ -9,8 +9,8 @@ class TaglineController extends Controller
 {
     public function index()
     {
-        $tagline = Tagline::all();
-        return view('tagline.index', compact('tagline'));
+        $taglines = Tagline::all();
+        return view('tagline.index', compact('taglines'));
     }
 
     public function create()
@@ -24,10 +24,10 @@ class TaglineController extends Controller
         'nama_website' => 'required'
         ]);
 
-        $tagline = new Tagline;
-        $tagline->nama_website = $request->nama_website;
+        $taglines = new Tagline;
+        $taglines->nama_website = $request->nama_website;
 
-        $tagline->save();
+        $taglines->save();
         Session::flash('flash_message', 'Data Tagline berhasil disimpan');
 
         return redirect('/tagline');
@@ -36,8 +36,8 @@ class TaglineController extends Controller
 
     public function edit($id)
     {
-        $tagline = Tagline::Find($id);
-        return view('tagline.create', compact('tagline'));
+        $taglines = Tagline::Find($id);
+        return view('tagline.create', compact('taglines'));
     }
 
     public function update (Request $request, $id)
@@ -46,17 +46,17 @@ class TaglineController extends Controller
             'nama_website' => 'required'
         ]);
 
-        $tagline = Tagline::find($id);
-        $tagline->nama_website = $request->nama_website;
+        $taglines = Tagline::find($id);
+        $taglines->nama_website = $request->nama_website;
 
-        $tagline->update();
+        $taglines->update();
 
         Session::flash('flash_message', 'Data Tagline berhasil disimpan');
 
         return redirect('/tagline');
     }
 
-    public function delete(Tagline $tagline)
+    public function delete(Tagline $taglines)
     {
         Session::flash('flash_message', 'Data Tagline berhasil dihapus');
         Session::flash('penting', true);
