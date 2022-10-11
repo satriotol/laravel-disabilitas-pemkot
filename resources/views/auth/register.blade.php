@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Telepon 62 = 0" name="telepon" required
+                        <input type="text" class="form-control" placeholder="Isi No Telepon dengan format '62'" name="telepon" required
                             autofocus value="{{ old('telepon') }}">
 
                         <div class="input-group-append">

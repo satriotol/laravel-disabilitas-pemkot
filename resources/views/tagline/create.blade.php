@@ -22,14 +22,14 @@
                             <h3 class="card-title">Tagline</h3>
                         </div>
                         <form method="POST"
-                        action="@isset($tagline) {{ route('tagline.update', $tagline->id) }} @endisset @empty($tagline) {{ route('tagline.store') }} @endempty ">
+                        action="@isset($taglines) {{ route('tagline.update', $taglines->id) }} @endisset @empty($taglines) {{ route('tagline.store') }} @endempty ">
                             <div class="card-body">
                                 @include('partials.errors')
                                 @csrf
                                 <div class="form-group">
                                     <label for="question">Nama Website</label>
                                     <input type="text" name="nama_website" class="form-control" required
-                                        placeholder="Enter Tagline Here" value={{ isset($tagline) ? $tagline->nama_website : '' }} >
+                                        placeholder="Enter Tagline Here" value={{ isset($taglines) ? $taglines->nama_website : '' }} >
                                 </div>
                             </div>
                             <!-- /.card-body -->

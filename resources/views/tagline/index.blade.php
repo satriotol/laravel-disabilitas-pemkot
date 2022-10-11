@@ -32,7 +32,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($tagline as $t)
+                            @foreach ($taglines as $t)
                             <td>{{ $t->id }}</td>
                             <td>{{ $t->nama_website }}</td>
                             <td>
