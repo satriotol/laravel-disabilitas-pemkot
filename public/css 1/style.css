@@ -331,6 +331,64 @@ body {
     -ms-transform: translate(-50%, -25%);
     transform: translate(-50%, -25%);
 }
+.box{
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: #053742 5px;
+    -ms-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+}
+.container-1{
+    width: 250px;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: #053742 5px;
+    position: relative;
+}
+.container-1 input#search{
+    width: 250px;
+    height: 50px;
+    background: #D4F0FF;
+    border: #053742 5px;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+
+ .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;
+ }
+
+ .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;
+ }
+
+ .container-1 input#search:-ms-input-placeholder {
+    color: #65737e;
+ }
+ .container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+ }
+ .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline: none;
+    background: #D4F0FF;
+ }
 .shop-menu {
 
 	text-align: right;
@@ -988,7 +1046,7 @@ body {
 	top: 0;
 	right: 0;
 }
-.topsearch .topsearch-btn {
+.topsearch {
 	height: 43px;
 	line-height: 43px;
 	width: 41px;
