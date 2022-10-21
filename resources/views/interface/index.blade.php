@@ -72,11 +72,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div><img src="{{ asset('gambar/' . $abouts[0]->image) }}" alt="gambar"
+                                    <div><img src="https://source.unsplash.com/random" alt="gambar"
                                             style="max-width: 100%;"></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="about_taital">{{ $abouts[0]->description }}</p>
+                                    <p class="about_taital">lala</p>
                                     <br>
 
                                     <div style="float: right;">
