@@ -76,7 +76,7 @@
 
 
             <ul class="prod-i-props" style="font-size: 25px;">
-                <li> <del> @currency($product->price) </del></li>
+                <li>@currency($product->price) </li>
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
