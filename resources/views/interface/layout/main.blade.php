@@ -130,7 +130,8 @@
                         @endforeach
                     </ul>
                     <div class="footer-copyright">
-                        <i><a href="https://semarangkota.go.id/" style="color: #fff;">Pemkot Semarang</a></i> ©Copyright
+                        <i><a href="https://semarangkota.go.id/" style="color: #fff;">Pemkot Semarang</a></i>
+                        ©Copyright
                         2022
                     </div>
                 </div>

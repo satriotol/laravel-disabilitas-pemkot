@@ -1,66 +1,66 @@
 @extends('interface.layout.main')
 
 @section('container')
-    <!-- Main Content - start -->
     <section class="container">
-
-
-        <!-- Slider -->
         <div class="fr-slider-wrap">
             <div class="fr-slider">
                 <ul class="slides">
                     @foreach ($sliders as $slider)
                         <li>
-                            <img src="{{ asset('gambar/' . $slider->image) }}" alt=""
-                                style="width: 100%;height: 300px;object-fit:cover">
+                            <img src="{{ asset('gambar/' . $slider->image) }}" alt="">
                             <div class="fr-slider-cont">
                                 <h3>{{ $slider->name }}</h3>
                                 <p>{{ $slider->description }}</p>
+                                <p class="fr-slider-more-wrap">
+                                    <a class="fr-slider-more" href="{{ route('dashboard') }}">Donasikan sekarang</a>
+                                </p>
                             </div>
                         </li>
                     @endforeach
                 </ul>
             </div>
         </div>
-
-        <br>
-        <!-- Popular Products -->
         <div class="fr-pop-wrap" id="kategori-bab">
 
             <h3 class="component-ttl"><span>Kategori</span></h3>
 
             <ul class="fr-pop-tabs sections-show">
 
-                    <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
-                            Kategori</a></li>
-                    @foreach ($categories as $cate)
-                    <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{ $cate->name }}</a></li>
-                    @endforeach
+                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Semua
+                        Kategori</a></li>
+                @foreach ($categories as $cate)
+                    <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">{{ $cate->name }}</a>
+                    </li>
+                @endforeach
             </ul>
 
             <div class="fr-pop-tab-cont">
 
-                <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">Semua Kategori</p>
+                <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">Semua Kategori
+                </p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
 
                     <ul class="slides">
                         @foreach ($products as $produk)
-                        @if ($produk->product_images->count() > 0)
-                        <li class="prod-i">
-                            <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><img src="{{asset('gambar/' . $produk->product_images[0]->image)}}" alt=""></a>
-                                <p class="prod-i-addwrap">
-                                    <a href="{{route('product-detail', $produk->id)}}" class="prod-i-add">Pergi Ke Detail</a>
-                                </p>
-                            </div>
-                            <h3>
-                                <a href="#">{{$produk->name}}</a>
-                            </h3>
-                            <p class="prod-i-price">
-                                <b>@currency($produk->discount_price)</b>
-                            </p>
-                        </li>
-                        @endif
+                            @if ($produk->product_images->count() > 0)
+                                <li class="prod-i">
+                                    <div class="prod-i-top">
+                                        <a href="#" class="prod-i-img"><img
+                                                src="{{ asset('gambar/' . $produk->product_images[0]->image) }}"
+                                                alt=""></a>
+                                        <p class="prod-i-addwrap">
+                                            <a href="{{ route('product-detail', $produk->id) }}" class="prod-i-add">Pergi Ke
+                                                Detail</a>
+                                        </p>
+                                    </div>
+                                    <h3>
+                                        <a href="#">{{ $produk->name }}</a>
+                                    </h3>
+                                    <p class="prod-i-price">
+                                        <b>@currency($produk->discount_price)</b>
+                                    </p>
+                                </li>
+                            @endif
                         @endforeach
                 </div>
 
@@ -151,11 +151,5 @@
                             </div> --}}
 
 
-                        </section>
-                    </main>
-                    <!-- Main Content - end -->
-                </div>
     </section>
-
-    <!-- Main Content - end -->
 @endsection

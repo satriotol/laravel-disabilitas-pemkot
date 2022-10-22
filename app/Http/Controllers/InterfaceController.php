@@ -26,8 +26,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $products = Product::all();
         $productimages = ProductImage::all();
-        $taglines = Tagline::all();
-        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia', 'products', 'productimages', 'taglines'));
+        $tagline = Tagline::first();
+        return view('interface.index', compact('sliders', 'abouts', 'faqs', 'kontak_kami','categories', 'socialmedia', 'products', 'productimages', 'tagline'));
 
 
     }
