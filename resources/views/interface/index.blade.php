@@ -71,12 +71,13 @@
                     <div id="about" class="layout_padding about_section">
                         <div class="container">
                             <div class="row">
+                                @foreach ($abouts as $about)
                                 <div class="col-md-6">
-                                    <div><img src="https://source.unsplash.com/random" alt="gambar"
+                                    <div><img src="{{asset('gambar/'.$about->image)}}" alt="gambar"
                                             style="max-width: 100%;"></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="about_taital">lala</p>
+                                    <p class="about_taital">{{$about->description}}</p>
                                     <br>
 
                                     <div style="float: right;">
@@ -87,6 +88,7 @@
                                         Selengkapnya
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
