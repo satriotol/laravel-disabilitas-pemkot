@@ -76,7 +76,7 @@
 
 
             <ul class="prod-i-props" style="font-size: 25px;">
-                <li>@currency($product->price) </li>
+                <li>{{ $product->price }}</li>
             </ul>
 
             <h3>Stok : {{ $product->stock }}</h3>
@@ -114,7 +114,7 @@
                         <div class="prod-rel-cont">
                             <h3><a href="#">{{$po->name}}</a></h3>
                             <p class="prod-rel-price">
-                                <b>@currency($po->price)</b>
+                                <b>{{$po->price}}</b>
                             </p>
                         </div>
                     </div>
