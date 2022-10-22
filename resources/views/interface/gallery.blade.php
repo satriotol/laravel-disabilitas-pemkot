@@ -104,7 +104,7 @@
                     <a href="#">{{$product->name}}</a>
                 </h3>
                 <p class="prod-i-price">
-                    <b>@currency($product->price)</b>
+                    <b>{{$product->price}}</b>
                 </p>
 
             </div>
