@@ -43,7 +43,7 @@
         <div class="toplogo">
             <a href="{{ route('home') }}">
                 <div class="row">
-                    <img src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
+                    <h1 style="text-align: justify;"><img style="float: left;" src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">{{$tagline->nama_website}}</h1>
                 </div>
             </a>
         </div>
