@@ -41,9 +41,10 @@
 <div class="header-middle">
     <div class="container header-middle-cont">
         <div class="toplogo">
-            <a href="index.html">
-                <img src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
-                <p>{{ $tagline->nama_website ?? '' }}</p>
+            <a href="{{ route('home') }}">
+                <div class="row">
+                    <img src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
+                </div>
             </a>
         </div>
         <div class="shop-menu">
