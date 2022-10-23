@@ -21,7 +21,7 @@ class InterfaceController extends Controller
         $sliders = Slider::all();
         $abouts = About::all();
         $faqs = Faq::all();
-        $kontak_kami = KontakKami::all();
+        $kontak_kami = KontakKami::first();
         $socialmedia = SocialMedia::all();
         $categories = Category::all();
         $products = Product::all();

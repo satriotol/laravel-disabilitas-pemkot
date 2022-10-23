@@ -57,7 +57,7 @@
                                         <a href="#">{{ $produk->name }}</a>
                                     </h3>
                                     <p class="prod-i-price">
-                                        <b>{{$produk->price}}</b>
+                                        <b>{{ $produk->price }}</b>
                                     </p>
                                 </li>
                             @endif
@@ -72,86 +72,47 @@
                         <div class="container">
                             <div class="row">
                                 @foreach ($abouts as $about)
-                                <div class="col-md-6">
-                                    <div><img src="{{asset('gambar/'.$about->image)}}" alt="gambar"
-                                            style="max-width: 100%;"></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <p class="about_taital">{{$about->description}}</p>
-                                    <br>
+                                    <div class="col-md-6">
+                                        <div><img src="{{ asset('gambar/' . $about->image) }}" alt="gambar"
+                                                style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="about_taital">{{ $about->description }}</p>
+                                        <br>
 
-                                    <div style="float: right;">
-                                        <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png"
-                                                style="max-width: 25%;"></a>
+                                        <div style="float: right;">
+                                            <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png"
+                                                    style="max-width: 25%;"></a>
+                                        </div>
+                                        <div style="float:right;">
+                                            Selengkapnya
+                                        </div>
                                     </div>
-                                    <div style="float:right;">
-                                        Selengkapnya
-                                    </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
                     </div>
                     <br><br>
                 </div>
-
-                <!-- FAQ -->
-                <div class="discounts-wrap" id="faq-bab">
-                    <h3 class="component-ttl"><span>Frequently Asked Questions</span></h3>
-                    <div id="faq" class="layout_padding about_section">
-                        <div class="faqs-container">
-                            @foreach ($faqs as $faq)
-                                <div class="faq active">
-                                    <h3 class="faq-title">
-                                        <h3>{{ $faq->question }}</h3>
-                                    </h3>
-                                    <p class="faq-text">
-                                        {{ $faq->answer }}
-                                    </p>
-                                    <button class="faq-toggle">
-                                        <i class="fa fa-chevron-down"></i>
-                                        <i class="fa fa-times"></i>
-                                    </button>
+                <div class="accordion-wrap" id="faq-bab">
+                    <h3 class="component-ttl component-ttl-ct"><span>Frequently Asked Questions</span></h3>
+                    <div class="accordion-tab-cont">
+                        @foreach ($faqs as $faq)
+                            <p data-accordion-num="{{ $faq->id }}"
+                                class="accordion-tab-mob @if ($loop->first) active @endif"
+                                data-accordion="#accordion-tab-{{ $faq->id }}">
+                                {{ $faq->question }}</p>
+                            <div class="accordion-tab" id="accordion-tab-{{ $faq->id }}">
+                                <div class="accordion-inner">
+                                    {{ $faq->answer }}
+                                    <span class="tabs-margin"></span>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
-
-                {{-- kontak kami --}}
-                {{-- <div class="discounts-wrap" id="kontakkami-bab">
-                    <h3 class="component-ttl"><span>Kontak Kami</span></h3>
-
-                    <main>
-                        <section class="container stylization maincont">
-
-                            <div class="contactform-wrap">
-                                <form action="#" class="form-validate">
-                                        <p class="component-desc component-desc-ct">Jangan ragu untuk mengirimkan pertanyaan
-                                            Anda</p>
-
-                                        <p class="contactform-field contactform-text">
-                                            <label class="contactform-label">Nama</label><!-- NO SPACE --><span
-                                                class="contactform-input"><input placeholder="Nama" type="text"
-                                                    name="name" data-required="text"></span>
-                                        </p>
-                                        <p class="contactform-field contactform-email">
-                                            <label class="contactform-label">Email</label><!-- NO SPACE --><span
-                                                class="contactform-input"><input placeholder="Email Anda" type="text"
-                                                    name="email" data-required="text" data-required-email="email"></span>
-                                        </p>
-                                        <p class="contactform-field contactform-textarea">
-                                            <label class="contactform-label">Message</label><!-- NO SPACE --><span
-                                                class="contactform-input">
-                                                <textarea placeholder="Pesan Anda" name="mess" data-required="text"></textarea>
-                                            </span>
-                                        </p>
-                                        <p class="contactform-submit">
-                                            <input value="Kirim" type="submit">
-                                        </p>
-                                </form>
-                            </div> --}}
-
-
+            </div>
+        </div>
     </section>
 @endsection

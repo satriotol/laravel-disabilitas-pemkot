@@ -97,12 +97,10 @@
                         Kontak Kami
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
-                        @foreach ($kontak_kami as $kk)
-                            <li><a> Telp: {{ $kk->telp }}</a></li>
-                            <li><a> Kode Pos: {{ $kk->kode_pos }}</a></li>
-                            <li><a> Alamat: {{ $kk->alamat }}</a></li>
-                            <li><a> E-mail: {{ $kk->email }}</a></li>
-                        @endforeach
+                            <li><a> Telp: {{ $kontak_kami->telp }}</a></li>
+                            <li><a> Kode Pos: {{ $kontak_kami->kode_pos }}</a></li>
+                            <li><a> Alamat: {{ $kontak_kami->alamat }}</a></li>
+                            <li><a> E-mail: {{ $kontak_kami->email }}</a></li>
                     </ul>
                 </div>
                 <div class="f-subscribe" style="color: #fff;">
