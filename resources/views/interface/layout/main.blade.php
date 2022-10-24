@@ -103,14 +103,14 @@
                             <li><a> E-mail: {{ $kontak_kami->email }}</a></li>
                     </ul>
                 </div>
-                <div class="f-subscribe" style="color: #fff;">
+                {{-- <div class="f-subscribe" style="color: #fff;">
                     <h3>Subscribe to news</h3>
                     <form class="f-subscribe-form" action="#">
                         <input placeholder="Email Anda" type="text">
                         <button type="submit"><i class="fa fa-paper-plane"></i></button>
                     </form>
                     <p>Masukkan alamat email Anda jika Anda ingin menerima buletin kami. Berlangganan sekarang!</p>
-                </div>
+                </div> --}}
             </div>
         </div>
 
