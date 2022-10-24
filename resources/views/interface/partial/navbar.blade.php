@@ -24,7 +24,7 @@
                 <li>
                     <a href="{{ route('kategori') }}">
                         <i class="fa fa-heart"></i>
-                        <span class="shop-menu-ttl">Produk Kami</span>
+                        <span class="shop-menu-ttl">Produk</span>
                     </a>
                 </li>
                 <li>
