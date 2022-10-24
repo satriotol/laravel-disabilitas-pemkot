@@ -22,6 +22,12 @@
         <div class="shop-menu">
             <ul>
                 <li>
+                    <a href="{{ route('gallery') }}">
+                        <i class="fa fa-heart"></i>
+                        <span class="shop-menu-ttl">Produk Kami</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('dashboard') }}">
                         <i class="fa fa-heart"></i>
                         <span class="shop-menu-ttl">Donasi Sekarang</span>
