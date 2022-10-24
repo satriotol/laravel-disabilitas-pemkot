@@ -21,7 +21,7 @@ class InterfaceController extends Controller
     {
       //its just a dummy data object.
       $kontak_kami = KontakKami::first();
-  
+
       // Sharing is caring
       View::share('kontak_kami', $kontak_kami);
     }
@@ -47,7 +47,8 @@ class InterfaceController extends Controller
         $socialmedia = SocialMedia::all();
         $list_category = Category::pluck('name', 'id');
         $tagline = Tagline::first();
-        return view('interface.jual', compact('socialmedia', 'categories', 'list_category', 'tagline'));
+        $kontak_kami = KontakKami::first();
+        return view('interface.jual', compact('socialmedia', 'categories', 'list_category', 'tagline','kontak_kami'));
     }
 
     public function pesan(Request $request){
@@ -59,7 +60,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $tagline = Tagline::first();
-        return view('interface.cart', compact('socialmedia', 'categories', 'tagline'));
+        $kontak_kami = KontakKami::first();
+        return view('interface.cart', compact('socialmedia', 'categories', 'tagline','kontak_kami'));
     }
 
     public function daftar()
@@ -67,7 +69,8 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $socialmedia = SocialMedia::all();
         $tagline = Tagline::first();
-        return view('interface.login', compact('socialmedia', 'categories', 'tagline'));
+        $kontak_kami = KontakKami::first();
+        return view('interface.login', compact('socialmedia', 'categories', 'tagline','kontak_kami'));
     }
 
     public function productgallery()
@@ -95,6 +98,7 @@ class InterfaceController extends Controller
         // $products = Product::all();
         $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
         $tagline = Tagline::first();
-        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post','tagline'));
+        $kontak_kami = KontakKami::first();
+        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post','tagline','kontak_kami'));
     }
 }

@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Donasi</label>
-                                    <input required type="text" name="price" class="form-control" placeholder="Masukan Harga"
+                                    <input required type="text" name="price" class="form-control" placeholder="Masukan Harga dengan Rp "
                                         value="{{ isset($product) ? $product->price : '' }}">
                                 </div>
 		                        <div class="col-8">
