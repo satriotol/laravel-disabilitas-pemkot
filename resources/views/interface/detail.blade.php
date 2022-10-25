@@ -83,7 +83,7 @@
                 <p class="prod-addwrap">
                     <i class="nav-icon fa-solid fa-square-share-nodes"></i>
                     <div class="col-md-10">
-                        <a href="https://wa.me/{{$product->user->telepon}}?"><img src="{{ asset('img/tombol chat dengan pemilik-01.png') }}" alt=""></a>
+                        <a href="https://wa.me/{{$product->user->telepon}}?text=Hallo%2C%20saya%20melihat%20produk%20yang%20Anda%20tampilkan%20di%20website%20SIDONA%2C%20bagaimana%20kondisinya%20saat%20ini?" target="_blank"><img src="{{ asset('img/tombol chat dengan pemilik-01.png') }}" alt=""></a>
                     </div>
                 </p>
             </div>
