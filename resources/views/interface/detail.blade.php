@@ -67,7 +67,7 @@
         <!-- Product Description/Info -->
         <div class="prod-cont">
             <div class="prod-sticker">
-                <p class="prod-sticker-3">-20%</p>
+                <p class="prod-sticker-3">Stok : {{ $product->stock }}</p>
             </div> <br><br>
             <div class="prod-cont-txt">
                 <p>{{  $product->description }}</p>
@@ -78,14 +78,12 @@
             <ul class="prod-i-props" style="font-size: 25px;">
                 <li>{{ $product->price }}</li>
             </ul>
-
-            <h3>Stok : {{ $product->stock }}</h3>
             <br> <br>
             <div class="prod-info">
                 <p class="prod-addwrap">
                     <i class="nav-icon fa-solid fa-square-share-nodes"></i>
                     <div class="col-md-10">
-                        <a href="https://wa.me/{{$product->user->telepon}}?"><img src="{{ asset('img/tombol-chat-penjual-08.png') }}" alt=""></a>
+                        <a href="https://wa.me/{{$product->user->telepon}}?"><img src="{{ asset('img/tombol chat dengan pemilik-01.png') }}" alt=""></a>
                     </div>
                 </p>
             </div>
@@ -108,11 +106,11 @@
                     @foreach ($post as $po)
                     @if ($po->product_images->count() > 0)
                     <div class="prod-rel">
-                        <a href="#" class="prod-rel-img">
+                        <a href="{{ route('product-detail', $po->id) }}" class="prod-rel-img">
                             <img src="{{asset('gambar/' . $po->product_images[0]->image)}}" alt="">
                         </a>
                         <div class="prod-rel-cont">
-                            <h3><a href="#">{{$po->name}}</a></h3>
+                            <h3><a href="{{ route('product-detail', $po->id) }}">{{$po->name}}</a></h3>
                             <p class="prod-rel-price">
                                 <b>{{$po->price}}</b>
                             </p>
