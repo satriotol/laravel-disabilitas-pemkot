@@ -19,7 +19,9 @@ Route::get('/home/cart/delete/{id}', 'App\Http\Controllers\PesanController@delet
 Route::get('/home/jual', 'App\Http\Controllers\InterfaceController@jual')->name('jual');
 Route::get('/home/login', 'App\Http\Controllers\InterfaceController@daftar')->name('login');
 Route::get('/product/gallery', 'App\Http\Controllers\InterfaceController@productgallery')->name('product-gallery');
+Route::get('/product/gallery/{category}', 'App\Http\Controllers\InterfaceController@productgallerycategory')->name('product-gallery.category');
 Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
+Route::get('/product/list/{category}', 'App\Http\Controllers\InterfaceController@productlistcategory')->name('product-list.category');
 Route::get('/product/show/{product}', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
 Route::get('/pesan/{id}', 'App\Http\Controllers\PesanController@index');
 Route::POST('/pesan/{id}', 'App\Http\Controllers\PesanController@pesan')->name('pesan');

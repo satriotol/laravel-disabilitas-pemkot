@@ -16,20 +16,25 @@
             </a>
         </li>
         <li>
-            <span>Kursi Roda</span>
+            <span>{{ isset($category) ? $category->name : "Semua Kategori" }}</span>
         </li>
     </ul>
-    <h1 class="main-ttl"><span>Kursi Roda</span></h1>
+    <h1 class="main-ttl"><span>{{ isset($category) ? $category->name : "Semua Kategori" }}</span></h1>
     <!-- Catalog Sidebar - start -->
     <div class="section-sb">
 
         <!-- Catalog Categories - start -->
         <div class="section-sb-current">
-            <h3><a href="{{route('product-list')}}">Kategori<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
+            <h3><a href="{{route('product-gallery')}}">Kategori<span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
             <ul class="section-sb-list" id="section-sb-list">
+                <li class="categ-1">
+                    <a href="{{route('product-gallery')}}">
+                        <span class="categ-1-label">Semua Kategori</span>
+                    </a>
+                </li>
                 @foreach ($categories as $cate)
                 <li class="categ-1">
-                    <a href="{{route('product-list')}}">
+                    <a href="{{route('product-gallery.category', $cate->id)}}">
                         <span class="categ-1-label">{{$cate->name}}</span>
                     </a>
                 </li>
@@ -50,8 +55,12 @@
 
             <!-- View Mode -->
             <ul class="section-mode">
-                <li class="section-mode-gallery active"><a title="View mode: Gallery" href="{{route('product-gallery')}}"></a></li>
-                <li class="section-mode-list"><a title="View mode: List" href="{{route('product-list')}}"></a></li>
+                @php
+                $id_cate = explode('/', url()->current());
+                $id_cate = end($id_cate);
+                @endphp
+                <li class="section-mode-gallery active"><a title="View mode: Gallery" href="{{ request()->routeIs('product-gallery') ? route('product-gallery') :  route('product-gallery.category',$id_cate) }}"></a></li>
+                <li class="section-mode-list"><a title="View mode: List" href="{{ request()->routeIs('product-list') ? route('product-list') : route('product-list.category',$id_cate) }}"></a></li>
             </ul>
 
             <!-- Sorting -->

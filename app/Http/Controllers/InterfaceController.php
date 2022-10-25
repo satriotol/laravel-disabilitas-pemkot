@@ -82,6 +82,15 @@ class InterfaceController extends Controller
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'tagline'));
     }
 
+    public function productgallerycategory(Category $category)
+    {
+        $socialmedia = SocialMedia::all();
+        $products = $category->products;
+        $categories = Category::all();
+        $tagline = Tagline::first();
+        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));
+    }
+
     public function productlist()
     {
         $socialmedia = SocialMedia::all();
@@ -89,6 +98,15 @@ class InterfaceController extends Controller
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.list', compact('socialmedia', 'products', 'categories', 'tagline'));
+    }
+
+    public function productlistcategory(Category $category)
+    {
+        $socialmedia = SocialMedia::all();
+        $products = $category->products;
+        $categories = Category::all();
+        $tagline = Tagline::first();
+        return view('interface.list', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));
     }
 
     public function detail(Product $product)
