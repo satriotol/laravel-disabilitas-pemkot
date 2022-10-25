@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="{{ asset('img/LOGO SIDONA 1.png') }}" type="image/x-icon">
-    <title>Si Dona</title>
+    <title>SIDONA</title>
 
     <link rel="stylesheet" href="{{ asset('css 1/fontawesome.min.css') }}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="f-menu">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('img/LOGO SIDONA 1.png') }}" alt=" ">
+                        <img style="width: 300px; height:auto" src="{{ asset('img/LOGO SIDONA 1.png') }}" alt="PEMKOT SEMARANG">
                     </a>
                 </div>
                 <div class="f-menu">
@@ -110,12 +110,12 @@
                             <img src="{{ asset('img/LOGO SIDONA 1.png') }}" alt=" ">
                         </a>
                     </div> --}}
-                    <div class="row">
+                    {{-- <div class="row">
                         <a href="{{ route('home') }}" style="display: flex; justify-content:center;align-items:center">
                             <img style="width: 150px; height:auto" src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
                             {{-- <div style="font-size:1.5rem;font-weight:bold">{{ $tagline->nama_website }}</div> --}}
-                        </a>
-                    </div>
+                        {{-- </a>
+                    </div> --}}
 
                 {{-- <div class="f-subscribe" style="color: #fff;">
                     <h3>Subscribe to news</h3>
