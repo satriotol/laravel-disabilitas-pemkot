@@ -14,6 +14,8 @@ use App\Models\Tagline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 
 class InterfaceController extends Controller
 {
@@ -87,8 +89,7 @@ class InterfaceController extends Controller
     {
         $socialmedia = SocialMedia::all();
         $products = $category->products;
-        $pageSize = 9;
-        $post = CollectionHelper::paginate($products, $pageSize);
+        $post = collect($products)->paginate(9);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'category', 'tagline','post'));
