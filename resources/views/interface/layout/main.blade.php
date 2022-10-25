@@ -104,12 +104,12 @@
                     </ul>
                 </div>
 
-                {{-- <div class="row">
+                <div class="row">
                     <div class="f-menu">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('img/LOGO SIDONA 1.png') }}" alt=" ">
+                            <img style="width: 150px; height:auto" src="{{ asset('img/semarang.png') }}" alt=" ">
                         </a>
-                    </div> --}}
+                    </div>
                     {{-- <div class="row">
                         <a href="{{ route('home') }}" style="display: flex; justify-content:center;align-items:center">
                             <img style="width: 150px; height:auto" src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
