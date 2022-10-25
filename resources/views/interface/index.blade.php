@@ -55,7 +55,7 @@
                                         </p>
                                     </div>
                                     <h3>
-                                        <a href="#">{{ $produk->name . $produk->category->name }}</a>
+                                        <a href="#">{{ $produk->name }}</a>
                                     </h3>
                                     <p class="prod-i-price">
                                         <b>{{ $produk->price }}</b>
