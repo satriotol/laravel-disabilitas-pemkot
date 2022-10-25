@@ -103,6 +103,20 @@
                             <li><a> E-mail: {{ $kontak_kami->email }}</a></li>
                     </ul>
                 </div>
+
+                {{-- <div class="row">
+                    <div class="f-menu">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('img/LOGO SIDONA 1.png') }}" alt=" ">
+                        </a>
+                    </div> --}}
+                    <div class="row">
+                        <a href="{{ route('home') }}" style="display: flex; justify-content:center;align-items:center">
+                            <img style="width: 150px; height:auto" src="{{ asset('img/pemkot.png') }}" alt="PEMKOT SEMARANG">
+                            {{-- <div style="font-size:1.5rem;font-weight:bold">{{ $tagline->nama_website }}</div> --}}
+                        </a>
+                    </div>
+
                 {{-- <div class="f-subscribe" style="color: #fff;">
                     <h3>Subscribe to news</h3>
                     <form class="f-subscribe-form" action="#">
