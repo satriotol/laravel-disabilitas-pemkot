@@ -101,7 +101,7 @@
         </div>
         <!-- Catalog Topbar - end -->
         <div class="prod-items section-items">
-            @foreach ($products as $product)
+            @foreach ($post as $product)
             @if ($product->product_images->count() > 0)
             <div class="prod-i">
                 <div class="prod-i-top">
@@ -119,14 +119,13 @@
             </div>
             @endif
             @endforeach
-            <!-- Pagination - start -->
-            <ul class="pagi">
-                <li class="active">{{$post->links()}}</li>
-            </ul>
-            <!-- Pagination - end -->
         </div>
 
-
+        <!-- Pagination - start -->
+        <ul class="pagi">
+            <li class="active">{{$post->links()}}</li>
+        </ul>
+        <!-- Pagination - end -->
     </div>
     <!-- Catalog Items | Gallery V1 - end -->
 </section>
