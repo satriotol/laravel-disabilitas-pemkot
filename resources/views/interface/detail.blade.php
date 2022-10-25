@@ -16,7 +16,7 @@
         </li>
         <li>
             <a href="{{route('product-gallery')}}">
-                {{ isset($category) ? $category->name : "Semua Kategori" }}
+                {{$products->product_category->name}}
             </a>
         </li>
         <li>
