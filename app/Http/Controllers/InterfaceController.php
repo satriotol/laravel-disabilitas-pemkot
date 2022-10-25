@@ -109,10 +109,10 @@ class InterfaceController extends Controller
         return view('interface.list', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));
     }
 
-    public function detailcategory(Category $category)
+    public function detailcategory()
     {
+        $category = Category::all();
         $products = $category->products;
-        $categories = Category::all();
         $socialmedia = SocialMedia::all();
         // $products = Product::all();
         $post = Product::orderBy('id', 'asc')->cursorpaginate(5);

@@ -14,13 +14,11 @@
                 Produk
             </a>
         </li>
-        @foreach ($categories as $cate)
         <li>
-            <a href="{{route('product-gallery.category', $cate->id)}}">
-                {{$cate->name}}
+            <a href="{{route('product-gallery')}}">
+                {{ isset($category) ? $category->name : "Semua Kategori" }}
             </a>
         </li>
-        @endforeach
         <li>
             <span>{{ $product->name }}</span>
         </li>
