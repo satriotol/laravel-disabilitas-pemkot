@@ -63,7 +63,7 @@
                 <li class="section-mode-list"><a title="View mode: List" href="{{ request()->routeIs('product-list') ? route('product-list') : route('product-list.category',$id_cate) }}"></a></li>
             </ul>
 
-            <!-- Sorting -->
+            {{-- <!-- Sorting -->
             <div class="section-sortby">
                 <p>default sorting</p>
                 <ul>
@@ -96,7 +96,7 @@
                     <li><a href="#">24</a></li>
                     <li><a href="#">48</a></li>
                 </ul>
-            </div>
+            </div> --}}
 
         </div>
         <!-- Catalog Topbar - end -->
