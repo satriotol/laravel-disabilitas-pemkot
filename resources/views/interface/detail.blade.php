@@ -16,7 +16,7 @@
         </li>
         <li>
             <a href="{{route('product-gallery')}}">
-                {{$products->product_category->name}}
+                {{$product->category->name}}
             </a>
         </li>
         <li>

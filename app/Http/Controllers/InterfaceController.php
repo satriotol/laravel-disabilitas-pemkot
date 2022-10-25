@@ -112,12 +112,11 @@ class InterfaceController extends Controller
     public function detail(Product $product)
     {
         $categories = Category::all();
-        $products = $categories->products;
         $socialmedia = SocialMedia::all();
         // $products = Product::all();
         $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
         $tagline = Tagline::first();
         $kontak_kami = KontakKami::first();
-        return view('interface.detail', compact('socialmedia', 'product', 'products', 'categories', 'post','tagline','kontak_kami'));
+        return view('interface.detail', compact('socialmedia', 'product','categories', 'post','tagline','kontak_kami'));
     }
 }
