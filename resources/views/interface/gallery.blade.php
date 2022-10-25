@@ -101,7 +101,7 @@
         </div>
         <!-- Catalog Topbar - end -->
         <div class="prod-items section-items">
-            @foreach ($post as $product)
+            @foreach ($products as $product)
             @if ($product->product_images->count() > 0)
             <div class="prod-i">
                 <div class="prod-i-top">
