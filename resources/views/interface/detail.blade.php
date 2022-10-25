@@ -16,7 +16,7 @@
         </li>
         @foreach ($categories as $cate)
         <li>
-            <a href="{{route('product-detail.category', $cate->id)}}">
+            <a href="{{route('product-gallery.category', $cate->id)}}">
                 {{$cate->name}}
             </a>
         </li>
