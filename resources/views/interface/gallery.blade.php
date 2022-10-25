@@ -119,13 +119,14 @@
             </div>
             @endif
             @endforeach
+            <!-- Pagination - start -->
+            <ul class="pagi">
+                <li class="active">{{$post->links()}}</li>
+            </ul>
+            <!-- Pagination - end -->
         </div>
 
-        <!-- Pagination - start -->
-        <ul class="pagi">
-            <li class="active">{{$post->links()}}</li>
-        </ul>
-        <!-- Pagination - end -->
+
     </div>
     <!-- Catalog Items | Gallery V1 - end -->
 </section>
