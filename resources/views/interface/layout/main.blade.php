@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="{{ asset('img/logook.png') }}" type="image/x-icon">
-    <title>Semarang Care Official</title>
+    <link rel="icon" href="{{ asset('img/LOGO SIDONA 1.png') }}" type="image/x-icon">
+    <title>Si Dona</title>
 
     <link rel="stylesheet" href="{{ asset('css 1/fontawesome.min.css') }}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">

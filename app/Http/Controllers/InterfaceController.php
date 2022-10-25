@@ -109,18 +109,6 @@ class InterfaceController extends Controller
         return view('interface.list', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));
     }
 
-    public function detailcategory()
-    {
-        $category = Category::all();
-        $products = $category->products;
-        $socialmedia = SocialMedia::all();
-        // $products = Product::all();
-        $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
-        $tagline = Tagline::first();
-        $kontak_kami = KontakKami::first();
-        return view('interface.detail', compact('products','category', 'categories', 'socialmedia', 'post','tagline','kontak_kami'));
-    }
-
     public function detail(Product $product)
     {
         $categories = Category::all();
@@ -129,6 +117,6 @@ class InterfaceController extends Controller
         $post = Product::orderBy('id', 'asc')->cursorpaginate(5);
         $tagline = Tagline::first();
         $kontak_kami = KontakKami::first();
-        return view('interface.detail', compact('socialmedia', 'product', 'categories', 'post','tagline','kontak_kami'));
+        return view('interface.detail', compact('socialmedia', 'product','categories', 'post','tagline','kontak_kami'));
     }
 }
