@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="f-menu">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('img/S-care logo part 2-03.png') }}" alt="S-care">
+                        <img src="{{ asset('img/LOGO SIDONA 1.png') }}" alt=" ">
                     </a>
                 </div>
                 <div class="f-menu">
