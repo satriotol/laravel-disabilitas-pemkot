@@ -123,7 +123,7 @@
 
         <!-- Pagination - start -->
         <ul class="pagi">
-            <li class="active">{{$products->links()}}</li>
+            <li class="active">{{$post->links()}}</li>
         </ul>
         <!-- Pagination - end -->
     </div>
