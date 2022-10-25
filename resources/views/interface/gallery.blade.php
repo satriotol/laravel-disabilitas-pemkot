@@ -123,11 +123,7 @@
 
         <!-- Pagination - start -->
         <ul class="pagi">
-            <li class="active"><span>1</span></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li class="pagi-next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            <li class="active">{{$post->links()}}</li>
         </ul>
         <!-- Pagination - end -->
     </div>
