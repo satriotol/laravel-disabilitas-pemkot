@@ -23,6 +23,7 @@ Route::get('/product/gallery/{category}', 'App\Http\Controllers\InterfaceControl
 Route::get('/product/list', 'App\Http\Controllers\InterfaceController@productlist')->name('product-list');
 Route::get('/product/list/{category}', 'App\Http\Controllers\InterfaceController@productlistcategory')->name('product-list.category');
 Route::get('/product/show/{product}', 'App\Http\Controllers\InterfaceController@detail')->name('product-detail');
+Route::get('/product/show/{category}', 'App\Http\Controllers\InterfaceController@detailcategory')->name('product-detail.category');
 Route::get('/pesan/{id}', 'App\Http\Controllers\PesanController@index');
 Route::POST('/pesan/{id}', 'App\Http\Controllers\PesanController@pesan')->name('pesan');
 
