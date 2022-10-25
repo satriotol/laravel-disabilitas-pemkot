@@ -80,7 +80,7 @@ class InterfaceController extends Controller
         $socialmedia = SocialMedia::all();
         $products = Product::all();
         $categories = Category::all();
-        $post = Product::orderBy('id', 'asc')->paginate(9);
+        $post = $products->sortByDesc('id')->paginate(3);
         $tagline = Tagline::first();
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'tagline','post'));
     }
@@ -89,7 +89,7 @@ class InterfaceController extends Controller
     {
         $socialmedia = SocialMedia::all();
         $products = $category->products;
-        $products = collect($products)->paginate(9);
+        $post = $products->sortByDesc('id')->paginate(3);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'category', 'tagline','post'));
