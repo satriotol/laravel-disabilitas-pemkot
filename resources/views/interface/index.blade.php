@@ -121,7 +121,7 @@
                                     <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png" style="max-width: 25%;"></a>
                                 </div> --}}
                                 <div style="float:right;">
-                                    <a href="https://semarangkota.go.id/"> Klik Selengkapnya
+                                    <a href="https://semarangkota.go.id/"> <b>Klik Selengkapnya</b>
                                 </div>
                             </div>
                         @endforeach
