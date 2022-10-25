@@ -117,12 +117,11 @@
                                 <p class="about_taital">{{ $about->description }}</p>
                                 <br>
 
-                                <div style="float: right;">
-                                    <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png"
-                                            style="max-width: 25%;"></a>
-                                </div>
+                                {{-- <div style="float: right;">
+                                    <a href="https://semarangkota.go.id/"><img src="img/buton selengkapnya-07.png" style="max-width: 25%;"></a>
+                                </div> --}}
                                 <div style="float:right;">
-                                    Selengkapnya
+                                    <a href="https://semarangkota.go.id/"> Klik Selengkapnya
                                 </div>
                             </div>
                         @endforeach
