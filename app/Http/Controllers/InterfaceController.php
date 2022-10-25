@@ -87,7 +87,7 @@ class InterfaceController extends Controller
     {
         $socialmedia = SocialMedia::all();
         $products = $category->products;
-        $post = $products->paginate(9);
+        $post = $this->paginate(9);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'category', 'tagline','post'));
