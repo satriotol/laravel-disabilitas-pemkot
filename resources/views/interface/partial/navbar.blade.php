@@ -21,7 +21,7 @@
         <div class="shop-menu">
             <ul>
                 <li>
-                    <a href="{{ route('kategori') }}">
+                    <a href="{{ route('product-gallery') }}">
                         <i class="fa fa-heart"></i>
                         <span class="shop-menu-ttl">Produk Kami</span>
                     </a>
