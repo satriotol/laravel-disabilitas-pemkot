@@ -107,7 +107,7 @@
                 <div class="row">
                     <div class="f-menu">
                         <a href="{{ route('home') }}">
-                            <img style="width: 150px; height:auto" src="{{ asset('img/semarang.png') }}" alt=" ">
+                            <img style="width: 110px; height:auto" src="{{ asset('img/semarang.png') }}" alt=" ">
                         </a>
                     </div>
                     {{-- <div class="row">
