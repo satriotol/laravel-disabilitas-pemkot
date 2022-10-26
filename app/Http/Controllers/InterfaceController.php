@@ -78,17 +78,16 @@ class InterfaceController extends Controller
     public function productgallery()
     {
         $socialmedia = SocialMedia::all();
-        $products = Product::paginate();
+        $products = Product::paginate(9);
         $categories = Category::all();
-        $post = $products->sortByDesc('id')->paginate(9);
         $tagline = Tagline::first();
-        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'tagline','post'));
+        return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'tagline'));
     }
 
     public function productgallerycategory(Category $category)
     {
         $socialmedia = SocialMedia::all();
-        $products = Product::where('category_id', $category->id)->paginate();
+        $products = Product::where('category_id', $category->id)->paginate(9);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.gallery', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));
