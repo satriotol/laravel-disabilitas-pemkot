@@ -35,9 +35,8 @@ class FaqController extends Controller
         return redirect('/faq');
     }
 
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faq = Faq::Find($id);
         return view('faq.create', compact('faq'));
     }
 

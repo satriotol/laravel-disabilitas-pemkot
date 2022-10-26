@@ -28,6 +28,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="question">Question</label>
+                                    <textarea name="" id="" cols="30" rows="10">{{ isset($faq) ? $faq->question : '' }}</textarea>
                                     <input type="text" name="question" class="form-control" required
                                         placeholder="Enter Question Here" value={{ isset($faq) ? $faq->question : '' }} >
                                 </div>
