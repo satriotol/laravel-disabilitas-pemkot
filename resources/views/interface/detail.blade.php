@@ -67,7 +67,7 @@
         <!-- Product Description/Info -->
         <div class="prod-cont">
             <div class="prod-sticker">
-                <p class="prod-sticker-3">Stok : {{ $product->stock }}</p>
+                <p class="prod-sticker-3">Stok: {{ $product->stock }}</p>
             </div> <br><br>
             <div class="prod-cont-txt">
                 <p>{{  $product->description }}</p>
