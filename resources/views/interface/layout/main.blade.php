@@ -75,11 +75,11 @@
                         Home
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#kategori-bab">Kategori</a></li>
-                        <li><a href="#tentang-bab">Produk</a></li>
-                        <li><a href="#faq-bab">FAQ</a></li>
-                        <li><a href="#kontakkami-bab">Kontak kami</a></li>
-                        <li><a href="#kontakkami-bab">Tentang</a></li>
+                        <li><a href="{{ route('product-list') }}">Kategori</a></li>
+                        <li><a href="{{ route('product-gallery') }}">Produk</a></li>
+                        <li><a href="{{ route('home') }}">FAQ</a></li>
+                        <li><a href="{{ route('home') }}">Kontak kami</a></li>
+                        <li><a href="{{ route('home') }}">Tentang</a></li>
                     </ul>
                 </div>
                 <div class="f-menu">
