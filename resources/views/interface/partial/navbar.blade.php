@@ -22,7 +22,7 @@
             <ul>
                 <li>
                     <a href="{{ route('product-gallery') }}">
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-bar-chart"></i>
                         <span class="shop-menu-ttl">Produk Kami</span>
                     </a>
                 </li>
