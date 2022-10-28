@@ -59,6 +59,7 @@
                 $id_cate = explode('/', url()->current());
                 $id_cate = end($id_cate);
                 @endphp
+
                 <li class="section-mode-gallery active"><a title="View mode: Gallery" href="{{ request()->routeIs('product-gallery') ? route('product-gallery') :  route('product-gallery.category',$id_cate) }}"></a></li>
                 <li class="section-mode-list"><a title="View mode: List" href="{{ request()->routeIs('product-list') ? route('product-list') : route('product-list.category',$id_cate) }}"></a></li>
             </ul>

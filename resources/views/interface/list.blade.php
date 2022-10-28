@@ -125,12 +125,12 @@
 
         <!-- Pagination - start -->
         <ul class="pagi">
-            <li class="">{{ $product->links() }}</li>
+            <li class="">{{ $products->links() }}</li>
         </ul>
         <!-- Pagination - end -->
     </div>
 
-    <!-- Quick View Product - start -->
+    {{-- <!-- Quick View Product - start -->
     <div class="qview-modal">
         <div class="prod-wrap">
             <a href="product.html">
@@ -280,6 +280,6 @@
             </div>
         </div>
     </div>
-    <!-- Quick View Product - end -->
+    <!-- Quick View Product - end --> --}}
 </section>
 @endsection
