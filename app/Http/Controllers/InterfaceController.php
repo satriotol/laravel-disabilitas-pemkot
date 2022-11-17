@@ -96,7 +96,7 @@ class InterfaceController extends Controller
     public function productlist()
     {
         $socialmedia = SocialMedia::all();
-        $products = Product::all();
+        $products = Product::paginate(9);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.list', compact('socialmedia', 'products', 'categories', 'tagline'));
@@ -105,7 +105,7 @@ class InterfaceController extends Controller
     public function productlistcategory(Category $category)
     {
         $socialmedia = SocialMedia::all();
-        $products = $category->products;
+        $products = Product::where('category_id', $category->id)->paginate(9);
         $categories = Category::all();
         $tagline = Tagline::first();
         return view('interface.list', compact('socialmedia', 'products', 'categories', 'category', 'tagline'));

@@ -58,7 +58,7 @@
                 <li class="section-mode-list active"><a title="View mode: List" href="{{ request()->routeIs('product-list') ? route('product-list') : route('product-list.category',$id_cate) }}"></a></li>
             </ul>
 
-            <!-- Sorting -->
+            {{-- <!-- Sorting -->
             <div class="section-sortby">
                 <p>default sorting</p>
                 <ul>
@@ -91,7 +91,7 @@
                     <li><a href="#">24</a></li>
                     <li><a href="#">48</a></li>
                 </ul>
-            </div>
+            </div> --}}
 
         </div>
         <!-- Catalog Topbar - end -->
@@ -125,16 +125,12 @@
 
         <!-- Pagination - start -->
         <ul class="pagi">
-            <li class="active"><span>1</span></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li class="pagi-next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            <li class="">{{ $products->links() }}</li>
         </ul>
         <!-- Pagination - end -->
     </div>
 
-    <!-- Quick View Product - start -->
+    {{-- <!-- Quick View Product - start -->
     <div class="qview-modal">
         <div class="prod-wrap">
             <a href="product.html">
@@ -284,6 +280,6 @@
             </div>
         </div>
     </div>
-    <!-- Quick View Product - end -->
+    <!-- Quick View Product - end --> --}}
 </section>
 @endsection
