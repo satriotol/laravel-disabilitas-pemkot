@@ -28,14 +28,17 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="question">Question</label>
-                                    <textarea name="" id="" cols="30" rows="10">{{ isset($faq) ? $faq->question : '' }}</textarea>
-                                    <input type="text" name="question" class="form-control" required
-                                        placeholder="Enter Question Here" value={{ isset($faq) ? $faq->question : '' }} >
+                                    <textarea name="question" id="" cols="90" rows="2" required
+                                    placeholder="Enter Question Here" class="form-control">{{ isset($faq) ? $faq->question : '' }}</textarea>
+                                    {{-- <input type="text" name="question" class="form-control" required
+                                        placeholder="Enter Question Here" value={{ isset($faq) ? $faq->question : '' }} > --}}
                                 </div>
                                 <div class="form-group">
                                     <label for="answer">Answer</label>
-                                    <input type="text" name="answer" class="form-control" required
-                                        placeholder="Enter Answer Here" value={{ isset($faq) ? $faq->answer : ''}} >
+                                    <textarea name="answer" id="" cols="90" rows="2" required
+                                    placeholder="Enter Answer Here" class="form-control">{{ isset($faq) ? $faq->answer : '' }}</textarea>
+                                    {{-- <input type="text" name="answer" class="form-control" required
+                                        placeholder="Enter Answer Here" value={{ isset($faq) ? $faq->answer : ''}} > --}}
                                 </div>
                             </div>
                             <!-- /.card-body -->
